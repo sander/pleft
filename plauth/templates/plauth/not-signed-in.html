@@ -1,0 +1,15 @@
+{% extends 'plapp/base.html' %}
+
+{% load i18n %}
+
+{% block pagetitle %}{% trans "Not signed in" %}{% endblock %}
+
+{% block pageid %}not-signed-in{% endblock %}
+
+{% block title %}
+  <h1>{% trans "Not signed in" %}</h1>
+{% endblock %}
+
+{% block content %}
+<p>{% trans "You are not signed in. Please use the URL that was sent to you by email." %}
+{% endblock %}

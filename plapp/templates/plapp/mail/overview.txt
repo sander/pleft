@@ -1,0 +1,12 @@
+{% extends 'plapp/mail/base.txt' %}
+{% load i18n %}
+
+{% block content %}
+
+{% trans "Your email address has been verified." %} {% trans "Go to the overview to see which invitees have entered their availability or modify the appointment:" %}
+
+{{ title_and_link }}
+
+{% trans "We have assumed that you are available on all proposed dates." %} {% trans "You can use the above link to change your own availability or add comments." %}
+
+{% endblock %}

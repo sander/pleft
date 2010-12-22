@@ -1,0 +1,8 @@
+{
+  "id": "form",
+  "paths": ".",
+  "inputs": "form.js",
+  "mode": "ADVANCED",
+  "level": "VERBOSE",
+  "externs": "externs.js"
+}

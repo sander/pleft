@@ -1,0 +1,27 @@
+{% extends 'plapp/base.html' %}
+
+{% load appointment_tags %}
+{% load pleft_tags %}
+{% load i18n %}
+
+{% block pageid %}appointment{% endblock %}
+
+{% block scripts %}
+  {% insert_script 'overview' %}
+{% endblock %}
+
+{% block main_script %}
+  <script>pleft.overview.init()</script>
+{% endblock %}
+
+{% block styles %}
+  <link rel=stylesheet href='/static/style/appointment.css'>
+{% endblock %}
+
+{% block title %}
+  <h1>{% trans "Appointment overview" %}</h1>
+{% endblock %}
+
+{% block content %}
+  <div id=overview-content></div>
+{% endblock %}

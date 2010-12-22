@@ -1,0 +1,65 @@
+/*
+Use of this source code is governed by an Apache 2.0 License.
+See the COPYING file for details.
+*/
+
+/* Copyright 2007 Google Inc.  All Rights Reserved. */
+/* Changed in 2009 by Sander Dijkhuis <sander@pleft.com>. */
+/**/
+
+
+
+/*
+ * goog.ui.Menu
+ */
+
+/* State: resting. */
+.goog-menu {
+  background-color: #fff;
+  border-color: #ccc #666 #666 #ccc;
+  border-style: solid;
+  border-width: 1px;
+  cursor: default;
+  margin: 0;
+  outline: none;
+  padding: 4px 0;
+  position: absolute;
+}
+
+/*
+ * goog.ui.MenuItem
+ */
+
+/* State: resting. */
+.goog-menuitem {
+  color: #000;
+  font: normal 12px Arial, sans-serif;
+  list-style: none;
+  margin: 0;
+  /* 28px on the left for icon or checkbox; 10ex on the right for shortcut. */ 
+  padding: 4px 10ex 4px 28px;
+  white-space: nowrap;
+}
+
+/* State: disabled. */
+.goog-menuitem-disabled {
+  color: #ccc;
+}
+
+/* State: hover. */
+.goog-menuitem-highlight,
+.goog-menuitem-hover {
+  background-color: #d6e9f8;
+}
+
+/*
+ * goog.ui.MenuSeparator
+ */
+
+/* State: resting. */
+.goog-menuseparator {
+  border-top: 1px solid #ccc;
+  margin: 4px 0;
+  padding: 0;
+  position: relative;
+}

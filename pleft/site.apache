@@ -1,0 +1,24 @@
+<VirtualHost *:80>
+	ServerName www.pleft.com 
+	ServerAdmin sander@pleft.com
+
+	WSGIScriptAlias / /home/sander/deploy/pleft/pleft/django.wsgi
+
+        Alias /favicon.ico /home/sander/deploy/pleft/static/images/favicon.ico
+        Alias /robots.txt /home/sander/deploy/pleft/static/robots.txt
+
+	Alias /static/site/ /home/sander/deploy/pleft/pleft/media/
+	Alias /static/ /home/sander/deploy/pleft/static/
+
+	Alias /about /home/sander/deploy/pleft.com/
+</VirtualHost>
+
+<VirtualHost *:80>
+        ServerName pleft.com
+
+        <Location "/">
+                RewriteEngine On
+                RewriteCond %{HTTP_HOST} ^pleft\.com$ [NC]
+                RewriteRule ^htdocs/(.*)$ http://www.pleft.com/$1 [R=301,L]
+        </Location>
+</VirtualHost>

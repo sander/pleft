@@ -1,0 +1,36 @@
+{% load i18n %}
+<!doctype html>
+<meta charset=utf-8>
+<title>{% trans "Not found" %} - {{ settings.SITE_NAME }}</title>
+
+<style>
+    body {
+        background: #80c18d;
+        font-family: Arial, sans-serif;
+        font-size: 16pt;
+        margin: 3em;
+    }
+    #content {
+        background: #fff;
+        width: 24em;
+        color: #000;
+        padding: 3em;
+        margin: auto;
+    }
+    h1 {
+        font-weight: normal;
+    }
+    a img {
+        border: none;
+    }
+</style>
+
+<div id=content>
+    <h1>{% trans "Not found" %}</h1>
+    <p>
+{% trans "We’re sorry, but this page does not seem to exist." %}<br>
+{% blocktrans with "<a href='/'>{{ settings.SITE_DOMAIN }}</a>" as url %}Please check whether the address is correct, or go to {{ url }} to find the right page.{% endblocktrans %}
+    </p>
+    <br>
+    <p><a href='/'><img src='{{ settings.EMAIL_LOGO }}' alt={{ settings.SITE_NAME }}></a></p>
+</div>

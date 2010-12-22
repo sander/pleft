@@ -1,0 +1,109 @@
+@import url(caleftar.css);
+@import url(goog-custom-button.css);
+@import url(goog-dialog.css);
+
+#logo {
+  background: url(../images/logo-green.png);
+}
+#content {
+  background: #abf39f url(../images/texture/green.png);
+  border-bottom-color: #4abc37;
+}
+#title {
+  background-color: #4abc37;
+}
+.appointment {
+  border-color: #85be7c;
+}
+
+#presentation-button-p {
+  margin-top: 5px;
+}
+#presentation-button {
+  cursor: pointer;
+}
+
+.preview img {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #95be7c;
+  padding: 0;
+}
+
+#create .field {
+  padding: 5px 10px;
+  padding-top: 10px;
+}
+#create .field dl {
+  margin: 0;
+}
+#create .field dt {
+  float: left;
+}
+#create .field dd {
+  margin-left: 110px;
+}
+#create dd textarea, #create dd input[type=text] {
+  width: 439px;
+  border: 0;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 13px;
+  padding: 5px;
+  resize: none;
+}
+#create dd input[type=text] {
+  margin-top: -5px;
+}
+#create .field .help {
+  font-size: 11px;
+}
+#create .field label {
+  cursor: pointer;
+}
+#create #propose-block {
+  padding: 10px 0;
+}
+#create #button-block {
+  margin-top: 10px;
+  background-color: #edf0f4;
+  padding: 10px;
+}
+#create .field.with-error {
+  background: #ecf13a;
+  border-bottom: 2px solid #f1c03a;
+}
+#create #button-block.with-error {
+  border-bottom: 0;
+  background: #ecf13a;
+}
+#create .field .error {
+  display: none;
+}
+#create .field.with-error .error {
+  margin-top: 5px;
+  font-weight: bold;
+  display: block;
+}
+#button {
+  font-weight: bold;
+}
+#inviteespropose {
+  margin-left: 11px;
+}
+
+.dp-picker {
+  margin-top: -10px;
+}
+
+a.preview {
+  cursor: pointer;
+}
+
+.modal-dialog {
+  font-family: arial, sans-serif;
+}
+.modal-dialog-buttons {
+  display: none;
+}

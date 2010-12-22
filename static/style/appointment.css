@@ -1,0 +1,280 @@
+@import url(goog-custom-button.css);
+@import url(goog-dialog.css);
+@import url(goog-menubutton.css);
+@import url(goog-popup-datepicker.css);
+@import url(timeentry.css);
+
+#logo {
+  background: url(../images/logo-blue.png);
+}
+#content {
+  background: #9fc0e4;
+  border-bottom-color: #3c7fc8;
+}
+#title {
+  background: #3c7fc8;
+}
+
+#app-description {
+  margin-top: -10px;
+  padding: 0 10px 10px 10px;
+}
+#app-description b {
+  font-size: 18px;
+  font-weight: normal;
+}
+.appointment {
+  border-color: #687e95;
+}
+.appointment > table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.appointment > table thead {
+  background: #828282;
+  color: #fff;
+}
+.appointment > table th {
+  font-weight: normal;
+  padding: 5px 10px;
+  font-size: 13px;
+  text-align: left;
+}
+.appointment > table td {
+  vertical-align: top;
+  padding: 0;
+}
+#dates, #people {
+  width: 130px;
+}
+
+.pleft-selectmenu {
+  background-color: #fff;
+  border-color: #ccc #666 #666 #ccc;
+  border-style: solid;
+  border-width: 1px;
+  cursor: default;
+  margin: 0;
+  outline: none;
+  padding: 4px 0;
+}
+.pleft-selectmenu .goog-menuitem {
+  padding-right: 4px;
+}
+.goog-option-selected {
+  background: #3c7fc8;
+  color: #fff;
+}
+.appointment .pleft-selectmenu {
+  border: none;
+  padding: 0;
+}
+.appointment .goog-menuitem {
+  height: 32px;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.appointment .pleft-selectmenu {
+  margin: 5px 0;
+}
+.appointment .goog-menuitem .bar {
+  background: #fcef42;
+  border-left: 10px solid #12bc41;
+  border-right: 10px solid #f66262;
+  display: block;
+  height: 4px;
+  margin-top: 4px;
+}
+
+#availability {
+  padding-top: 4px;
+  background: #f3f3f3;
+}
+.balloon {
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  margin: 1px 12px 0px 2px;
+  background: #bdbdbd;
+}
+.balloon .choose {
+  font-size: 11px;
+}
+.balloon .choose .goog-custom-button-inner-box {
+  padding: 1px 2px;
+}
+.person-balloon {
+}
+.date-balloon {
+  margin-left: 12px;
+}
+.balloon .arrow {
+  border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #bdbdbd;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 304px;
+  height: 0;
+  width: 0;
+}
+.date-balloon .arrow {
+  margin-left: 294px;
+}
+.balloon .availability {
+  height: 39px;
+  padding: 0 2px;
+}
+.date-balloon .availability {
+  height: 37px;
+}
+.date-balloon .static.availability {
+  height: 33px;
+}
+.balloon .availability + .availability {
+  border-top: 1px solid #bdbdbd;
+}
+
+.availability {
+  font-size: 13px;
+  overflow: hidden;
+}
+.static.availability {
+  padding: 2px 4px;
+  height: 35px;
+}
+.availability.yes {
+  background: #a7ef71;
+}
+.availability.maybe {
+  background: #fdeb90;
+}
+.availability.no {
+  background: #fdc4b6;
+}
+.static.availability .possible {
+  width: 50px;
+  display: inline-block;
+}
+.static.availability .comment {
+  display: inline;
+  font-style: italic;
+}
+
+.availability.form .choose {
+  float: left;
+}
+.availability.form textarea {
+  margin-left: 90px;
+  margin-top: -20px;
+  font-size: 13px;
+  width: 192px;
+  border: 1px solid #bdbdbd;
+  resize: none;
+  outline: none;
+  height: 29px;
+}
+.date-balloon .availability.form textarea {
+  width: 183px;
+  height: 27px;
+}
+
+#save {
+  padding-left: 10px;
+}
+#save-button {
+  vertical-align: 2px;
+  font-weight: bold;
+}
+#status {
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+#refresh {
+  float: right;
+  margin-left: 450px;
+  width: 126px;
+  margin-top: -2px;
+  position: absolute;
+  z-index: 9;
+  font-size: 13px;
+  text-align: right;
+}
+.goog-menu {
+  z-index: 10;
+}
+
+#tools h3 {
+  background: #828282;
+  color: #fff;
+  font-weight: normal;
+  padding: 5px 10px;
+  margin: 0 0 5px 0;
+  font-size: 13px;
+}
+#propose-dates > div, #invite-participants > div, #resend-invitations > div {
+  padding: 0 10px;
+  font-size: 13px;
+  margin: 5px 0;
+}
+#tools .label-input-label {
+  color: gray;
+}
+#tools input {
+  font-size: 13px;
+  width: 300px;
+  border: 1px solid #aaa;
+  padding: 3px 2px;
+  float: left;
+  outline: none;
+}
+#tools #propose-form input {
+  width: 100px;
+  float: none;
+}
+#tools #propose-form label {
+  float: left;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+#tools #invite-participants input {
+  margin-right: 10px;
+}
+#tools #resend-invitations .goog-menu-button {
+  margin-right: 10px;
+}
+#tools #resend-invitations .goog-menu-button-caption {
+  width: 285px;
+}
+#tools #propose-error, #tools #invite-error {
+  color: red;
+  font-style: italic;
+}
+#tools #email-addresses p {
+  margin: 10px;
+}
+#tools #email-addresses textarea {
+  padding: 3px 2px;
+  border: 1px solid #aaa;
+  width: 500px;
+  height: 60px;
+  outline: none;
+}
+
+.goog-date-picker  button {
+  font: bold 12px Arial, sans-serif;
+}
+
+.te-up, .te-down {
+  margin-left: -40px;
+  margin-top: 4px;
+}
+.te-down {
+  margin-top: 14px;
+}
+
+.modal-dialog {
+  font-family: arial, sans-serif;
+}

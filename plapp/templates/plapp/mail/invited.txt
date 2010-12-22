@@ -1,0 +1,12 @@
+{% extends 'plapp/mail/base.txt' %}
+{% load i18n %}
+
+{% block content %}
+
+{% blocktrans %}You have been invited by {{ initiator }} to tell when you’re available for the following appointment:{% endblocktrans %}
+
+{{ title_and_link }}
+
+{% trans "Click the above link for an overview and to indicate your availability." %}
+
+{% endblock %}

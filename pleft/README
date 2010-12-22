@@ -1,0 +1,11 @@
+apache2			2.2.14-5ubuntu8.2
+libapache2-mod-wsgi	2.8-2ubuntu1
+python			2.6.5-0ubuntu1
+mysql-server		5.1.41-3ubuntu12.6
+python-mysqldb		1.2.2-10build1
+
+mysqladmin create pfo -u root -p
+sudo a2enmod ssl
+sudo ln -s /home/sander/git/pleft/autonomous/site.apache /etc/apache2/sites-available/pleft
+sudo a2ensite pleft
+sudo /etc/init.d/apache2 restart

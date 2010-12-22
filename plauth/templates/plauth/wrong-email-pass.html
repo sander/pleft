@@ -1,0 +1,15 @@
+{% extends 'plapp/base.html' %}
+
+{% load i18n %}
+
+{% block pagetitle %}{% trans "Failed to sign in" %}{% endblock %}
+
+{% block pageid %}wrong-email-pass{% endblock %}
+
+{% block title %}
+  <h1>{% trans "Failed to sign in" %}</h1>
+{% endblock %}
+
+{% block content %}
+<p>{% trans "It seems that the URL you used is wrong or stopped working." %}
+{% endblock %}

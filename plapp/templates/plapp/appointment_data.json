@@ -1,0 +1,17 @@
+{% load appointment_tags %}{% load pleft_tags %}{
+  "id": "{{ appointment.get_id }}",
+  "title": "{{ appointment.get_title|json_escape }}",
+  "description": "{{ appointment.get_html_desc|json_escape }}",
+  "userIsInitiator": {% ifequal appointment.initiator.get_id user.get_id %}true{% else %}false{% endifequal %},
+  "userCanProposeDates": {% if propose_dates %}true{% else %}false{% endif %},
+  "people": [{% for invitee in appointment.invitee_set %}
+    {
+      "name": "{{ invitee.get_name|json_escape }}"{% ifequal invitee.get_id me.get_id %},
+      "isMe": true{% endifequal %}
+    }{% if not forloop.last %},{% endif %}{% endfor %}
+  ],{% ifequal appointment.initiator.get_id user.get_id %}
+  "addresses": "{% for invitee in appointment.invitee_set %}{% ifnotequal invitee.user.get_id user.get_id %}{% if invitee.name %}{{ invitee.name|json_escape }} <{{ invitee.user.email|json_escape }}>{% if not forloop.last %}, {% endif %}{% else %}{{ invitee.user.email|json_escape }}{% if not forloop.last %}, {% endif %}{% endif %}{% endifnotequal %}{% endfor %}",{% endifequal %}
+  "dates": [{% for date in appointment.get_ordered_dates %}"{% local_short_date date.date_time %}"{% if not forloop.last %}, {% endif %}{% endfor %}],
+  "dateKeys": [{% for date in appointment.get_ordered_dates %}"{{ date.get_id }}"{% if not forloop.last %}, {% endif %}{% endfor %}],
+  "availability": [{% for invitee in appointment.invitee_set %}[{% for date in appointment.get_ordered_dates %}{% get_availability invitee date %}{% if not forloop.last %}, {% endif %}{% endfor %}]{% if not forloop.last %},{% endif %}{% endfor %}]
+}

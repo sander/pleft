@@ -1,0 +1,19 @@
+.te-up, .te-down {
+  display: block;
+  width: 18px;
+  height: 10px;
+  margin-left: -30px;
+  margin-top: 3px;
+  position: relative;
+  float: right;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+.te-up {
+  background-image: url(../images/te-up.png);
+}
+.te-down {
+  background-image: url(../images/te-down.png);
+  margin-top: 13px;
+}

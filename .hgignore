@@ -1,0 +1,9 @@
+syntax: glob
+
+*~
+*.pyc
+*.swp
+*.mo
+*.cjs
+external/*
+pleft/local_settings.py

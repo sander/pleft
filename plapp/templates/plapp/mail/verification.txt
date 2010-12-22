@@ -1,0 +1,14 @@
+{% extends 'plapp/mail/base.txt' %}
+{% load i18n %}
+
+{% block content %}
+
+{% blocktrans with settings.SITE_NAME as site %}Thank you for using {{ site }} to help you pick the right moment for your appointment.{% endblocktrans %} {% trans "We need to verify your email address." %} {% trans "Please click the following link to continue:" %}
+
+{{ title_and_link }}
+
+{% blocktrans with settings.SITE_NAME as site %}After you have done this, a {{ site }} email will be sent to the invitees.{% endblocktrans %}
+
+{% trans "If you did not create this appointment, someone else has entered your email address." %} {% trans "Please ignore this message." %} {% blocktrans %}Should this happen more often, please contact {{ abuse_address }} and we will get back to you.{% endblocktrans %}
+
+{% endblock %}

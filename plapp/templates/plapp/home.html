@@ -1,0 +1,89 @@
+{% extends 'plapp/base.html' %}
+
+{% load pleft_tags %}
+{% load i18n %}
+
+{% block scripts %}
+  {% insert_script 'form' %}
+{% endblock %}
+
+{% block main_script %}
+  <script>pleft.form.init();</script>
+{% endblock %}
+
+{% block styles %}
+  <link rel=stylesheet href='/static/style/form.css'>
+{% endblock %}
+
+{% block pageid %}home{% endblock %}
+
+{% block title %}
+  <h1>{% trans "Plan an appointment" %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class=side-help>
+  <p id=presentation-button-p><a id=presentation-button><img src='/static/images/presentation-button.png' alt='{% trans "Watch our presentation!" %}'></a>
+  <p>{% blocktrans with settings.SITE_NAME as name %}{{ name }} helps you to find the right date and time for your appointments.{% endblocktrans %} {% blocktrans with settings.SITE_NAME as name %}Propose a few dates and let the invitees tell {{ name }} when they’re available.{% endblocktrans %}
+  <br><br>
+  <p>{% trans "The invitees will receive an email that looks like this:" %}
+  <p><a id=mail-preview class=preview><img src='/static/images/preview-mail-small.png'></a>
+  <p>{% trans "Both you and the invitees will then get a nice overview:" %}
+  <p><a id=overview-preview class=preview><img src='/static/images/preview-overview-small.png'></a>
+</div>
+
+<div class=appointment>
+  <h2>{% trans "Appointment" %}</h2>
+  <form id=create>
+    <div class=field>
+      <dl>
+        <dt><label for=desc>{% trans "Description:" %}</label>
+        <dd><textarea id=desc name=desc></textarea>
+        <dd class=help>{% trans "What, where, how?" %}
+      </dl>
+    </div>
+    <div class=field>
+      <dl>
+        <dt><label for=invitees>{% trans "Invitees:" %}</label>
+        <dd><textarea id=invitees name=invitees></textarea>
+        <dd class=help>{% trans "Example: john.doe@example.com, Jane Doe &lt;jane@example.net&gt;" %}
+      </dl>
+      <div class=error></div>
+    </div>
+    <div class=field>
+      <p>{% trans "Proposed dates:" %}
+      <div id=dates></div>
+    </div>
+    <div class=field id=propose-block>
+      <dl>
+        <dt>
+        <dd>
+          <label>
+            <input id=inviteespropose name=inviteespropose type=checkbox checked>
+            {% trans "Invitees may propose more dates" %}
+          </label>
+      </dl>
+    </div>
+    <div class=field>
+      <dl>
+        <dt><label for=field-name>{% trans "Your name:" %}</label>
+        <dd><input id=field-name name=name type=text maxlength=100>
+      </dl>
+    </div>
+    <div class=field>
+      <dl>
+        <dt><label for=field-email>{% trans "Email address:" %}</label>
+        <dd><input id=field-email name=email type=text maxlength=100 value='{% if user %}{{ user.email }}{% endif %}'>
+      </dl>
+      <div class=error></div>
+    </div>
+    <div class=field id=button-block>
+      <div id=button></div>
+      <div class=error></div>
+    </div>
+  </form>
+</div>
+
+<div id=status></div>
+{% endblock %}

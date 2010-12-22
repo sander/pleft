@@ -1,0 +1,54 @@
+@import url(static.css);
+
+table {
+  border-collapse: collapse;
+  font: 13px helvetica, arial, sans-serif;
+}
+th, td {
+  padding: 2px;
+}
+table .title {
+  width: 100%;
+}
+th {
+  text-align: left;
+  padding-right: 6px;
+}
+th, table .by, table .on {
+  white-space: nowrap;
+}
+thead tr {
+  background: #a3c4e0;
+}
+tbody td {
+  border-bottom: 1px solid #a3c4e0;
+}
+tbody tr:hover {
+  background: #eaf2f9;
+}
+.archive {
+  padding-left: 16px;
+  text-align: right;
+}
+table .button {
+  font-size: 12px;
+  padding: 4px;
+  white-space: nowrap;
+  color: #000;
+}
+#content p {
+  margin-top: 2em;
+}
+table a {
+  color: #000;
+  font-weight: bold;
+}
+table .archived a {
+  font-weight: normal;
+}
+table .archived, table .archived a {
+  color: #777;
+}
+table .archived .button {
+  color: #000;
+}

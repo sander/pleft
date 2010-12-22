@@ -1,0 +1,28 @@
+This is the Pleft software that runs on www.pleft.com.
+Documentation is limited right now, but please email sander.dijkhuis@gmail.com
+for more details and to get involved.
+
+System requirements:
+- Django 1.2 or higher
+- a Java runtime environment (for plovr)
+
+Installation:
+1. mkdir external
+2. Download the most recent plovr build to the external/ dir, from:
+   http://code.google.com/p/plovr/downloads/list
+3. Symlink external/plovr-[code].jar to external/plovr.jar
+4. Create pleft/local_settings.py, based on one of the examples in that dir.
+5. pleft/manage.py init
+6. pleft/manage.py compile
+7. pleft/manage.py mo
+
+Run debug servers:
+pleft/manage.py runplovr
+pleft/manage.py runserver
+
+Note:
+- If you are using MySQL, make sure that the database is created using:
+    CREATE DATABASE name CHARACTER SET utf8
+  Also, for the user system to work, the email address field must be made
+  case sensitive, using:
+    ALTER TABLE plauth_user MODIFY email VARCHAR(255) COLLATE utf8_bin

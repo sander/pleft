@@ -1,0 +1,79 @@
+{% load pleft_tags %}
+{% load i18n %}
+
+<!doctype html>
+<html lang={{ request.LANGUAGE_CODE }}>
+<meta charset=utf=8>
+
+<title>{% block pagetitle %}{{ settings.SITE_NAME }}{% endblock %}</title>
+
+<meta http-equiv=X-UA-Compatible content='IE=7'>
+<meta name=description content='{% blocktrans with settings.SITE_NAME as name %}Planning an appointment? {{ name }} helps you and the invitees to pick the right date and time.{% endblocktrans %}'>
+<meta property='og:title' content='{% blocktrans with settings.SITE_NAME as name %}{{ name }} the appointment planner{% endblocktrans %}'>
+<meta property='og:site_name' content='{{ settings.SITE_NAME }}'>
+<meta property='og:image' content='{{ settings.SCREENSHOT }}'>
+
+{% block meta %}{% endblock %}
+
+<link rel='image_src' href='/static/images/logo.png'>
+<link rel='shortcut icon' href='/favicon.ico'>
+
+<link rel=stylesheet href='/static/style/site.css'>
+<!--[if ie]>
+  <link rel=stylesheet href='/static/style/ie7.css'>
+<![endif]-->
+{% block styles %}{% endblock %}
+
+<script src='/static/scripts/browsercheck.js'></script>
+<script src='{% url django.views.i18n.javascript_catalog %}'></script>
+{% block scripts %}
+  {% insert_script 'main' %}
+{% endblock %}
+
+<body id='{% block pageid %}{% endblock %}'>
+
+<noscript>
+  <strong>{% trans "Your Web browser does not seem to support JavaScript, so unfortunately Pleft will not work properly." %} {% trans "We are sorry for the inconvenience." %}</strong>
+</noscript>
+
+<div id=header>
+  <p id=logo>{{ settings.SITE_NAME }}
+  {% if settings.ALPHA %}<p style='color:#666;font:12px arial;margin-top:-24px;margin-left:80px;'>2 alpha{% endif %}
+</div>
+
+<div id=title>{% block title %}{% endblock %}</div>
+
+{% if user %}
+  <script>
+    window['signedIn'] = true;
+    window['email'] = '{{ user.email|escape }}';
+  </script>
+{% else %}
+  <script>signedIn = false;</script>
+{% endif %}
+
+<div id=content>
+  <div>
+    {% block content %}{% endblock %}
+  </div>
+</div>
+
+<div id=footer>
+  <form id=language-form action='/i18n/setlang/' method=post>
+    <p><a href='/about/'>{% blocktrans with settings.SITE_NAME as name %}About {{ name }}{% endblocktrans %}</a>
+    <p id=languages>
+      {% trans "Language" %}:
+      <select id=language-select name=language>{% for lang in LANGUAGES %}
+        <option value={{ lang.0 }}{% ifequal request.LANGUAGE_CODE lang.0 %} selected{% endifequal %}>{{ lang.1 }}</option>{% endfor %}
+      </select>
+      <input id=language-next name=next type=hidden value='/'>
+  </form>
+</div>
+
+{% block main_script %}
+  <script>pleft.main.init()</script>
+{% endblock %}
+
+{% if not disable_analytics %}
+  {% google_analytics_snippet request %}
+{% endif %}

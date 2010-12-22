@@ -1,0 +1,41 @@
+{% extends 'plapp/base.html' %}
+
+{% load appointment_tags %}
+{% load i18n %}
+
+{% block pagetitle %}{% blocktrans with settings.SITE_NAME as name %}Your appointments on {{ name }}{% endblocktrans %}{% endblock %}
+
+{% block pageid %}appointment-list{% endblock %}
+
+{% block styles %}
+  <link rel=stylesheet href='/static/style/list.css'>
+{% endblock %}
+
+{% block title %}
+  <h1>{% trans "Your appointments" %}</h1>
+{% endblock %}
+
+{% block content %}
+  <table>
+    <thead>
+      <tr>
+        <th id=h-title>{% trans "Title" %}
+        <th id=h-by>{% trans "Started by" %}
+        <th id=h-on>{% trans "Created on" %}
+        <th id=h-archive>
+    <tbody>
+      {% for i in inviteeships %}
+        <tr{% if i.archived %} class=archived{% endif %}>
+          <td class=title><a href='/a#id={{ i.appointment.id }}'>{{ i.appointment.get_title|escape }}</a>
+          <td class=by>{% get_initiator_name i.appointment user %}
+          <td class=on>{{ i.appointment.created|date:"D M d, G:i" }}
+          <td class=archive>
+            {% if i.archived %}
+              <a class=button href='/archive?id={{ i.appointment.id }}&undo=1'>{% trans "Un-archive" %}</a>
+            {% else %}
+              <a class=button href='/archive?id={{ i.appointment.id }}'>{% trans "Archive" %}</a>
+            {% endif %}
+      {% endfor %}
+  </table>
+  <p>{% trans "Archived appointments will not be shown in the My appointments menu." %}
+{% endblock %}

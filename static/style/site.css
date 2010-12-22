@@ -1,0 +1,164 @@
+@import url(goog-menus.css);
+
+html {
+  background: #7ed1ef url(../images/clouds.png);
+}
+body {
+  color: black;
+  margin: 0 0 10px 0;
+  cursor: default;
+}
+body {
+  font-family: georgia, serif;
+  font-size: 15px;
+}
+a {
+  color: black;
+  text-decoration: underline;
+}
+a img {
+  border: 0;
+}
+
+#header {
+  width: 800px;
+  margin: 0 auto;
+  height: 40px;
+}
+#logo {
+  margin: 0;
+  position: relative;
+  top: 12px;
+  width: 74px;
+  height: 41px;
+  text-indent: -99999px;
+}
+#beta {
+  text-transform: uppercase;
+  font: 9px helvetica, arial, sans-serif;
+  color: #fff;
+  position: relative;
+  top: -30px;
+  left: 80px;
+  color: #666;
+}
+
+#title {
+  padding: 5px 0;
+}
+#title h1 {
+  font: bold 16px helvetica, arial, sans-serif;
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding-left: 22px;
+}
+
+#content {
+  border-bottom: 5px solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#title h1, #content > div {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#footer p {
+  padding: 0 10px;
+  display: inline;
+}
+#footer a, #footer span {
+  margin: 0 5px;
+}
+
+.appointment {
+  background: #fff;
+  width: 580px;
+  border: 2px solid;
+  border-bottom-width: 5px;
+  border-top: 0;
+  font-size: 14px;
+}
+.appointment, .appointment input, .appointment textarea {
+  font: 13px Helvetica, Arial, sans-serif;
+}
+.appointment h2 {
+  background: #fff;
+  position: relative;
+  bottom: 5px;
+  text-transform: uppercase;
+  padding: 10px 10px 0 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.bn-notice {
+  background: #fff;
+  border-bottom: 1px solid #8ea3cc;
+  padding: 8px;
+  font: 13px helvetica, arial, sans-serif;
+}
+.bn-notice a {
+  color: #2a48ab;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 2em;
+  white-space: nowrap;
+}
+.bn-notice p {
+  margin: 0;
+}
+.bn-notice img {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+a.bn-close {
+  float: right;
+  margin: 0 0 0 2em;
+}
+
+#ab-bar {
+  border-bottom: 1px solid #aaa;
+  padding: 4px;
+  text-align: right;
+  font: 13px helvetica, arial, sans-serif;
+  background: #fff;
+}
+#ab-bar span, #ab-bar a {
+  margin-left: 16px;
+}
+#ab-bar #ab-email {
+  font-weight: bold;
+}
+#ab-bar a {
+  color: blue;
+  text-decoration: underline;
+}
+.goog-menu {
+  width: 200px;
+}
+.goog-menuitem {
+  padding-right: 4px;
+}
+.goog-menuitem-content {
+  overflow: hidden;
+}
+
+.side-help {
+  float: right;
+  width: 200px;
+  margin-top: -10px;
+}
+.side-help p {
+  margin: 1em 0 0 0;
+}
+.side-help p:first-child {
+  margin-top: 0;
+}

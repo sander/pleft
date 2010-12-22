@@ -1,0 +1,36 @@
+#logo {
+  background: url(../images/logo-grey.png);
+}
+#title {
+  background: #a4a4a4;
+}
+#content {
+  background: #fff;
+  border-bottom-color: #a4a4a4;
+}
+#content > div {
+  width: 600px;
+  padding: 0 180px 0 30px;
+}
+h2 {
+  font-size: 15px;
+  font-weight: normal;
+  font-style: italic;
+  margin: 20px 0 10px -20px;
+}
+#content p {
+  margin: 10px 0;
+}
+
+#translators #logo {
+  background: url(../images/logo-green.png);
+}
+#translators #content {
+  background: #abf39f url(../images/texture/green.png);
+  border-bottom-color: #4abc37;
+}
+#translators #title {
+  background-color: #4abc37;
+}
+
+

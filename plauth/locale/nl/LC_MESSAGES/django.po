@@ -1,0 +1,42 @@
+# Dutch translation of Plauth.
+# Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
+# This file is distributed under the same license as the Pleft package.
+# Sander Dijkhuis <sander.dijkhuis@gmail.com>
+# Kleis Krebbers <kleiskrebbers@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-22 06:23-0600\n"
+"PO-Revision-Date: 2010-09-27 13:31+0100\n"
+"Last-Translator: Sander Dijkhuis <sander@pleft.com>\n"
+"Language-Team: Dutch <info@pleft.com>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Dutch\n"
+
+#: templates/plauth/not-signed-in.html:5
+#: templates/plauth/not-signed-in.html:10
+msgid "Not signed in"
+msgstr "Niet ingelogd"
+
+#: templates/plauth/not-signed-in.html:14
+msgid ""
+"You are not signed in. Please use the URL that was sent to you by email."
+msgstr ""
+"U bent niet ingelogd. Gebruik alstublieft de URL die naar u toe is gestuurd "
+"om weer in te loggen."
+
+#: templates/plauth/wrong-email-pass.html:5
+#: templates/plauth/wrong-email-pass.html:10
+msgid "Failed to sign in"
+msgstr "Inloggen mislukt"
+
+#: templates/plauth/wrong-email-pass.html:14
+msgid "It seems that the URL you used is wrong or stopped working."
+msgstr ""
+"Het lijkt erop dat de URL die u heeft gebruikt, verkeerd is of niet meer "
+"werkt."

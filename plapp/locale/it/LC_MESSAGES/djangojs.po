@@ -1,0 +1,256 @@
+# Italian translation of Plapp's JavaScript files.
+# Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
+# This file is distributed under the same license as the Pleft package.
+# Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
+# Kleis Krebbers <kleiskrebbers@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-22 06:23-0600\n"
+"PO-Revision-Date: 2010-12-19 18:38+0100\n"
+"Last-Translator: Kleis Krebbers <kleiskrebbers@gmail.com>\n"
+"Language-Team: Italian <info@pleft.com>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Italian\n"
+
+#: js/accountbar.js:59
+msgid "Loading…"
+msgstr "Inviare…"
+
+#: js/accountbar.js:78
+msgid "Menu temporarily unavailaible."
+msgstr ""
+
+#: js/accountbar.js:90
+msgid "All appointments"
+msgstr "Tutti gli appuntamenti"
+
+#: js/accountbar.js:92
+msgid "New appointment"
+msgstr "Nuovi appuntamenti"
+
+#: js/accountbar.js:121
+msgid "My appointments"
+msgstr "Miei appuntamenti"
+
+#: js/accountbar.js:124
+msgid "Sign out"
+msgstr "Uscire"
+
+#: js/caleftar.js:49
+msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+msgstr "Gen|Feb|Mar|Apr|Mag|Giu|Lug|Ago|Set|Ott|Nov|Dic"
+
+#: js/caleftar.js:50
+msgid "Mon|Tue|Wed|Thu|Fri|Sat|Sun"
+msgstr "Lun|Mar|Mer|Gio|Ven|Sab|Dom"
+
+#: js/caleftar.js:113
+msgid "Selected times:"
+msgstr "Orari scelti:"
+
+#: js/form.js:47
+msgid "Send invitations"
+msgstr "Invia inviti"
+
+#: js/form.js:78
+msgid "Please enter your email address."
+msgstr "Per favore inserire il tuo indirizzo email."
+
+#: js/form.js:82
+msgid "This email address doesn‘t seem to be valid."
+msgstr "Questo indirizzo email non sembra essere valido."
+
+#: js/form.js:116
+msgid "There seems to be an invalid email address in this list:"
+msgstr "Sembra che ci sia un indirizzo email non valido in questa lista:"
+
+#: js/form.js:138
+msgid "Sorry, I do not fully understand your input yet."
+msgstr "Spiacente, ma non capisco il tuo input."
+
+#: js/form.js:139
+msgid "Please check the form for any warnings."
+msgstr "Per favore controllare la scheda per eventuali avvertimenti."
+
+#: js/form.js:172
+msgid "Creating an appointment…"
+msgstr "Creare un appuntamento…"
+
+#: js/form.js:190 js/form.js.py:218
+msgid "Sorry, something went wrong."
+msgstr "Spiacente, si è verificato un errore."
+
+#: js/form.js:191 js/form.js.py:219
+msgid "This should not happen."
+msgstr "Questo non dovrebbe succedere."
+
+#: js/form.js:193 js/form.js.py:220
+msgid "Click here to go back to the form."
+msgstr "Clicca qui per tornare alla scheda."
+
+#: js/form.js:214
+msgid "Created!"
+msgstr "Creato!"
+
+#: js/form.js:215
+msgid "Please check your email."
+msgstr "Per favore controlla la tua email."
+
+#: js/form.js:234
+msgid "Pleft: the presentation!"
+msgstr ""
+
+#: js/form.js:258
+msgid "Example invitation email"
+msgstr "Esempio di email di invito"
+
+#: js/form.js:269
+msgid "Example appointment overview"
+msgstr "Esempio di panoramica degli appuntamenti"
+
+#: js/overview.js:142
+msgid ""
+"This appointment could not be found or is not meant to be seen by you. We "
+"apologize for the inconvenience."
+msgstr ""
+"Questo appuntamento non può essere trovato o non accessibile per te. Ci "
+"scusiamo per l’incovenienza."
+
+#: js/overview.js:166
+msgid ""
+"Use the Yes/Maybe/No buttons to indicate when you’re available. You can also "
+"enter comments."
+msgstr ""
+"Usa i pulsanti Si/Forse/No per indicare quando sei disponibile. Puoi anche "
+"inserire commenti."
+
+#: js/overview.js:168
+msgid ""
+"View the other participants’ availability by clicking on their names or on "
+"the dates at the left side."
+msgstr ""
+"Per vedere la disponibilità degli altri partecipanti cliccare su i loro nomi "
+"o sulle date al lato sinistro"
+
+#: js/overview.js:170
+msgid "Appointment"
+msgstr "Appuntamento"
+
+#: js/overview.js:172
+msgid "Proposed dates"
+msgstr "Date proposte"
+
+#: js/overview.js:174
+msgid "Participants"
+msgstr "Partecipanti"
+
+#: js/overview.js:177
+msgid "Done"
+msgstr "Fatto"
+
+#: js/overview.js:183
+msgid "Refresh"
+msgstr "Aggiorna"
+
+#: js/overview.js:339
+msgid "Automatically saved on "
+msgstr "Salvato automaticamente su "
+
+#: js/overview.js:346
+msgid "Sorry, your availability could not be saved."
+msgstr ""
+
+#: js/overview.js:346
+msgid "Please try again."
+msgstr ""
+
+#: js/overview.js:374
+msgid "Email addresses of the invitees (only visible to you)"
+msgstr "Indirizzi email degli invitati (visibile solo a te)"
+
+#: js/overview.js:382
+msgid "Invite another participant"
+msgstr "Invita un altro partecipante"
+
+#: js/overview.js:385
+msgid "Name <email@address.example>"
+msgstr "Nome <email@indirizzo.example>"
+
+#: js/overview.js:388 js/overview.js.py:418
+msgid "Send invitation"
+msgstr "Invia invito"
+
+#: js/overview.js:402
+msgid "Please enter an address."
+msgstr "Per favore inserire un indirizzo."
+
+#: js/overview.js:405
+msgid "This email address does not seem to be correct."
+msgstr "Questo indirizzo email non sembra essere corretto"
+
+#: js/overview.js:410 js/overview.js.py:452
+msgid "Sending…"
+msgstr "Inviare…"
+
+#: js/overview.js:428
+msgid "Resend invitations"
+msgstr "Invia inviti "
+
+#: js/overview.js:432
+msgid "Select an invitee"
+msgstr ""
+
+#: js/overview.js:446 js/overview.js.py:457
+msgid "Send invitation again"
+msgstr "Invia invito "
+
+#: js/overview.js:465
+msgid "Propose another date"
+msgstr "Proponi un altra data"
+
+#: js/overview.js:466
+msgid "Date:"
+msgstr "Data:"
+
+#: js/overview.js:467
+msgid "Time:"
+msgstr "Orario:"
+
+#: js/overview.js:496
+msgid "Add date"
+msgstr "Aggiungi data"
+
+#: js/overview.js:505
+msgid "This does not seem to be a valid date."
+msgstr "Questo non sembra essere una data valida."
+
+#: js/overview.js:512
+msgid "This does not seem to be a valid time."
+msgstr "Questo non sembra essere un orario valido."
+
+#: js/overview.js:613
+msgid "Yes"
+msgstr "Si"
+
+#: js/overview.js:614
+msgid "Maybe"
+msgstr "Forse"
+
+#: js/overview.js:615
+msgid "No"
+msgstr "No"
+
+#~ msgid "today"
+#~ msgstr "oggi"
+
+#~ msgid "No times are selected yet."
+#~ msgstr "Nessun orario è stato ancora scelto."
+
+#~ msgid "Add a time:"
+#~ msgstr "aggiungi un orario:"

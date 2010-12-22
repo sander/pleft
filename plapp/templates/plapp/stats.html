@@ -1,0 +1,74 @@
+{% extends 'plapp/base.html' %}
+
+{% block pagetitle %}Pleft stats{% endblock %}
+
+{% block pageid %}stats{% endblock %}
+
+{% block styles %}
+<link rel=stylesheet href='/static/look.css'>
+<!--[if lte ie 8]><link rel=stylesheet href='/static/look-ie8.css'><![endif]-->
+<!--[if lte ie 7]><link rel=stylesheet href='/static/look-ie7.css'><![endif]-->
+<style>
+#content {
+  padding-top: 8px;
+}
+table {
+  margin-top: 2em !important;
+}
+th {
+  text-align: right;
+  width: 15em;
+  padding-right: 2em;
+}
+th.minor {
+  font-weight: normal;
+}
+td {
+  text-align: left;
+}
+th, td {
+  vertical-align: top;
+}
+</style>
+{% endblock %}
+
+{% block title %}
+  <h1>Statistics</h1>
+{% endblock %}
+
+{% block content %}
+<p>Some statistics that cannot be measured by <a
+href='https://www.google.com/analytics/reporting/?id=20525613'>Google
+Analytics</a>. These numbers break when over 1000, so when we reach that kind
+of amounts, this page needs to be reprogrammed.
+
+<table>
+<tr>
+  <th># users
+  <td>{{ n_users }}
+<tr>
+  <th class=minor>ever signed in
+  <td>{{ n_signed_in }}
+<tr>
+  <th># appointments
+  <td>{{ n_appts }}
+<tr>
+  <th class=minor>verified
+  <td>{{ n_verified }}
+<tr>
+  <th class=minor>created in the last 24h 
+  <td>{{ n_appts_today }}
+<tr>
+  <th class=minor>avg appointments / user
+  <td>{{ appts_p_user }}
+<tr>
+  <th class=minor>avg participations / user
+  <td>{{ invts_p_user }}
+<tr>
+  <th class=minor>avg participants / appointment
+  <td>{{ invts_p_appt }}
+<tr>
+  <th class=minor>avg dates / appointment
+  <td>{{ dates_p_appt }}
+</table>
+{% endblock %}

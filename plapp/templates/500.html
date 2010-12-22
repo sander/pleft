@@ -1,0 +1,10 @@
+{% load i18n %}
+<!doctype html>
+<meta charset=utf-8>
+<title>{% trans "Server error" %}</title>
+
+<h1>{% trans "Oops!" %}</h1>
+<p>
+{% blocktrans with settings.SITE_NAME as name %}There seems to be something wrong at {{ name }}.{% endblocktrans %}
+{% blocktrans with "<a href='info@pleft.com'>info@pleft.com</a>" as email %}Don’t panic though: try again or send an email to {{ email }}.{% endblocktrans %}
+{% trans "We are sorry for the inconvenience." %}

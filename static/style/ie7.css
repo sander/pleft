@@ -1,0 +1,81 @@
+#beta {
+  top: -39px;
+}
+
+#title {
+  padding-bottom: 3px;
+}
+#title h1 {
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#666666', Direction=180, Strength=2);
+}
+
+.appointment {
+  margin-top: 10px;
+}
+.side-help {
+  margin-top: 0;
+}
+
+#create dd input[type=text] {
+  margin-top: -38px !important;
+}
+#create textarea {
+  margin-top: -20px;
+}
+#create .dp-picker {
+  margin-top: 0;
+}
+#create #button-block {
+  margin-bottom: -20px;
+}
+#create .te-up {
+  margin-left: 8px;
+  margin-top: -22px;
+}
+#create .te-down {
+  margin-top: -12px;
+  margin-left: 48px;
+}
+#create .dp-enter {
+  position: relative;
+  top: 21px;
+}
+#create .dp-date span {
+  float: left;
+}
+
+#appointment .date-balloon .arrow {
+  margin-left: 147px;
+}
+#appointment input {
+  vertical-align: middle;
+}
+#appointment #time-input {
+  width: 140px;
+  text-align: right;
+}
+#appointment .te-up {
+  margin-left: 0;
+  margin-right: -1px;
+  margin-top: -22px;
+  float: none;
+}
+#appointment .te-down {
+  margin-left: 0;
+  margin-right: -1px;
+  margin-top: 0;
+}
+#appointment #tools .goog-custom-button {
+  margin-top: 0;
+}
+#appointment #refresh {
+  float: none;
+  margin-top: 1px;
+}
+#appointment #status {
+  margin-bottom: 10px;
+}
+#appointment .static.availability .possible {
+  display: inline;
+  margin-right: 1em;
+}

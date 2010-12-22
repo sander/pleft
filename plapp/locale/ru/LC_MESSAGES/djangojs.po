@@ -1,0 +1,260 @@
+# Russian translation of Plapp's JavaScript files.
+# Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
+# This file is distributed under the same license as the Pleft package.
+# Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
+# Kleis Krebbers <kleiskrebbers@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-22 06:23-0600\n"
+"PO-Revision-Date: 2010-12-19 18:41+0100\n"
+"Last-Translator: Kleis Krebbers <kleiskrebbers@gmail.com>\n"
+"Language-Team: Russian <info@pleft.com>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Russian\n"
+
+#: js/accountbar.js:59
+#, fuzzy
+msgid "Loading…"
+msgstr "Отсылаю…"
+
+#: js/accountbar.js:78
+msgid "Menu temporarily unavailaible."
+msgstr ""
+
+#: js/accountbar.js:90
+msgid "All appointments"
+msgstr "Все встречи"
+
+#: js/accountbar.js:92
+msgid "New appointment"
+msgstr "Новая встреча"
+
+#: js/accountbar.js:121
+msgid "My appointments"
+msgstr "Мои встречи"
+
+#: js/accountbar.js:124
+msgid "Sign out"
+msgstr "Выход"
+
+#: js/caleftar.js:49
+msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+msgstr "Янв|Фев|Мар|Апр|Май|Июн|Июл|Авг|Сен|Окт|Ноя|Дек"
+
+#: js/caleftar.js:50
+msgid "Mon|Tue|Wed|Thu|Fri|Sat|Sun"
+msgstr "Пон|Вт|Ср|Чет|Пят|Суб|Вос"
+
+#: js/caleftar.js:113
+msgid "Selected times:"
+msgstr "Выбранные даты:"
+
+#: js/form.js:47
+msgid "Send invitations"
+msgstr "Отошлите приглашения"
+
+#: js/form.js:78
+msgid "Please enter your email address."
+msgstr "Пожалуйста введите ваш емэйл адрес."
+
+#: js/form.js:82
+msgid "This email address doesn‘t seem to be valid."
+msgstr "Этот емэйл адрес не правильный."
+
+#: js/form.js:116
+msgid "There seems to be an invalid email address in this list:"
+msgstr "В этом списке есть неправильный емэйл адрес:"
+
+#: js/form.js:138
+msgid "Sorry, I do not fully understand your input yet."
+msgstr "Извините, я не совсем понимаю ваш ввод."
+
+#: js/form.js:139
+msgid "Please check the form for any warnings."
+msgstr "Пожалуйста проконтролируйте есть ли ошибки в форме."
+
+#: js/form.js:172
+msgid "Creating an appointment…"
+msgstr "Создаю встречу…"
+
+#: js/form.js:190 js/form.js.py:218
+msgid "Sorry, something went wrong."
+msgstr "Извините, что-то произошло неправильно."
+
+#: js/form.js:191 js/form.js.py:219
+msgid "This should not happen."
+msgstr "Это не должно было случиться."
+
+#: js/form.js:193 js/form.js.py:220
+msgid "Click here to go back to the form."
+msgstr "Нажмите здесь чтобы вернуться к форме."
+
+#: js/form.js:214
+msgid "Created!"
+msgstr "Создано!"
+
+#: js/form.js:215
+msgid "Please check your email."
+msgstr "Посмотрите в своём почтовом ящике."
+
+#: js/form.js:234
+msgid "Pleft: the presentation!"
+msgstr "Контакт с Pleft"
+
+#: js/form.js:258
+msgid "Example invitation email"
+msgstr "Пример пригласительного емэйла"
+
+#: js/form.js:269
+msgid "Example appointment overview"
+msgstr "Пример обзора встречь"
+
+#: js/overview.js:142
+msgid ""
+"This appointment could not be found or is not meant to be seen by you. We "
+"apologize for the inconvenience."
+msgstr ""
+"Эта встреча не была найдена или вы не имеете права на просмотр. Мы приносим "
+"вам наши извинения."
+
+#: js/overview.js:166
+msgid ""
+"Use the Yes/Maybe/No buttons to indicate when you’re available. You can also "
+"enter comments."
+msgstr ""
+"Используйте Да/??/Нет кнопки чтобы указать вашу доступность. Вы также можете "
+"ввести свой комментарий."
+
+#: js/overview.js:168
+msgid ""
+"View the other participants’ availability by clicking on their names or on "
+"the dates at the left side."
+msgstr ""
+"Смотрите доступность других приглашённых нажимая на их имена или на даты "
+"слева."
+
+#: js/overview.js:170
+msgid "Appointment"
+msgstr "Встреча"
+
+#: js/overview.js:172
+msgid "Proposed dates"
+msgstr "Предполагаемые даты"
+
+#: js/overview.js:174
+msgid "Participants"
+msgstr "Приглашённые"
+
+#: js/overview.js:177
+msgid "Done"
+msgstr "Готово"
+
+#: js/overview.js:183
+msgid "Refresh"
+msgstr "Обновить"
+
+#: js/overview.js:339
+msgid "Automatically saved on "
+msgstr "Автоматически сохранено в "
+
+#: js/overview.js:346
+msgid "Sorry, your availability could not be saved."
+msgstr ""
+
+#: js/overview.js:346
+#, fuzzy
+msgid "Please try again."
+msgstr "Пожалуйста введите адрес."
+
+#: js/overview.js:374
+msgid "Email addresses of the invitees (only visible to you)"
+msgstr "Имэйл адреса приглашённых (только видны вам)"
+
+#: js/overview.js:382
+msgid "Invite another participant"
+msgstr "Пригласите других"
+
+#: js/overview.js:385
+msgid "Name <email@address.example>"
+msgstr "Имя <email@address.example>"
+
+#: js/overview.js:388 js/overview.js.py:418
+msgid "Send invitation"
+msgstr "Отправить приглашения"
+
+#: js/overview.js:402
+msgid "Please enter an address."
+msgstr "Пожалуйста введите адрес."
+
+#: js/overview.js:405
+msgid "This email address does not seem to be correct."
+msgstr "Кажется этот адрес не правильный."
+
+#: js/overview.js:410 js/overview.js.py:452
+msgid "Sending…"
+msgstr "Отсылаю…"
+
+#: js/overview.js:428
+#, fuzzy
+msgid "Resend invitations"
+msgstr "Отошлите приглашения"
+
+#: js/overview.js:432
+msgid "Select an invitee"
+msgstr ""
+
+#: js/overview.js:446 js/overview.js.py:457
+#, fuzzy
+msgid "Send invitation again"
+msgstr "Отправить приглашения"
+
+#: js/overview.js:465
+msgid "Propose another date"
+msgstr "Предложить другую дату"
+
+#: js/overview.js:466
+msgid "Date:"
+msgstr "Дата:"
+
+#: js/overview.js:467
+msgid "Time:"
+msgstr "Время:"
+
+#: js/overview.js:496
+msgid "Add date"
+msgstr "Добавить дату"
+
+#: js/overview.js:505
+msgid "This does not seem to be a valid date."
+msgstr "Кажется это не правильная дата."
+
+#: js/overview.js:512
+msgid "This does not seem to be a valid time."
+msgstr "Кажется это не правильная время."
+
+#: js/overview.js:613
+msgid "Yes"
+msgstr "Да"
+
+#: js/overview.js:614
+msgid "Maybe"
+msgstr "??"
+
+#: js/overview.js:615
+msgid "No"
+msgstr "Нет"
+
+#~ msgid "today"
+#~ msgstr "⬅"
+
+#~ msgid "No times are selected yet."
+#~ msgstr "Ещё нет выбранных дат."
+
+#~ msgid "Add a time:"
+#~ msgstr "Добавьте время:"
