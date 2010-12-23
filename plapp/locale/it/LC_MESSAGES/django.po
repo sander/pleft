@@ -1,22 +1,21 @@
-# Italian translation of Plapp.
-# Copyright (C) Sander Dijkhuis <sander.dijkhuis@gmail.com>
+# Pleft app server.
+# Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
 # This file is distributed under the same license as the Pleft package.
 # Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
-# Kleis Krebbers <kleiskrebbers@gmail.com>, 2010.
-#
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: Pleft\n"
+"Report-Msgid-Bugs-To: http://code.google.com/p/pleft/issues/list\n"
 "POT-Creation-Date: 2010-12-22 17:05-0600\n"
-"PO-Revision-Date: 2010-12-19 18:37+0100\n"
-"Last-Translator: Kleis Krebbers <kleiskrebbers@gmail.com>\n"
-"Language-Team: Italian <info@pleft.com>\n"
-"Language: it\n"
+"PO-Revision-Date: 2010-12-23 00:25+0000\n"
+"Last-Translator: sander <sander.dijkhuis@gmail.com>\n"
+"Language-Team: Italian <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Italian\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: fields.py:41
 msgid "Please enter a valid list of email addresses."
@@ -52,12 +51,8 @@ msgstr "Siamo spiacenti, ma questa pagina non sembra esistere."
 
 #: templates/404.html:32
 #, python-format
-msgid ""
-"Please check whether the address is correct, or go to %(url)s to find the "
-"right page."
-msgstr ""
-"Si prega di controllare se l’indirizzo sia giusto o andare a %(url)s per "
-"trovare la pagina esatta."
+msgid "Please check whether the address is correct, or go to %(url)s to find the right page."
+msgstr "Si prega di controllare se l’indirizzo sia giusto o andare a %(url)s per trovare la pagina esatta."
 
 #: templates/500.html:4
 msgid "Server error"
@@ -75,8 +70,7 @@ msgstr "Sembra esserci un errore nel sito %(name)s."
 #: templates/500.html:9
 #, python-format
 msgid "Don’t panic though: try again or send an email to %(email)s."
-msgstr ""
-"Tuttavia non si preoccupi: provi di nuovo o invia una email a %(email)s."
+msgstr "Tuttavia non si preoccupi: provi di nuovo o invia una email a %(email)s."
 
 #: templates/500.html:10 templates/base.html:36
 msgid "We are sorry for the inconvenience."
@@ -84,12 +78,8 @@ msgstr "Ci scusiamo per l’incovenienza."
 
 #: templates/base.html:11
 #, python-format
-msgid ""
-"Planning an appointment? %(name)s helps you and the invitees to pick the "
-"right date and time."
-msgstr ""
-"Fissare un appuntamento? %(name)s aiuta te e tuoi invitati a scegliere la "
-"data e l’ora giusta."
+msgid "Planning an appointment? %(name)s helps you and the invitees to pick the right date and time."
+msgstr "Fissare un appuntamento? %(name)s aiuta te e tuoi invitati a scegliere la data e l’ora giusta."
 
 #: templates/base.html:12
 #, python-format
@@ -97,17 +87,13 @@ msgid "%(name)s the appointment planner"
 msgstr ""
 
 #: templates/base.html:36
-msgid ""
-"Your Web browser does not seem to support JavaScript, so unfortunately Pleft "
-"will not work properly."
-msgstr ""
-"Il suo Web browser non sembra supportare JavaScript, di conseguenza Pleft "
-"non funziona correttamente."
+msgid "Your Web browser does not seem to support JavaScript, so unfortunately Pleft will not work properly."
+msgstr "Il suo Web browser non sembra supportare JavaScript, di conseguenza Pleft non funziona correttamente."
 
 #: templates/base.html:63
-#, fuzzy, python-format
+#, python-format
 msgid "About %(name)s"
-msgstr "Caro/a %(name)s,"
+msgstr ""
 
 #: templates/base.html:65
 msgid "Language"
@@ -127,25 +113,17 @@ msgstr ""
 
 #: templates/plapp/home.html:28
 #, python-format
-msgid ""
-"%(name)s helps you to find the right date and time for your appointments."
-msgstr ""
-"%(name)s ti aiuta a trovare la data e l’ora giusta  per il tuo appuntamento."
+msgid "%(name)s helps you to find the right date and time for your appointments."
+msgstr "%(name)s ti aiuta a trovare la data e l’ora giusta  per il tuo appuntamento."
 
 #: templates/plapp/home.html:28
 #, python-format
-msgid ""
-"Propose a few dates and let the invitees tell %(name)s when they’re "
-"available."
-msgstr ""
-"Suggerisci alcune date e lascia che gli invitati dicano a %(name)s quando "
-"sono disponibili."
+msgid "Propose a few dates and let the invitees tell %(name)s when they’re available."
+msgstr "Suggerisci alcune date e lascia che gli invitati dicano a %(name)s quando sono disponibili."
 
 #: templates/plapp/home.html:30
 msgid "The invitees will receive an email that looks like this:"
-msgstr ""
-"Gli invitati riceveranno una <span style='white-space:nowrap'>e-mail</span> "
-"simile a questa:"
+msgstr "Gli invitati riceveranno una <span style='white-space:nowrap'>e-mail</span> simile a questa:"
 
 #: templates/plapp/home.html:32
 msgid "Both you and the invitees will then get a nice overview:"
@@ -218,8 +196,7 @@ msgstr "Archiviare"
 
 #: templates/plapp/list.html:40
 msgid "Archived appointments will not be shown in the My appointments menu."
-msgstr ""
-"Gli appuntamenti archiviati non saranno visualizzati nei Miei appuntamenti."
+msgstr "Gli appuntamenti archiviati non saranno visualizzati nei Miei appuntamenti."
 
 #: templates/plapp/mail/base.txt:5
 #, python-format
@@ -237,49 +214,33 @@ msgstr "The %(name)s Team"
 
 #: templates/plapp/mail/invited.txt:6
 #, python-format
-msgid ""
-"You have been invited by %(initiator)s to tell when you’re available for the "
-"following appointment:"
-msgstr ""
-"Sei stato invitato da %(initiator)s a dire quando sarai disponibile per il "
-"seguente appuntamento:"
+msgid "You have been invited by %(initiator)s to tell when you’re available for the following appointment:"
+msgstr "Sei stato invitato da %(initiator)s a dire quando sarai disponibile per il seguente appuntamento:"
 
 #: templates/plapp/mail/invited.txt:10
 msgid "Click the above link for an overview and to indicate your availability."
-msgstr ""
-"Clicca il link di sopra per una visione e indicare la tua disponibilità."
+msgstr "Clicca il link di sopra per una visione e indicare la tua disponibilità."
 
 #: templates/plapp/mail/overview.txt:6
 msgid "Your email address has been verified."
 msgstr "La tua email è stata verificata."
 
 #: templates/plapp/mail/overview.txt:6
-msgid ""
-"Go to the overview to see which invitees have entered their availability or "
-"modify the appointment:"
-msgstr ""
-"Vai alla panoramica per vedere quali invitati hanno inserito la loro "
-"disponibilità o modificato  l’apputamento:"
+msgid "Go to the overview to see which invitees have entered their availability or modify the appointment:"
+msgstr "Vai alla panoramica per vedere quali invitati hanno inserito la loro disponibilità o modificato  l’apputamento:"
 
 #: templates/plapp/mail/overview.txt:10
 msgid "We have assumed that you are available on all proposed dates."
 msgstr "Presumiamo che tu sia disponibile per tutte le date proposte."
 
 #: templates/plapp/mail/overview.txt:10
-msgid ""
-"You can use the above link to change your own availability or add comments."
-msgstr ""
-"Puoi usare il link di sopra per cambiare la tua disponibilità o aggiungere "
-"commenti."
+msgid "You can use the above link to change your own availability or add comments."
+msgstr "Puoi usare il link di sopra per cambiare la tua disponibilità o aggiungere commenti."
 
 #: templates/plapp/mail/verification.txt:6
 #, python-format
-msgid ""
-"Thank you for using %(site)s to help you pick the right moment for your "
-"appointment."
-msgstr ""
-"Grazie per aver usato %(site)s per scegliere il momento giusto del tuo "
-"appuntamento."
+msgid "Thank you for using %(site)s to help you pick the right moment for your appointment."
+msgstr "Grazie per aver usato %(site)s per scegliere il momento giusto del tuo appuntamento."
 
 #: templates/plapp/mail/verification.txt:6
 msgid "We need to verify your email address."
@@ -291,18 +252,12 @@ msgstr "Per favore clicca il seguente link per continuare:"
 
 #: templates/plapp/mail/verification.txt:10
 #, python-format
-msgid ""
-"After you have done this, a %(site)s email will be sent to the invitees."
-msgstr ""
-"Dopo aver cliccato il link, una email di %(site)s sarà inviato agli invitati."
+msgid "After you have done this, a %(site)s email will be sent to the invitees."
+msgstr "Dopo aver cliccato il link, una email di %(site)s sarà inviato agli invitati."
 
 #: templates/plapp/mail/verification.txt:12
-msgid ""
-"If you did not create this appointment, someone else has entered your email "
-"address."
-msgstr ""
-"Se non è stato creato un appuntamento, allora qualcuno altro ha inserito il "
-"tuo indirizzo email."
+msgid "If you did not create this appointment, someone else has entered your email address."
+msgstr "Se non è stato creato un appuntamento, allora qualcuno altro ha inserito il tuo indirizzo email."
 
 #: templates/plapp/mail/verification.txt:12
 msgid "Please ignore this message."
@@ -310,12 +265,8 @@ msgstr "Si prega dunque di ignorare questo messaggio."
 
 #: templates/plapp/mail/verification.txt:12
 #, python-format
-msgid ""
-"Should this happen more often, please contact %(abuse_address)s and we will "
-"get back to you."
-msgstr ""
-"Se dovesse succedere spesso, per favore contattare (in inglese) "
-"%(abuse_address)s e noi provvederemo a risolvere il problema."
+msgid "Should this happen more often, please contact %(abuse_address)s and we will get back to you."
+msgstr "Se dovesse succedere spesso, per favore contattare (in inglese) %(abuse_address)s e noi provvederemo a risolvere il problema."
 
 #: templatetags/appointment_tags.py:63
 msgid "me"

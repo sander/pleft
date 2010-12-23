@@ -1,27 +1,25 @@
-# French translation of Plapp's JavaScript files.
+# Pleft app client.
 # Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
 # This file is distributed under the same license as the Pleft package.
 # Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
-# Kleis Krebbers <kleiskrebbers@gmail.com>, 2010.
-#
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: Pleft\n"
+"Report-Msgid-Bugs-To: http://code.google.com/p/pleft/issues/list\n"
 "POT-Creation-Date: 2010-12-22 17:05-0600\n"
-"PO-Revision-Date: 2010-12-19 18:34+0100\n"
-"Last-Translator: Kleis Krebbers <kleiskrebbers@gmail.com>\n"
-"Language-Team: French <info@pleft.com>\n"
-"Language: fr\n"
+"PO-Revision-Date: 2010-12-23 00:25+0000\n"
+"Last-Translator: sander <sander.dijkhuis@gmail.com>\n"
+"Language-Team: French <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: French\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 #: js/accountbar.js:59
-#, fuzzy
 msgid "Loading…"
-msgstr "Envoie en cous…"
+msgstr ""
 
 #: js/accountbar.js:78
 msgid "Menu temporarily unavailaible."
@@ -116,28 +114,16 @@ msgid "Example appointment overview"
 msgstr ""
 
 #: js/overview.js:142
-msgid ""
-"This appointment could not be found or is not meant to be seen by you. We "
-"apologize for the inconvenience."
-msgstr ""
-"Ce rendez-vous n’a pas pu être trouver ou vous ne disposez pas des "
-"autorisation pour le consulter. Nous nous excusons pour le gène occasionnée."
+msgid "This appointment could not be found or is not meant to be seen by you. We apologize for the inconvenience."
+msgstr "Ce rendez-vous n’a pas pu être trouver ou vous ne disposez pas des autorisation pour le consulter. Nous nous excusons pour le gène occasionnée."
 
 #: js/overview.js:166
-msgid ""
-"Use the Yes/Maybe/No buttons to indicate when you’re available. You can also "
-"enter comments."
-msgstr ""
-"Utilisez les boutons Oui/??/Non pour indiquer quand vous êtes disponible. "
-"Vous pouvez aussi ajouter des commentaires."
+msgid "Use the Yes/Maybe/No buttons to indicate when you’re available. You can also enter comments."
+msgstr "Utilisez les boutons Oui/??/Non pour indiquer quand vous êtes disponible. Vous pouvez aussi ajouter des commentaires."
 
 #: js/overview.js:168
-msgid ""
-"View the other participants’ availability by clicking on their names or on "
-"the dates at the left side."
-msgstr ""
-"Consultez la disponibilitée des autres participants en cliquant sur leur nom "
-"ou surles date à gauche."
+msgid "View the other participants’ availability by clicking on their names or on the dates at the left side."
+msgstr "Consultez la disponibilitée des autres participants en cliquant sur leur nom ou surles date à gauche."
 
 #: js/overview.js:170
 msgid "Appointment"
@@ -168,9 +154,8 @@ msgid "Sorry, your availability could not be saved."
 msgstr ""
 
 #: js/overview.js:346
-#, fuzzy
 msgid "Please try again."
-msgstr "Veuillez ajouter une adresse. Merci."
+msgstr ""
 
 #: js/overview.js:374
 msgid "Email addresses of the invitees (only visible to you)"
@@ -247,12 +232,3 @@ msgstr "??"
 #: js/overview.js:615
 msgid "No"
 msgstr "Non"
-
-#~ msgid "today"
-#~ msgstr "présent"
-
-#~ msgid "No times are selected yet."
-#~ msgstr "Aucun horaire n’est encore selectioné"
-
-#~ msgid "Add a time:"
-#~ msgstr "Ajouter un horaire:"

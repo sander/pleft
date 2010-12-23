@@ -1,0 +1,30 @@
+[pleft.plapp-js]
+source_file = plapp/locale/en/LC_MESSAGES/djangojs.po
+source_lang = en
+trans.de = plapp/locale/de/LC_MESSAGES/djangojs.po
+trans.fr = plapp/locale/fr/LC_MESSAGES/djangojs.po
+trans.it = plapp/locale/it/LC_MESSAGES/djangojs.po
+trans.nl = plapp/locale/nl/LC_MESSAGES/djangojs.po
+trans.ru = plapp/locale/ru/LC_MESSAGES/djangojs.po
+
+[main]
+host = http://www.transifex.net
+
+[pleft.plauth]
+source_file = plauth/locale/en/LC_MESSAGES/django.po
+source_lang = en
+trans.de = plauth/locale/de/LC_MESSAGES/django.po
+trans.fr = plauth/locale/fr/LC_MESSAGES/django.po
+trans.it = plauth/locale/it/LC_MESSAGES/django.po
+trans.nl = plauth/locale/nl/LC_MESSAGES/django.po
+trans.ru = plauth/locale/ru/LC_MESSAGES/django.po
+
+[pleft.plapp]
+source_file = plapp/locale/en/LC_MESSAGES/django.po
+source_lang = en
+trans.de = plapp/locale/de/LC_MESSAGES/django.po
+trans.fr = plapp/locale/fr/LC_MESSAGES/django.po
+trans.it = plapp/locale/it/LC_MESSAGES/django.po
+trans.nl = plapp/locale/nl/LC_MESSAGES/django.po
+trans.ru = plapp/locale/ru/LC_MESSAGES/django.po
+
