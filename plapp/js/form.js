@@ -236,21 +236,14 @@ pleft.form.init = function() {
         dialog.setButtonSet(null);
         dialog.setTitle(gettext('Pleft: the presentation!'));
         dialog.setContent(
-            '<object id="prezi_ypue_lepzywa" name="prezi_ypue_lepzywa" ' +
-            'classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="550"' +
-            'height="400"><param name="movie" ' +
-            'value="http://prezi.com/bin/preziloader.swf"/><param name=' +
-            '"allowfullscreen" value="true"/><param name="allowscriptaccess" ' +
-            'value="always"/><param name="bgcolor" value="#ffffff"/><param ' +
-            'name="flashvars" value="prezi_id=ypue_lepzywa&lock_to_path=0&' +
-            'color=ffffff&autoplay=autostart&autohide_ctrls=1"/><embed id=' +
-            '"preziEmbed_ypue_lepzywa" name="preziEmbed_ypue_lepzywa" src=' +
-            '"http://prezi.com/bin/preziloader.swf" type=' +
-            '"application/x-shockwave-flash" allowfullscreen="true" ' +
-            'allowscriptaccess="always" width="550" height="400" bgcolor=' +
-            '"#ffffff" flashvars="prezi_id=ypue_lepzywa&lock_to_path=0&color=' +
-            'ffffff&autoplay=autostart&autohide_ctrls=1"></embed></object>');
-        dialog.setVisible(true);
+            '<iframe type="text/html" width=480 height=390 ' +
+            'src="http://www.youtube.com/embed/q6VC-jLOBWI?rel=0&autoplay=1" ' +
+            'frameborder=0></iframe>');
+        dialog.addEventListener(goog.ui.Dialog.EventType.AFTER_HIDE,
+            function() {
+            this.setContent('');
+        });
+       dialog.setVisible(true);
       });
 
   goog.events.listen(goog.dom.getElement('mail-preview'),
