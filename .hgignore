@@ -7,3 +7,4 @@ syntax: glob
 *.cjs
 external/*
 pleft/local_settings.py
+django
