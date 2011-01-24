@@ -29,3 +29,5 @@ DEBUG = False
 SITE_DOMAIN = 'www.pleft.com'
 
 GOOGLE_ANALYTICS = 'UA-211435-26'
+
+MEDIA_ROOT = '/home/sander/hg/pleft/static'
