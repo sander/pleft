@@ -48,6 +48,9 @@ body {
   padding: 5px;
   resize: none;
 }
+#create dd textarea {
+  width: 451px;
+}
 #create dd input[type=text] {
   margin-top: -5px;
 }

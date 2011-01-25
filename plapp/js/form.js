@@ -32,8 +32,8 @@ goog.require('goog.ui.CharCounter');
 goog.require('goog.ui.Component');
 goog.require('goog.ui.CustomButton');
 goog.require('goog.ui.Dialog');
+goog.require('goog.ui.Textarea');
 goog.require('goog.Uri');
-goog.require('pleft.autoexpand');
 goog.require('pleft.caleftar.Caleftar');
 goog.require('pleft.main');
 
@@ -53,8 +53,12 @@ pleft.form.init = function() {
   cal.create(document.getElementById('dates'));
 
   // Make text fields expand automatically.
-  pleft.autoexpand.install(document.getElementById('desc'));
-  pleft.autoexpand.install(document.getElementById('invitees'));
+  var area = new goog.ui.Textarea();
+  area.setMinHeight(50);
+  area.decorate(goog.dom.getElement('desc'));
+  area = new goog.ui.Textarea();
+  area.setMinHeight(50);
+  area.decorate(goog.dom.getElement('invitees'));
 
   // Make text field have limited length.
   var dummy = document.createElement('span');
