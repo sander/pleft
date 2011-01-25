@@ -2,13 +2,13 @@
 # Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
 # This file is distributed under the same license as the Pleft package.
 # Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Pleft\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: http://code.google.com/p/pleft/issues/list\n"
 "POT-Creation-Date: 2011-01-25 21:51+0100\n"
-"PO-Revision-Date: 2010-12-23 00:25+0000\n"
+"PO-Revision-Date: 2011-01-25 21:06+0000\n"
 "Last-Translator: sander <sander.dijkhuis@gmail.com>\n"
 "Language-Team: German <>\n"
 "MIME-Version: 1.0\n"
@@ -42,9 +42,8 @@ msgid "Language"
 msgstr ""
 
 #: .\js\accountbar.js.py:113
-#, fuzzy
 msgid "the appointment planner"
-msgstr "Neuer Termin"
+msgstr ""
 
 #: .\js\accountbar.js.py:123
 msgid "Loading…"
@@ -83,9 +82,8 @@ msgid "No times are selected yet."
 msgstr ""
 
 #: .\js\caleftar.js.py:524
-#, fuzzy
 msgid "Add a time:"
-msgstr "Datum hinzufügen"
+msgstr ""
 
 #: .\js\form.js.py:47
 msgid "Send invitations"
@@ -148,30 +146,16 @@ msgid "Example appointment overview"
 msgstr "Beispiel für die Terminübersicht"
 
 #: .\js\overview.js.py:136
-msgid ""
-"This appointment could not be found or is not meant to be seen by you. We "
-"apologize for the inconvenience."
-msgstr ""
-"Dieser Termin konnte nicht gefunden werden oder Sie verfügen nicht über "
-"ausreichende Berechtigungen. Wir entschuldigen uns für die Unannehmlichkeit."
+msgid "This appointment could not be found or is not meant to be seen by you. We apologize for the inconvenience."
+msgstr "Dieser Termin konnte nicht gefunden werden oder Sie verfügen nicht über ausreichende Berechtigungen. Wir entschuldigen uns für die Unannehmlichkeit."
 
 #: .\js\overview.js.py:160
-#, fuzzy
-msgid ""
-"Use the buttons to indicate when you’re available. You can also enter "
-"comments."
+msgid "Use the buttons to indicate when you’re available. You can also enter comments."
 msgstr ""
-"Benutzen Sie die Ja/??/Nein Schaltflächen um anzugeben wann Sie verfügbar "
-"sind.  Sie können auch Kommentare eintragen."
 
 #: .\js\overview.js.py:162
-#, fuzzy
-msgid ""
-"View the availability of the other participants by clicking on their names "
-"or on the dates at the left side."
+msgid "View the availability of the other participants by clicking on their names or on the dates at the left side."
 msgstr ""
-"Lassen Sie der Verfügbarkeit der anderen Reilnehmer anzeigen, indem Sie auf "
-"deren Namen auf der linken Seite klicken."
 
 #: .\js\overview.js.py:164
 msgid "Appointment"
@@ -268,12 +252,3 @@ msgstr "Das Datum hat nicht das geforderte Format."
 #: .\js\overview.js.py:506
 msgid "This does not seem to be a valid time."
 msgstr "Die Zeit hat nicht das geforderte Format."
-
-#~ msgid "Yes"
-#~ msgstr "Ja"
-
-#~ msgid "Maybe"
-#~ msgstr "??"
-
-#~ msgid "No"
-#~ msgstr "Nein"

@@ -2,13 +2,13 @@
 # Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
 # This file is distributed under the same license as the Pleft package.
 # Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Pleft\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: http://code.google.com/p/pleft/issues/list\n"
 "POT-Creation-Date: 2011-01-25 21:51+0100\n"
-"PO-Revision-Date: 2010-12-23 00:25+0000\n"
+"PO-Revision-Date: 2011-01-25 21:06+0000\n"
 "Last-Translator: sander <sander.dijkhuis@gmail.com>\n"
 "Language-Team: German <>\n"
 "MIME-Version: 1.0\n"
@@ -50,16 +50,12 @@ msgid "We’re sorry, but this page does not seem to exist."
 msgstr "Entschuldigung, diese Seite gibt es nicht."
 
 #: .\templates\404.html.py:15
-#, fuzzy
 msgid "Please check whether the address is correct."
 msgstr ""
-"Bitte überprüfen Sie, ob die Adresse korrekt ist, oder gehe zu %(url)s, um "
-"die richtige Seite zu finden."
 
 #: .\templates\404.html.py:16
-#, fuzzy
 msgid "Back to the appointment form"
-msgstr "%(name)s the appointment planner"
+msgstr ""
 
 #: .\templates\500.html.py:4
 msgid "Server error"
@@ -85,12 +81,8 @@ msgstr "Wir entschuldigen und für die Unanehmlichkleit."
 
 #: .\templates\base.html.py:11
 #, python-format
-msgid ""
-"Planning an appointment? %(name)s helps you and the invitees to pick the "
-"right date and time."
-msgstr ""
-"Sie planen einen Termin? %(name)s hilft Ihnen und den eingeladenen Gästen "
-"das richtige Datum und die richtige Zeit zu finden."
+msgid "Planning an appointment? %(name)s helps you and the invitees to pick the right date and time."
+msgstr "Sie planen einen Termin? %(name)s hilft Ihnen und den eingeladenen Gästen das richtige Datum und die richtige Zeit zu finden."
 
 #: .\templates\base.html.py:12
 #, python-format
@@ -111,20 +103,13 @@ msgstr "Sehen Sie unsere Präsentation!"
 
 #: .\templates\plapp\home.html.py:28
 #, python-format
-msgid ""
-"%(name)s helps you to find the right date and time for your appointments."
-msgstr ""
-"%(name)s hilf Ihnen das richtige Datum und die richtige Zeit für einen "
-"Termin zu finden."
+msgid "%(name)s helps you to find the right date and time for your appointments."
+msgstr "%(name)s hilf Ihnen das richtige Datum und die richtige Zeit für einen Termin zu finden."
 
 #: .\templates\plapp\home.html.py:28
 #, python-format
-msgid ""
-"Propose a few dates and let the invitees tell %(name)s when they’re "
-"available."
-msgstr ""
-"Schlagen Sie ein paar Termine vor und lassen Sie die eingeladenen Teilnehmer "
-"%(name)s eintragen, wann sie verfügbar sind."
+msgid "Propose a few dates and let the invitees tell %(name)s when they’re available."
+msgstr "Schlagen Sie ein paar Termine vor und lassen Sie die eingeladenen Teilnehmer %(name)s eintragen, wann sie verfügbar sind."
 
 #: .\templates\plapp\home.html.py:30
 msgid "The invitees will receive an email that looks like this:"
@@ -152,8 +137,7 @@ msgstr "Teilnehmer:"
 
 #: .\templates\plapp\home.html.py:50
 msgid "Example: john.doe@example.com, Jane Doe &lt;jane@example.net&gt;"
-msgstr ""
-"Beispiel:  max.muster@beispiel.de, Anna Müller &lt;anna@beispiel.net&gt;"
+msgstr "Beispiel:  max.muster@beispiel.de, Anna Müller &lt;anna@beispiel.net&gt;"
 
 #: .\templates\plapp\home.html.py:55
 msgid "Proposed dates:"
@@ -220,52 +204,33 @@ msgstr "The %(name)s Team"
 
 #: .\templates\plapp\mail\invited.txt.py:6
 #, python-format
-msgid ""
-"You have been invited by %(initiator)s to tell when you’re available for the "
-"following appointment:"
-msgstr ""
-"Sie wurden von %(initiator)s eingeladen mitzuteilen, wann Sie für den "
-"folgenden Termin verfügbar sind:"
+msgid "You have been invited by %(initiator)s to tell when you’re available for the following appointment:"
+msgstr "Sie wurden von %(initiator)s eingeladen mitzuteilen, wann Sie für den folgenden Termin verfügbar sind:"
 
 #: .\templates\plapp\mail\invited.txt.py:10
 msgid "Click the above link for an overview and to indicate your availability."
-msgstr ""
-"Klicken Sie oben stehenden Link um eine Übersicht zu sehen und anzugeben "
-"wann Sie verfügbar sind."
+msgstr "Klicken Sie oben stehenden Link um eine Übersicht zu sehen und anzugeben wann Sie verfügbar sind."
 
 #: .\templates\plapp\mail\overview.txt.py:6
 msgid "Your email address has been verified."
 msgstr "Ihre E-Mailadresse wurde bestätigt."
 
 #: .\templates\plapp\mail\overview.txt.py:6
-msgid ""
-"Go to the overview to see which invitees have entered their availability or "
-"modify the appointment:"
-msgstr ""
-"Gehen Sie zur Übersicht um zu sehen welche eingeladenen Teilnehmer Ihre "
-"Verfügbarkeit angegeben haben oder den Termin zu verändern:"
+msgid "Go to the overview to see which invitees have entered their availability or modify the appointment:"
+msgstr "Gehen Sie zur Übersicht um zu sehen welche eingeladenen Teilnehmer Ihre Verfügbarkeit angegeben haben oder den Termin zu verändern:"
 
 #: .\templates\plapp\mail\overview.txt.py:10
 msgid "We have assumed that you are available on all proposed dates."
-msgstr ""
-"Wir haben angenommen, dass Sie an allen vorgeschlagenen Terminen verfügbar "
-"sind."
+msgstr "Wir haben angenommen, dass Sie an allen vorgeschlagenen Terminen verfügbar sind."
 
 #: .\templates\plapp\mail\overview.txt.py:10
-msgid ""
-"You can use the above link to change your own availability or add comments."
-msgstr ""
-"Benutzen Sie den oben stehenden Link um Ihre eigene Verfügbarkleit zu ändern "
-"oder Kommentare einzutragen."
+msgid "You can use the above link to change your own availability or add comments."
+msgstr "Benutzen Sie den oben stehenden Link um Ihre eigene Verfügbarkleit zu ändern oder Kommentare einzutragen."
 
 #: .\templates\plapp\mail\verification.txt.py:6
 #, python-format
-msgid ""
-"Thank you for using %(site)s to help you pick the right moment for your "
-"appointment."
-msgstr ""
-"Vielen Dank, dass Sie %(site)s benutzen um den richtigen Zeitpunkt für Ihren "
-"Termin zu finden."
+msgid "Thank you for using %(site)s to help you pick the right moment for your appointment."
+msgstr "Vielen Dank, dass Sie %(site)s benutzen um den richtigen Zeitpunkt für Ihren Termin zu finden."
 
 #: .\templates\plapp\mail\verification.txt.py:6
 msgid "We need to verify your email address."
@@ -277,19 +242,12 @@ msgstr "Bitte klicken Sie bitte folgenden Link um fortzufahren:"
 
 #: .\templates\plapp\mail\verification.txt.py:10
 #, python-format
-msgid ""
-"After you have done this, a %(site)s email will be sent to the invitees."
-msgstr ""
-"Nachdem Sie den Vorgang erfolgreich abgeschlossen haben, wird %(site)s eine "
-"E-Mail an die eingeladenen Teilnehmer senden."
+msgid "After you have done this, a %(site)s email will be sent to the invitees."
+msgstr "Nachdem Sie den Vorgang erfolgreich abgeschlossen haben, wird %(site)s eine E-Mail an die eingeladenen Teilnehmer senden."
 
 #: .\templates\plapp\mail\verification.txt.py:12
-msgid ""
-"If you did not create this appointment, someone else has entered your email "
-"address."
-msgstr ""
-"Falls Sie diesen Termin nicht erstellt haben, hat eine andere Person Ihre E-"
-"Mail Adresse eingegeben."
+msgid "If you did not create this appointment, someone else has entered your email address."
+msgstr "Falls Sie diesen Termin nicht erstellt haben, hat eine andere Person Ihre E-Mail Adresse eingegeben."
 
 #: .\templates\plapp\mail\verification.txt.py:12
 msgid "Please ignore this message."
@@ -297,20 +255,9 @@ msgstr "Bitte ignorieren Sie in diesem Fall diese E-Mail."
 
 #: .\templates\plapp\mail\verification.txt.py:12
 #, python-format
-msgid ""
-"Should this happen more often, please contact %(abuse_address)s and we will "
-"get back to you."
-msgstr ""
-"Sollte dies öfter vorkommen, kontaktieren Sie bitte %(abuse_address)s. Wir "
-"nehmen dann Kontakt mit Ihnen auf."
+msgid "Should this happen more often, please contact %(abuse_address)s and we will get back to you."
+msgstr "Sollte dies öfter vorkommen, kontaktieren Sie bitte %(abuse_address)s. Wir nehmen dann Kontakt mit Ihnen auf."
 
 #: .\templatetags\appointment_tags.py:63
 msgid "me"
-msgstr ""
-
-#~ msgid ""
-#~ "Your Web browser does not seem to support JavaScript, so unfortunately "
-#~ "Pleft will not work properly."
-#~ msgstr ""
-#~ "Ihr Web-Browser unterstützt leider kein JavaScript. Pleft wird daher "
-#~ "leider nicht korrekt funktionieren."
+msgstr "mir"

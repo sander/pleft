@@ -2,13 +2,13 @@
 # Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
 # This file is distributed under the same license as the Pleft package.
 # Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Pleft\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: http://code.google.com/p/pleft/issues/list\n"
 "POT-Creation-Date: 2011-01-25 21:51+0100\n"
-"PO-Revision-Date: 2010-12-23 00:25+0000\n"
+"PO-Revision-Date: 2011-01-25 21:06+0000\n"
 "Last-Translator: sander <sander.dijkhuis@gmail.com>\n"
 "Language-Team: German <>\n"
 "MIME-Version: 1.0\n"
@@ -23,11 +23,8 @@ msgid "Not signed in"
 msgstr "Nicht angemeldet"
 
 #: .\templates\plauth\not-signed-in.html.py:14
-msgid ""
-"You are not signed in. Please use the URL that was sent to you by email."
-msgstr ""
-"Sie sind nicht angemeldet. Bitte benutzen Sie die Adresse die Ihnen per E-"
-"Mail zugeschickt wurde."
+msgid "You are not signed in. Please use the URL that was sent to you by email."
+msgstr "Sie sind nicht angemeldet. Bitte benutzen Sie die Adresse die Ihnen per E-Mail zugeschickt wurde."
 
 #: .\templates\plauth\wrong-email-pass.html.py:5
 #: .\templates\plauth\wrong-email-pass.html.py:10
