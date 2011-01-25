@@ -29,6 +29,7 @@ class Command(NoArgsCommand):
         for pkg in packages:
             print 'Making MO files for package \'%s\'...' % pkg
 
-            os.system('cd %s && ../pleft/manage.py compilemessages ' % pkg)
+            os.system('cd %s && python ../pleft/manage.py compilemessages '
+                      % pkg)
 
             print 'Done.'
