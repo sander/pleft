@@ -77,31 +77,6 @@ a img {
   display: none;
 }
 
-.bn-notice {
-  background: #fff;
-  border-bottom: 1px solid #8ea3cc;
-  padding: 8px;
-  font-size: 13px;
-}
-.bn-notice a {
-  color: #2a48ab;
-  text-decoration: none;
-  font-weight: bold;
-  margin-right: 2em;
-  white-space: nowrap;
-}
-.bn-notice p {
-  margin: 0;
-}
-.bn-notice img {
-  vertical-align: middle;
-  margin-right: 0.5em;
-}
-a.bn-close {
-  float: right;
-  margin: 0 0 0 2em;
-}
-
 #ab-bar {
   padding: 7px 0 4px 0;
   border-bottom: 4px solid #eee;
@@ -199,4 +174,21 @@ a.bn-close {
   position: fixed;
   bottom: -4px;
   right: 8px;
+}
+
+#browser-notice {
+  background: yellow;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+}
+#browser-notice b {
+  font-weight: bold;
+}
+#browser-notice p {
+  margin: 5px;
+}
+#browser-notice .browsers a {
+  margin-right: 20px;
+  font-size: 26px;
 }

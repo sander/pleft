@@ -41,6 +41,18 @@
 
 <body id='{% block pageid %}{% endblock %}'>
 
+<!--[if ie lt 7]>
+<div id=browser-notice>
+  <p><b>Internet Explorer 6 is not supported by {{ settings.SITE_NAME }}.</b>
+  <p>For the best experience and safer Web browsing, we recommend that you use one of these:
+  <p class=browsers>
+    <a href='http://www.google.com/chrome/' target=_blank>Google Chrome</a>
+    <a href='http://www.mozilla.com/' target=_blank>Mozilla Firefox</a>
+    <a href='http://www.microsoft.com/windows/internet-explorer/' target=_blank>Internet Explorer 8</a>
+    <a href='http://www.apple.com/safari/' target=_blank>Safari</a>
+</div> 
+<![endif]-->
+
 <div id=title>{% block title %}{% endblock %}</div>
 
 <div id=content>
