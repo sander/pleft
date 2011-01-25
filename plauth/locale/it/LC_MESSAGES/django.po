@@ -2,12 +2,12 @@
 # Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
 # This file is distributed under the same license as the Pleft package.
 # Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Pleft\n"
-"Report-Msgid-Bugs-To: http://code.google.com/p/pleft/issues/list\n"
-"POT-Creation-Date: 2010-12-22 17:05-0600\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-25 21:51+0100\n"
 "PO-Revision-Date: 2010-12-23 00:25+0000\n"
 "Last-Translator: sander <sander.dijkhuis@gmail.com>\n"
 "Language-Team: Italian <>\n"
@@ -17,20 +17,23 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: templates/plauth/not-signed-in.html:5
-#: templates/plauth/not-signed-in.html:10
+#: .\templates\plauth\not-signed-in.html.py:5
+#: .\templates\plauth\not-signed-in.html.py:10
 msgid "Not signed in"
 msgstr "Non registrato"
 
-#: templates/plauth/not-signed-in.html:14
-msgid "You are not signed in. Please use the URL that was sent to you by email."
-msgstr "Non sei registrato. Per favore usa il seguente URL che ti è stato inviato per email."
+#: .\templates\plauth\not-signed-in.html.py:14
+msgid ""
+"You are not signed in. Please use the URL that was sent to you by email."
+msgstr ""
+"Non sei registrato. Per favore usa il seguente URL che ti è stato inviato "
+"per email."
 
-#: templates/plauth/wrong-email-pass.html:5
-#: templates/plauth/wrong-email-pass.html:10
+#: .\templates\plauth\wrong-email-pass.html.py:5
+#: .\templates\plauth\wrong-email-pass.html.py:10
 msgid "Failed to sign in"
 msgstr "Registrazione fallita"
 
-#: templates/plauth/wrong-email-pass.html:14
+#: .\templates\plauth\wrong-email-pass.html.py:14
 msgid "It seems that the URL you used is wrong or stopped working."
 msgstr "Sembra che il URL che hai inserito è sbagliato o non funziona più."

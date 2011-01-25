@@ -157,9 +157,9 @@ pleft.overview.Overview.prototype.refresh = function() {
 
 pleft.overview.Overview.prototype.show = function() {
   this.container.innerHTML = '<div class=side-help><p>'
-      + gettext('Use the Yes/Maybe/No buttons to indicate when you’re available. You can also enter comments.')
+      + gettext('Use the buttons to indicate when you’re available. You can also enter comments.')
       + '<p>'
-      + gettext('View the other participants’ availability by clicking on their names or on the dates at the left side.')
+      + gettext('View the availability of the other participants by clicking on their names or on the dates at the left side.')
       + '</div><div class=appointment><div id=refresh></div><h2>'
       + gettext('Appointment')
       + '</h2><div id=app-description></div><table><thead><tr><th>'
@@ -605,9 +605,12 @@ pleft.overview.Availability.prototype.init = function(overview, person, i) {
     var choose = goog.dom.createDom('div', 'choose');
     goog.dom.appendChild(this.element, choose);
 
-    var buttons = [new goog.ui.ToggleButton(gettext('Yes')),
-                   new goog.ui.ToggleButton(gettext('Maybe')),
-                   new goog.ui.ToggleButton(gettext('No'))];
+    var buttons = [new goog.ui.ToggleButton(
+                      goog.dom.createDom('div', 'label-yes')),
+                   new goog.ui.ToggleButton(
+                      goog.dom.createDom('div', 'label-maybe')),
+                   new goog.ui.ToggleButton(
+                      goog.dom.createDom('div', 'label-no'))];
 
     function onChange(event) {
       var m;
@@ -716,29 +719,31 @@ pleft.overview.Availability.prototype.init = function(overview, person, i) {
       switch (a[0]) {
         case -1:
           goog.dom.classes.add(this.element, 'no');
-          possible.innerHTML = gettext('No');
+          possible.innerHTML = '<div class=label-no></div>';
           break;
         case 0:
           goog.dom.classes.add(this.element, 'maybe');
-          possible.innerHTML = gettext('Maybe');
+          possible.innerHTML = '<div class=label-maybe></div>';
           break;
         case 1:
           goog.dom.classes.add(this.element, 'yes');
-          possible.innerHTML = gettext('Yes');
+          possible.innerHTML = '<div class=label-yes></div>';
       }
 
-      var origText = (a[1] || '').replace(/ /g, '\u00a0');
-      var length = 40;
-      if (origText.length < length)
+      var origText = (a[1] || '');//.replace(/ /g, '\u00a0');
+      //var length = 40;
+      //if (origText.length < length)
         comment.innerHTML = origText;
+        /*
       else {
         comment.innerHTML = origText.substring(0, length - 2) + '\u2026';
         comment.title = origText;
         comment.style.cursor = 'help';
       }
+      */
     } else {
       goog.dom.classes.add(this.element, 'maybe');
-      possible.innerHTML = gettext('Maybe');
+      possible.innerHTML = '<div class=label-maybe></div>';
       comment.innerHTML = '[' + gettext('Not filled in yet.') + ']';
     }
   } 

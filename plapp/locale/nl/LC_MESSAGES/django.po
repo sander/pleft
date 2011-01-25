@@ -2,12 +2,12 @@
 # Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
 # This file is distributed under the same license as the Pleft package.
 # Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Pleft\n"
-"Report-Msgid-Bugs-To: http://code.google.com/p/pleft/issues/list\n"
-"POT-Creation-Date: 2010-12-22 17:05-0600\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-25 21:51+0100\n"
 "PO-Revision-Date: 2010-12-23 00:25+0000\n"
 "Last-Translator: sander <sander.dijkhuis@gmail.com>\n"
 "Language-Team: Dutch <>\n"
@@ -17,257 +17,306 @@ msgstr ""
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: fields.py:41
+#: .\fields.py:41
 msgid "Please enter a valid list of email addresses."
 msgstr "Voer alstublieft een geldige lijst met e-mailadressen in."
 
-#: models.py:70 models.py:75
+#: .\models.py:70 .\models.py:75
 msgid "(no title)"
 msgstr "(zonder titel)"
 
-#: models.py:118
+#: .\models.py:118
 msgid "Overview"
 msgstr "Overzicht"
 
-#: models.py:130
+#: .\models.py:130
 msgid "Invitation"
 msgstr "Uitnodiging"
 
-#: views.py:113
+#: .\views.py:113
 msgid "Verification"
 msgstr "Verificatie"
 
-#: views.py:184 templatetags/pleft_tags.py:49
+#: .\views.py:184 .\templatetags\pleft_tags.py:49
 msgid "D M d, G:i"
 msgstr "D d b, G:i"
 
-#: templates/404.html:4 templates/404.html.py:29
+#: .\templates\404.html.py:5 .\templates\404.html.py:10
 msgid "Not found"
 msgstr "Niet gevonden"
 
-#: templates/404.html:31
+#: .\templates\404.html.py:14
 msgid "We’re sorry, but this page does not seem to exist."
-msgstr "Het spijt ons, maar het lijkt erop dat deze pagina niet beschikbaar is."
+msgstr ""
+"Het spijt ons, maar het lijkt erop dat deze pagina niet beschikbaar is."
 
-#: templates/404.html:32
-#, python-format
-msgid "Please check whether the address is correct, or go to %(url)s to find the right page."
-msgstr "Kijk alstublieft of het adres correct is, of ga naar %(url)s om de juiste pagina te vinden."
+#: .\templates\404.html.py:15
+#, fuzzy
+msgid "Please check whether the address is correct."
+msgstr ""
+"Kijk alstublieft of het adres correct is, of ga naar %(url)s om de juiste "
+"pagina te vinden."
 
-#: templates/500.html:4
+#: .\templates\404.html.py:16
+#, fuzzy
+msgid "Back to the appointment form"
+msgstr "%(name)s de afsprakenplanner"
+
+#: .\templates\500.html.py:4
 msgid "Server error"
 msgstr "Serverfout"
 
-#: templates/500.html:6
+#: .\templates\500.html.py:6
 msgid "Oops!"
 msgstr "Oeps!"
 
-#: templates/500.html:8
+#: .\templates\500.html.py:8
 #, python-format
 msgid "There seems to be something wrong at %(name)s."
 msgstr "Er lijkt iets mis te zijn met %(name)s."
 
-#: templates/500.html:9
+#: .\templates\500.html.py:9
 #, python-format
 msgid "Don’t panic though: try again or send an email to %(email)s."
-msgstr "Panikeer echter niet: probeer het alstublieft opnieuw of stuur een e-mail aan %(email)s."
+msgstr ""
+"Panikeer echter niet: probeer het alstublieft opnieuw of stuur een e-mail "
+"aan %(email)s."
 
-#: templates/500.html:10 templates/base.html:36
+#: .\templates\500.html.py:10
 msgid "We are sorry for the inconvenience."
 msgstr "Onze excuses voor het ongemak."
 
-#: templates/base.html:11
+#: .\templates\base.html.py:11
 #, python-format
-msgid "Planning an appointment? %(name)s helps you and the invitees to pick the right date and time."
-msgstr "Een afspraak aan het maken? %(name)s zorgt ervoor dat u en de genodigden de juiste dag en tijd kunnen kiezen."
+msgid ""
+"Planning an appointment? %(name)s helps you and the invitees to pick the "
+"right date and time."
+msgstr ""
+"Een afspraak aan het maken? %(name)s zorgt ervoor dat u en de genodigden de "
+"juiste dag en tijd kunnen kiezen."
 
-#: templates/base.html:12
+#: .\templates\base.html.py:12
 #, python-format
 msgid "%(name)s the appointment planner"
 msgstr "%(name)s de afsprakenplanner"
 
-#: templates/base.html:36
-msgid "Your Web browser does not seem to support JavaScript, so unfortunately Pleft will not work properly."
-msgstr "Uw internetbrowser ondersteunt geen JavaScript. Hierdoor zal Pleft niet optimaal functioneren."
-
-#: templates/base.html:63
-#, python-format
-msgid "About %(name)s"
-msgstr "Over %(name)s"
-
-#: templates/base.html:65
-msgid "Language"
-msgstr "Taal"
-
-#: templates/plapp/appointment.html:22
+#: .\templates\plapp\appointment.html.py:22
 msgid "Appointment overview"
 msgstr "Afsprakenoverzicht"
 
-#: templates/plapp/home.html:21
+#: .\templates\plapp\home.html.py:21
 msgid "Plan an appointment"
 msgstr "Een afspraak plannen"
 
-#: templates/plapp/home.html:27
+#: .\templates\plapp\home.html.py:27
 msgid "Watch our presentation!"
 msgstr "Bekijk onze presentatie!"
 
-#: templates/plapp/home.html:28
+#: .\templates\plapp\home.html.py:28
 #, python-format
-msgid "%(name)s helps you to find the right date and time for your appointments."
-msgstr "%(name)s helpt u bij het vinden van de juiste datum en tijd voor uw afspraken."
+msgid ""
+"%(name)s helps you to find the right date and time for your appointments."
+msgstr ""
+"%(name)s helpt u bij het vinden van de juiste datum en tijd voor uw "
+"afspraken."
 
-#: templates/plapp/home.html:28
+#: .\templates\plapp\home.html.py:28
 #, python-format
-msgid "Propose a few dates and let the invitees tell %(name)s when they’re available."
-msgstr "Stel een aantal data voor en laat de genodigden %(name)s aangeven wanneer ze beschikbaar zijn."
+msgid ""
+"Propose a few dates and let the invitees tell %(name)s when they’re "
+"available."
+msgstr ""
+"Stel een aantal data voor en laat de genodigden %(name)s aangeven wanneer ze "
+"beschikbaar zijn."
 
-#: templates/plapp/home.html:30
+#: .\templates\plapp\home.html.py:30
 msgid "The invitees will receive an email that looks like this:"
 msgstr "De genodigden ontvangen een e-mail die er zo uitziet:"
 
-#: templates/plapp/home.html:32
+#: .\templates\plapp\home.html.py:32
 msgid "Both you and the invitees will then get a nice overview:"
 msgstr "Zowel u als de genodigden krijgen dan een handig overzicht:"
 
-#: templates/plapp/home.html:37
+#: .\templates\plapp\home.html.py:37
 msgid "Appointment"
 msgstr "Afspraak"
 
-#: templates/plapp/home.html:41
+#: .\templates\plapp\home.html.py:41
 msgid "Description:"
 msgstr "Beschrijving:"
 
-#: templates/plapp/home.html:43
+#: .\templates\plapp\home.html.py:43
 msgid "What, where, how?"
 msgstr "Wat, waar, hoe?"
 
-#: templates/plapp/home.html:48
+#: .\templates\plapp\home.html.py:48
 msgid "Invitees:"
 msgstr "Genodigden:"
 
-#: templates/plapp/home.html:50
+#: .\templates\plapp\home.html.py:50
 msgid "Example: john.doe@example.com, Jane Doe &lt;jane@example.net&gt;"
 msgstr "Voorbeeld: john.doe@voorbeeld.com, Jane Doe &lt;jane@voorbeeld.net&gt;"
 
-#: templates/plapp/home.html:55
+#: .\templates\plapp\home.html.py:55
 msgid "Proposed dates:"
 msgstr "Voorgestelde data:"
 
-#: templates/plapp/home.html:64
+#: .\templates\plapp\home.html.py:64
 msgid "Invitees may propose more dates"
 msgstr "Genodigden mogen meer data voorstellen"
 
-#: templates/plapp/home.html:70
+#: .\templates\plapp\home.html.py:70
 msgid "Your name:"
 msgstr "Uw naam:"
 
-#: templates/plapp/home.html:76
+#: .\templates\plapp\home.html.py:76
 msgid "Email address:"
 msgstr "E-mailadres:"
 
-#: templates/plapp/list.html:6
+#: .\templates\plapp\list.html.py:6
 #, python-format
 msgid "Your appointments on %(name)s"
 msgstr "Uw afspraken op %(name)s"
 
-#: templates/plapp/list.html:15
+#: .\templates\plapp\list.html.py:15
 msgid "Your appointments"
 msgstr "Uw afspraken"
 
-#: templates/plapp/list.html:22
+#: .\templates\plapp\list.html.py:22
 msgid "Title"
 msgstr "Titel"
 
-#: templates/plapp/list.html:23
+#: .\templates\plapp\list.html.py:23
 msgid "Started by"
 msgstr "Gestart door"
 
-#: templates/plapp/list.html:24
+#: .\templates\plapp\list.html.py:24
 msgid "Created on"
 msgstr "Gecreëerd op"
 
-#: templates/plapp/list.html:34
+#: .\templates\plapp\list.html.py:34
 msgid "Un-archive"
 msgstr "De-archiveren"
 
-#: templates/plapp/list.html:36
+#: .\templates\plapp\list.html.py:36
 msgid "Archive"
 msgstr "Archiveren"
 
-#: templates/plapp/list.html:40
+#: .\templates\plapp\list.html.py:40
 msgid "Archived appointments will not be shown in the My appointments menu."
-msgstr "Gearchiveerde afspraken worden niet weergegeven in het Mijn afspraken-menu."
+msgstr ""
+"Gearchiveerde afspraken worden niet weergegeven in het Mijn afspraken-menu."
 
-#: templates/plapp/mail/base.txt:5
+#: .\templates\plapp\mail\base.txt.py:5
 #, python-format
 msgid "Dear %(name)s,"
 msgstr "Beste %(name)s,"
 
-#: templates/plapp/mail/base.txt:8
+#: .\templates\plapp\mail\base.txt.py:8
 msgid "Sincerely,"
 msgstr "Met vriendelijke groet,"
 
-#: templates/plapp/mail/base.txt:10
+#: .\templates\plapp\mail\base.txt.py:10
 #, python-format
 msgid "The %(name)s Team"
 msgstr "Het %(name)s-team"
 
-#: templates/plapp/mail/invited.txt:6
+#: .\templates\plapp\mail\invited.txt.py:6
 #, python-format
-msgid "You have been invited by %(initiator)s to tell when you’re available for the following appointment:"
-msgstr "U bent uitgenodigd door %(initiator)s om aan te geven of u beschikbaar bent voor de volgende afspraak:"
+msgid ""
+"You have been invited by %(initiator)s to tell when you’re available for the "
+"following appointment:"
+msgstr ""
+"U bent uitgenodigd door %(initiator)s om aan te geven of u beschikbaar bent "
+"voor de volgende afspraak:"
 
-#: templates/plapp/mail/invited.txt:10
+#: .\templates\plapp\mail\invited.txt.py:10
 msgid "Click the above link for an overview and to indicate your availability."
-msgstr "Klik op bovenstaande link voor het overzicht en om aan te geven wanneer u beschikbaar bent."
+msgstr ""
+"Klik op bovenstaande link voor het overzicht en om aan te geven wanneer u "
+"beschikbaar bent."
 
-#: templates/plapp/mail/overview.txt:6
+#: .\templates\plapp\mail\overview.txt.py:6
 msgid "Your email address has been verified."
 msgstr "Uw e-mailadres is geverifieerd."
 
-#: templates/plapp/mail/overview.txt:6
-msgid "Go to the overview to see which invitees have entered their availability or modify the appointment:"
-msgstr "Ga naar het afsprakenoverzicht om te zien welke genodigden hun beschikbaarheid al hebben opgegeven of om de afspraak aan te passen:"
+#: .\templates\plapp\mail\overview.txt.py:6
+msgid ""
+"Go to the overview to see which invitees have entered their availability or "
+"modify the appointment:"
+msgstr ""
+"Ga naar het afsprakenoverzicht om te zien welke genodigden hun "
+"beschikbaarheid al hebben opgegeven of om de afspraak aan te passen:"
 
-#: templates/plapp/mail/overview.txt:10
+#: .\templates\plapp\mail\overview.txt.py:10
 msgid "We have assumed that you are available on all proposed dates."
 msgstr "We zijn ervan uitgegaan dat u op alle opgegeven data beschikbaar bent."
 
-#: templates/plapp/mail/overview.txt:10
-msgid "You can use the above link to change your own availability or add comments."
-msgstr "Klik op de bovenstaande link om uw eigen beschikbaarheid aan te passen of om commentaar te plaatsen."
+#: .\templates\plapp\mail\overview.txt.py:10
+msgid ""
+"You can use the above link to change your own availability or add comments."
+msgstr ""
+"Klik op de bovenstaande link om uw eigen beschikbaarheid aan te passen of om "
+"commentaar te plaatsen."
 
-#: templates/plapp/mail/verification.txt:6
+#: .\templates\plapp\mail\verification.txt.py:6
 #, python-format
-msgid "Thank you for using %(site)s to help you pick the right moment for your appointment."
-msgstr "Bedankt dat u %(site)s gebruikt om u te helpen het juiste tijdstip te kiezen voor uw afspraak."
+msgid ""
+"Thank you for using %(site)s to help you pick the right moment for your "
+"appointment."
+msgstr ""
+"Bedankt dat u %(site)s gebruikt om u te helpen het juiste tijdstip te kiezen "
+"voor uw afspraak."
 
-#: templates/plapp/mail/verification.txt:6
+#: .\templates\plapp\mail\verification.txt.py:6
 msgid "We need to verify your email address."
 msgstr "Het is nodig om uw e-mailadres te verifiëren."
 
-#: templates/plapp/mail/verification.txt:6
+#: .\templates\plapp\mail\verification.txt.py:6
 msgid "Please click the following link to continue:"
 msgstr "Klik alstublieft op de volgende link om door te gaan:"
 
-#: templates/plapp/mail/verification.txt:10
+#: .\templates\plapp\mail\verification.txt.py:10
 #, python-format
-msgid "After you have done this, a %(site)s email will be sent to the invitees."
-msgstr "Nadat u dit heeft gedaan, stuurt %(site)s een e-mail naar alle genodigden."
+msgid ""
+"After you have done this, a %(site)s email will be sent to the invitees."
+msgstr ""
+"Nadat u dit heeft gedaan, stuurt %(site)s een e-mail naar alle genodigden."
 
-#: templates/plapp/mail/verification.txt:12
-msgid "If you did not create this appointment, someone else has entered your email address."
-msgstr "Als u deze afspraak niet hebt aangemaakt, dan heeft iemand anders uw e-mailadres opgegeven."
+#: .\templates\plapp\mail\verification.txt.py:12
+msgid ""
+"If you did not create this appointment, someone else has entered your email "
+"address."
+msgstr ""
+"Als u deze afspraak niet hebt aangemaakt, dan heeft iemand anders uw e-"
+"mailadres opgegeven."
 
-#: templates/plapp/mail/verification.txt:12
+#: .\templates\plapp\mail\verification.txt.py:12
 msgid "Please ignore this message."
 msgstr "Deze e-mail kan dan als niet verzonden worden beschouwd."
 
-#: templates/plapp/mail/verification.txt:12
+#: .\templates\plapp\mail\verification.txt.py:12
 #, python-format
-msgid "Should this happen more often, please contact %(abuse_address)s and we will get back to you."
-msgstr "Mocht dit vaker gebeuren, dan kunt u een e-mail sturen naar %(abuse_address)s en dan zullen we contact met u opnemen."
+msgid ""
+"Should this happen more often, please contact %(abuse_address)s and we will "
+"get back to you."
+msgstr ""
+"Mocht dit vaker gebeuren, dan kunt u een e-mail sturen naar %(abuse_address)"
+"s en dan zullen we contact met u opnemen."
 
-#: templatetags/appointment_tags.py:63
+#: .\templatetags\appointment_tags.py:63
 msgid "me"
 msgstr "ik"
+
+#~ msgid ""
+#~ "Your Web browser does not seem to support JavaScript, so unfortunately "
+#~ "Pleft will not work properly."
+#~ msgstr ""
+#~ "Uw internetbrowser ondersteunt geen JavaScript. Hierdoor zal Pleft niet "
+#~ "optimaal functioneren."
+
+#~ msgid "About %(name)s"
+#~ msgstr "Over %(name)s"
+
+#~ msgid "Language"
+#~ msgstr "Taal"

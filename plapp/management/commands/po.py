@@ -44,14 +44,14 @@ class Command(NoArgsCommand):
                     + '--ignore=*.pot ' \
                     + '--ignore=*.css '
 
-                os.system('cd %s && ../pleft/manage.py makemessages ' % pkg
+                os.system('cd %s && python ../pleft/manage.py makemessages ' % pkg
                           + '--verbosity=1 '
                           + '--locale=%s ' % locale
                           + ignore
                           + '--domain=django '
                           + '--extension=html,txt,py')
 
-                os.system('cd %s && ../pleft/manage.py makemessages ' % pkg
+                os.system('cd %s && python ../pleft/manage.py makemessages ' % pkg
                           + '--verbosity=1 '
                           + '--locale=%s ' % locale
                           + ignore

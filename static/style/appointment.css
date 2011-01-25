@@ -148,26 +148,39 @@ body {
   background: #fdc4b6;
 }
 .static.availability .possible {
-  width: 50px;
+  width: 29px;
   display: inline-block;
 }
 .static.availability .comment {
   display: inline;
-  font-style: italic;
+  position: absolute;
+  margin-top: 2px;
+  width: 267px;
+  height: 35px;
+  overflow: hidden;
+  font-size: 12px;
+}
+.static.availability .comment:hover {
+  overflow: hidden visible;
+  background: inherit;
+  height: auto;
+  padding: 4px;
+  margin: -2px 0 0 -4px;
 }
 
 .availability.form .choose {
   float: left;
 }
 .availability.form textarea {
-  margin-left: 90px;
-  margin-top: -20px;
   font-size: 13px;
-  width: 192px;
+  width: 200px;
   border: 1px solid #bdbdbd;
   resize: none;
   outline: none;
-  height: 29px;
+  height: 32px;
+  position: absolute;
+  margin: 2px;
+  padding: 0;
 }
 .date-balloon .availability.form textarea {
   width: 183px;
@@ -271,4 +284,17 @@ body {
 
 .modal-dialog {
   font-family: arial, sans-serif;
+}
+
+.label-yes, .label-maybe, .label-no {
+  width: 21px;
+  height: 24px;
+  background: url(../images/options.png) no-repeat;
+  margin: 3px 2px;
+}
+.label-maybe {
+  background-position: -21px 0;
+}
+.label-no {
+  background-position: -42px 0;
 }
