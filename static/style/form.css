@@ -2,12 +2,8 @@
 @import url(goog-custom-button.css);
 @import url(goog-dialog.css);
 
-#logo {
-  background: url(../images/logo-green.png);
-}
-#content {
+body {
   background: #abf39f url(../images/texture/green.png);
-  border-bottom-color: #4abc37;
 }
 #title {
   background-color: #4abc37;
@@ -102,7 +98,6 @@ a.preview {
 }
 
 .modal-dialog {
-  font-family: arial, sans-serif;
 }
 .modal-dialog-buttons {
   display: none;

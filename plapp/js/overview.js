@@ -73,12 +73,6 @@ pleft.overview.init = function() {
       }
     }
     overview = new pleft.overview.Overview(id);
-
-    var languages = goog.dom.getElement('languages');
-    var links = goog.dom.getElementsByTagNameAndClass('a', null, languages);
-    for (i = 0; i < links.length; i++) {
-      links[i].href = '?lang=' + links[i].lang + '#id=' + id;
-    }
   }
 
   var h = new goog.History();

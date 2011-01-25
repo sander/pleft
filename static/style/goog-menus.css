@@ -63,3 +63,16 @@ See the COPYING file for details.
   padding: 0;
   position: relative;
 }
+
+.goog-menu .goog-menuitem-checkbox {
+  background-repeat: no-repeat;
+  height: 16px;
+  left: 6px;
+  position: absolute;
+  right: auto;
+  vertical-align: middle;
+  width: 16px;
+}
+.goog-menu .goog-option-selected .goog-menuitem-checkbox {
+  background: url(../images/menuitem-checked.png);
+}

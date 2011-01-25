@@ -24,7 +24,6 @@
 goog.provide('pleft.main');
 
 goog.require('pleft.accountBar');
-goog.require('pleft.languageSelect');
 
 /**
  * Initializes the page scripts.
@@ -36,7 +35,6 @@ pleft.main.init = function() {
   goog.events.listen(document.body, goog.events.EventType.DRAGSTART, prevent);
 
   pleft.accountBar.init();
-  pleft.languageSelect.init();
 };
 
 goog.exportSymbol('pleft.main.init', pleft.main.init);

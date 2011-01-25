@@ -1,16 +1,15 @@
 @import url(goog-menus.css);
 
-html {
-  background: #7ed1ef url(../images/clouds.png);
-}
 body {
   color: black;
-  margin: 0 0 10px 0;
+  margin: 0;
   cursor: default;
-}
-body {
-  font-family: georgia, serif;
   font-size: 15px;
+}
+* {
+  font-family: 'Droid Sans', Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
 }
 a {
   color: black;
@@ -20,34 +19,12 @@ a img {
   border: 0;
 }
 
-#header {
-  width: 800px;
-  margin: 0 auto;
-  height: 40px;
-}
-#logo {
-  margin: 0;
-  position: relative;
-  top: 12px;
-  width: 74px;
-  height: 41px;
-  text-indent: -99999px;
-}
-#beta {
-  text-transform: uppercase;
-  font: 9px helvetica, arial, sans-serif;
-  color: #fff;
-  position: relative;
-  top: -30px;
-  left: 80px;
-  color: #666;
-}
-
 #title {
   padding: 5px 0;
 }
 #title h1 {
-  font: bold 16px helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
   color: #fff;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
   margin: 0;
@@ -55,7 +32,7 @@ a img {
 }
 
 #content {
-  border-bottom: 5px solid;
+  aborder-bottom: 5px solid;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -81,13 +58,13 @@ a img {
 .appointment {
   background: #fff;
   width: 580px;
-  border: 2px solid;
-  border-bottom-width: 5px;
-  border-top: 0;
+  border: 1px solid;
+  border-top-width: 1px;
+  border-bottom-width: 3px;
   font-size: 14px;
 }
 .appointment, .appointment input, .appointment textarea {
-  font: 13px Helvetica, Arial, sans-serif;
+  font-size: 13px;
 }
 .appointment h2 {
   background: #fff;
@@ -97,13 +74,14 @@ a img {
   padding: 10px 10px 0 10px;
   font-weight: bold;
   font-size: 12px;
+  display: none;
 }
 
 .bn-notice {
   background: #fff;
   border-bottom: 1px solid #8ea3cc;
   padding: 8px;
-  font: 13px helvetica, arial, sans-serif;
+  font-size: 13px;
 }
 .bn-notice a {
   color: #2a48ab;
@@ -125,21 +103,76 @@ a.bn-close {
 }
 
 #ab-bar {
-  border-bottom: 1px solid #aaa;
-  padding: 4px;
-  text-align: right;
-  font: 13px helvetica, arial, sans-serif;
+  padding: 7px 0 4px 0;
+  border-bottom: 4px solid #eee;
+  font-size: 15px;
+  font-size: 13px;
   background: #fff;
 }
+#ab-bar .goog-flat-menu-button {
+  cursor: pointer;
+  margin: -8px 0;
+  padding: 8px 8px 4px 8px;
+  border-bottom: 4px solid transparent;
+  color: #666;
+}
+#ab-bar .goog-flat-menu-button-open {
+  color: #000;
+}
+#ab-bar .goog-flat-menu-button-caption {
+  padding-right: 8px;
+}
+#ab-bar .goog-flat-menu-button-dropdown {
+  height: 15px;
+  width: 7px;
+  background: url(https://ssl.gstatic.com/editor/editortoolbar.png) no-repeat -388px 0;
+  vertical-align: top;
+}
+#ab-bar b {
+  font-weight: bold;
+}
+#ab-header {
+  color: #666;
+}
+#ab-header span {
+  padding: 8px 0 !important;
+}
+#ab-title {
+  font-weight: bold;
+  margin-left: 8px;
+}
 #ab-bar span, #ab-bar a {
-  margin-left: 16px;
+  padding: 4px 8px;
 }
 #ab-bar #ab-email {
   font-weight: bold;
 }
 #ab-bar a {
-  color: blue;
-  text-decoration: underline;
+  text-decoration: none;
+  padding: 8px 8px 4px 8px;
+  color: #4e7bc6;
+  border-bottom: 4px solid transparent;
+}
+#ab-bar a:hover, #ab-bar .goog-flat-menu-button:hover,
+#ab-bar .goog-flat-menu-button-open {
+  border-bottom-color: #bcbdd3;
+  background: #eeeff7;
+}
+#ab-menu, #ab-settings, #ab-main {
+  padding-right: 20px !important;
+}
+#ab-menu::after, #ab-settings::after, #ab-main::after {
+  content: "▾";
+  position: absolute;
+  font-size: 20px;
+  margin-top: -5px;
+}
+#ab-email, #ab-signout {
+  float: right;
+  margin-top: -4px;
+}
+#ab-signout {
+  margin-top: -8px;
 }
 .goog-menu {
   width: 200px;
@@ -154,11 +187,16 @@ a.bn-close {
 .side-help {
   float: right;
   width: 200px;
-  margin-top: -10px;
 }
 .side-help p {
   margin: 1em 0 0 0;
 }
 .side-help p:first-child {
   margin-top: 0;
+}
+
+#clockpuppets {
+  position: fixed;
+  bottom: -4px;
+  right: 8px;
 }

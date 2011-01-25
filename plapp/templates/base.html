@@ -19,10 +19,19 @@
 <link rel='shortcut icon' href='/favicon.ico'>
 
 <link rel=stylesheet href='/static/style/site.css'>
-<!--[if ie]>
-  <link rel=stylesheet href='/static/style/ie7.css'>
-<![endif]-->
+<!--[if ie]><link rel=stylesheet href='/static/style/ie7.css'><![endif]-->
 {% block styles %}{% endblock %}
+
+<script>
+{% if user %}
+  signedIn = true;
+  email = '{{ user.email|escape }}';
+{% else %}
+  signedIn = false;
+{% endif %}
+  languages = {% templatetag openbrace %}{% for lang in LANGUAGES %}{{ lang.0 }}:'{{ lang.1 }}'{% if not forloop.last %},{% endif %}{% endfor %}{% templatetag closebrace %};
+  language = '{{ request.LANGUAGE_CODE }}';
+</script>
 
 <script src='/static/scripts/browsercheck.js'></script>
 <script src='{% url django.views.i18n.javascript_catalog %}'></script>
@@ -32,25 +41,7 @@
 
 <body id='{% block pageid %}{% endblock %}'>
 
-<noscript>
-  <strong>{% trans "Your Web browser does not seem to support JavaScript, so unfortunately Pleft will not work properly." %} {% trans "We are sorry for the inconvenience." %}</strong>
-</noscript>
-
-<div id=header>
-  <p id=logo>{{ settings.SITE_NAME }}
-  {% if settings.ALPHA %}<p style='color:#666;font:12px arial;margin-top:-24px;margin-left:80px;'>2 alpha{% endif %}
-</div>
-
 <div id=title>{% block title %}{% endblock %}</div>
-
-{% if user %}
-  <script>
-    window['signedIn'] = true;
-    window['email'] = '{{ user.email|escape }}';
-  </script>
-{% else %}
-  <script>signedIn = false;</script>
-{% endif %}
 
 <div id=content>
   <div>
@@ -58,17 +49,7 @@
   </div>
 </div>
 
-<div id=footer>
-  <form id=language-form action='/i18n/setlang/' method=post>
-    <p><a href='/about/'>{% blocktrans with settings.SITE_NAME as name %}About {{ name }}{% endblocktrans %}</a>
-    <p id=languages>
-      {% trans "Language" %}:
-      <select id=language-select name=language>{% for lang in LANGUAGES %}
-        <option value={{ lang.0 }}{% ifequal request.LANGUAGE_CODE lang.0 %} selected{% endifequal %}>{{ lang.1 }}</option>{% endfor %}
-      </select>
-      <input id=language-next name=next type=hidden value='/'>
-  </form>
-</div>
+<div id=clockpuppets><img src='/static/images/clockpuppets.png'></div>
 
 {% block main_script %}
   <script>pleft.main.init()</script>

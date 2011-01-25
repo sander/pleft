@@ -4,20 +4,16 @@
 @import url(goog-popup-datepicker.css);
 @import url(timeentry.css);
 
-#logo {
-  background: url(../images/logo-blue.png);
-}
-#content {
+body {
   background: #9fc0e4;
-  border-bottom-color: #3c7fc8;
 }
 #title {
   background: #3c7fc8;
 }
 
 #app-description {
-  margin-top: -10px;
-  padding: 0 10px 10px 10px;
+  padding: 10px;
+  padding-top: 8px;
 }
 #app-description b {
   font-size: 18px;
@@ -61,7 +57,7 @@
 .pleft-selectmenu .goog-menuitem {
   padding-right: 4px;
 }
-.goog-option-selected {
+.pleft-selectmenu .goog-option-selected {
   background: #3c7fc8;
   color: #fff;
 }
@@ -196,7 +192,7 @@
   float: right;
   margin-left: 450px;
   width: 126px;
-  margin-top: -2px;
+  margin-top: 4px;
   position: absolute;
   z-index: 9;
   font-size: 13px;
