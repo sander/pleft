@@ -33,7 +33,6 @@
   language = '{{ request.LANGUAGE_CODE }}';
 </script>
 
-<script src='/static/scripts/browsercheck.js'></script>
 <script src='{% url django.views.i18n.javascript_catalog %}'></script>
 {% block scripts %}
   {% insert_script 'main' %}
