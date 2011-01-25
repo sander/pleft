@@ -22,6 +22,7 @@
 
 goog.provide('pleft.accountBar');
 
+goog.require('goog.debug.ErrorHandler');
 goog.require('goog.dom');
 goog.require('goog.events');
 goog.require('goog.net.XhrIo');
@@ -35,6 +36,7 @@ goog.require('goog.ui.Menu');
 goog.require('goog.ui.MenuButton');
 goog.require('goog.ui.MenuItem');
 goog.require('goog.ui.MenuSeparator');
+goog.require('goog.Uri');
 
 /**
  * Initializes the Account Bar on the current page.
@@ -53,7 +55,8 @@ pleft.accountBar.init = function() {
                   '</span>');
     base.append('</div>');
 
-    bar = goog.dom.htmlToDocumentFragment(base.toString());
+    bar = /** @type {Element } */ (
+        goog.dom.htmlToDocumentFragment(base.toString()));
     document.body.insertBefore(bar, document.body.firstChild);
   })();
 

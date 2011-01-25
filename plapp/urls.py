@@ -42,6 +42,9 @@ urlpatterns = patterns(
     tpl(r'^$', 'plapp/home.html'),
     tpl(r'^legal-notices$', 'legal-notices.html'),
 
+    tpl(r'^404$', '404.html'),
+    tpl(r'^500$', '500.html'),
+
     (r'^signout$', 'plauth.views.sign_out'),
 
     (r'^i18n/', include('django.conf.urls.i18n')),
