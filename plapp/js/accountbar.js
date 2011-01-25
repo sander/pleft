@@ -62,7 +62,20 @@ pleft.accountBar.init = function() {
     var menu = new goog.ui.Menu();
 
     menu.addItem(new goog.ui.MenuItem(gettext('New appointment'), '/'));
+    menu.addItem(new goog.ui.MenuSeparator());
     menu.addItem(new goog.ui.MenuItem(gettext('About Pleft'), '/about'));
+
+    // Add a link to Chrome Web Store if it's installed.
+    if (window['chrome'] && window['chrome']['app']) {
+      if (window['chrome']['app']['isInstalled'])
+        var text = gettext('Write a review');
+      else
+        var text = gettext('Install Pleft in Chrome');
+      menu.addItem(new goog.ui.MenuItem(text,
+          'https://chrome.google.com/webstore/detail/' +
+          'gaplcjgcfjoianghpkfkbgggdidedcid'));
+    }
+
     menu.addItem(new goog.ui.MenuSeparator());
 
     var item = new goog.ui.MenuItem(gettext('Language'));
@@ -81,7 +94,8 @@ pleft.accountBar.init = function() {
     menu.addEventListener(goog.ui.Component.EventType.ACTION, function(e) {
       var value = e.target.getModel();
       if (!value) return;
-      if (value == '/about') window.open(e.target.getModel());
+      if (value == '/about' || value.indexOf('//') != -1)
+        window.open(e.target.getModel());
       else if (value[0] == '/') window.location = e.target.getModel();
       else {
         var request = new goog.net.XhrIo();
