@@ -28,6 +28,7 @@ from django.utils import dateformat
 from django.utils import html
 from django.utils import simplejson
 from django.utils.translation import ugettext as _
+from django.views.decorators.cache import never_cache
 
 import plauth
 import plauth.models
@@ -138,6 +139,7 @@ def appointment(request):
     return render_to_response('plapp/appointment.html',
                               context_instance=RequestContext(request))
 
+@never_cache
 def appointment_data(request):
     appointment, user, invitee = _get_appointment_or_404(request)
 
@@ -215,6 +217,7 @@ def appointment_list(request):
                               { 'inviteeships': inviteeships, },
                               context_instance=RequestContext(request))
 
+@never_cache
 def appointment_menu(request):
     user = plauth.models.User.get_signed_in(request)
     if not user:
