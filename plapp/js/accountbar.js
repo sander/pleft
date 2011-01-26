@@ -99,7 +99,7 @@ pleft.accountBar.init = function() {
       if (!value) return;
       if (value == '/about' || value.indexOf('//') != -1)
         window.open(e.target.getModel());
-      else if (value[0] == '/') window.location = e.target.getModel();
+      else if (value.substr(0, 1) == '/') window.location = e.target.getModel();
       else {
         var request = new goog.net.XhrIo();
         request.addEventListener(goog.net.EventType.COMPLETE, function(e) {
