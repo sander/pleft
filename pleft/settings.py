@@ -45,6 +45,7 @@ LANGUAGES = (
     ('en', 'English'),
     ('fr', 'Français'),
     ('de', 'Deutsch'),
+    ('es_ES', 'Español'),
     ('it', 'Italiano'),
     ('nl', 'Nederlands'),
     ('ru', 'Русский'),

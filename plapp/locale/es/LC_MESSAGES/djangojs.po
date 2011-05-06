@@ -1,0 +1,268 @@
+# Pleft app client.
+# Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
+# This file is distributed under the same license as the Pleft package.
+# Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Pleft\n"
+"Report-Msgid-Bugs-To: http://code.google.com/p/pleft/issues/list\n"
+"POT-Creation-Date: 2011-01-25 21:51+0100\n"
+"PO-Revision-Date: 2011-05-01 21:33+0000\n"
+"Last-Translator: larjona <larjona99@gmail.com>\n"
+"Language-Team: Spanish (Spain) (http://www.transifex.net/projects/p/pleft/team/es_ES/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: .\js\accountbar.js.py:52
+msgid "Sign out"
+msgstr "Salir"
+
+#: .\js\accountbar.js.py:66
+msgid "New appointment"
+msgstr "Nueva cita"
+
+#: .\js\accountbar.js.py:68
+msgid "About Pleft"
+msgstr "Sobre Pleft"
+
+#: .\js\accountbar.js.py:72
+msgid "Write a review"
+msgstr "Escribir una revisión"
+
+#: .\js\accountbar.js.py:74
+msgid "Install Pleft in Chrome"
+msgstr "Instalar Pleft en Chrome"
+
+#: .\js\accountbar.js.py:82
+msgid "Language"
+msgstr "Idioma"
+
+#: .\js\accountbar.js.py:113
+msgid "the appointment planner"
+msgstr "el planificador de citas"
+
+#: .\js\accountbar.js.py:123
+msgid "Loading…"
+msgstr "Cargando..."
+
+#: .\js\accountbar.js.py:127
+msgid "All appointments"
+msgstr "Todas las citas "
+
+#: .\js\accountbar.js.py:144
+msgid "Menu temporarily unavailaible."
+msgstr "Menú no disponible temporalmente."
+
+#: .\js\accountbar.js.py:154
+msgid "My appointments"
+msgstr "Mis citas"
+
+#: .\js\caleftar.js.py:49
+msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+msgstr "ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic"
+
+#: .\js\caleftar.js.py:50
+msgid "Mon|Tue|Wed|Thu|Fri|Sat|Sun"
+msgstr "lun|mar|mié|jue|vie|sáb|dom"
+
+#: .\js\caleftar.js.py:113
+msgid "Selected times:"
+msgstr "Horas seleccionadas:"
+
+#: .\js\caleftar.js.py:327
+msgid "today"
+msgstr "hoy"
+
+#: .\js\caleftar.js.py:407
+msgid "No times are selected yet."
+msgstr "No se han seleccionado horas aún."
+
+#: .\js\caleftar.js.py:524
+msgid "Add a time:"
+msgstr "Agregar una hora:"
+
+#: .\js\form.js.py:47
+msgid "Send invitations"
+msgstr "Enviar invitaciones"
+
+#: .\js\form.js.py:82
+msgid "Please enter your email address."
+msgstr "Por favor introduzca su dirección de correo electrónico."
+
+#: .\js\form.js.py:86
+msgid "This email address doesn‘t seem to be valid."
+msgstr "Esta dirección de correo electrónico parece que no es válida."
+
+#: .\js\form.js.py:120
+msgid "There seems to be an invalid email address in this list:"
+msgstr ""
+"Parece que hay una dirección de correo electrónico no válida en esta lista:"
+
+#: .\js\form.js.py:142
+msgid "Sorry, I do not fully understand your input yet."
+msgstr "Lo siento, aún no entiendo completamente su petición."
+
+#: .\js\form.js.py:143
+msgid "Please check the form for any warnings."
+msgstr "Por favor compruebe si hay alguna advertencia en el formulario."
+
+#: .\js\form.js.py:176
+msgid "Creating an appointment…"
+msgstr "Creando una cita..."
+
+#: .\js\form.js.py:194 .\js\form.js.py:222
+msgid "Sorry, something went wrong."
+msgstr "Lo siento, algo fue mal."
+
+#: .\js\form.js.py:195 .\js\form.js.py:223
+msgid "This should not happen."
+msgstr "Esto no debería pasar."
+
+#: .\js\form.js.py:197 .\js\form.js.py:224
+msgid "Click here to go back to the form."
+msgstr "Haga clic aquí para volver al formulario."
+
+#: .\js\form.js.py:218
+msgid "Created!"
+msgstr "Creada!"
+
+#: .\js\form.js.py:219
+msgid "Please check your email."
+msgstr "Por favor compruebe su correo electrónico."
+
+#: .\js\form.js.py:238
+msgid "Pleft: the presentation!"
+msgstr "Pleft: ¡la presentación!"
+
+#: .\js\form.js.py:255
+msgid "Example invitation email"
+msgstr "Ejemplo de correo electrónico de invitación"
+
+#: .\js\form.js.py:266
+msgid "Example appointment overview"
+msgstr "Ejemplo de vista general de cita"
+
+#: .\js\overview.js.py:136
+msgid ""
+"This appointment could not be found or is not meant to be seen by you. We "
+"apologize for the inconvenience."
+msgstr ""
+"No se encuentra esta cita o parece que no ha sido revisada por usted. "
+"Disculpe las molestias."
+
+#: .\js\overview.js.py:160
+msgid ""
+"Use the buttons to indicate when you’re available. You can also enter "
+"comments."
+msgstr ""
+"Use los botones para indicar cuándo está usted disponible. Puede además "
+"introducir comentarios."
+
+#: .\js\overview.js.py:162
+msgid ""
+"View the availability of the other participants by clicking on their names "
+"or on the dates at the left side."
+msgstr ""
+"Vea la disponibilidad de otros participantes haciendo clic en sus nombres o "
+"en las fechas en el lado izquierdo."
+
+#: .\js\overview.js.py:164
+msgid "Appointment"
+msgstr "Cita"
+
+#: .\js\overview.js.py:166
+msgid "Proposed dates"
+msgstr "Fechas propuestas"
+
+#: .\js\overview.js.py:168
+msgid "Participants"
+msgstr "Participantes"
+
+#: .\js\overview.js.py:171
+msgid "Done"
+msgstr "Hecho"
+
+#: .\js\overview.js.py:177
+msgid "Refresh"
+msgstr "Actualizar"
+
+#: .\js\overview.js.py:333
+msgid "Automatically saved on "
+msgstr "Guardado automáticamente a las  "
+
+#: .\js\overview.js.py:340
+msgid "Sorry, your availability could not be saved."
+msgstr "Lo siento, su disponibilidad no pudo ser guardada."
+
+#: .\js\overview.js.py:340
+msgid "Please try again."
+msgstr "Por favor inténtelo otra vez."
+
+#: .\js\overview.js.py:368
+msgid "Email addresses of the invitees (only visible to you)"
+msgstr ""
+"Direcciones de correo electrónico de los invitados (sólo visible para usted)"
+
+#: .\js\overview.js.py:376
+msgid "Invite another participant"
+msgstr "Invitar a otro participante"
+
+#: .\js\overview.js.py:379
+msgid "Name <email@address.example>"
+msgstr "Nombre <email@address.example>"
+
+#: .\js\overview.js.py:382 .\js\overview.js.py:412
+msgid "Send invitation"
+msgstr "Enviar invitación"
+
+#: .\js\overview.js.py:396
+msgid "Please enter an address."
+msgstr "Por favor introduzca una dirección."
+
+#: .\js\overview.js.py:399
+msgid "This email address does not seem to be correct."
+msgstr "Esta dirección de correo electrónico parece que no es correcta."
+
+#: .\js\overview.js.py:404 .\js\overview.js.py:446
+msgid "Sending…"
+msgstr "Enviando..."
+
+#: .\js\overview.js.py:422
+msgid "Resend invitations"
+msgstr "Reenviar invitaciones"
+
+#: .\js\overview.js.py:426
+msgid "Select an invitee"
+msgstr "Seleccionar un invitado"
+
+#: .\js\overview.js.py:440 .\js\overview.js.py:451
+msgid "Send invitation again"
+msgstr "Enviar invitación otra vez"
+
+#: .\js\overview.js.py:459
+msgid "Propose another date"
+msgstr "Proponer otra fecha"
+
+#: .\js\overview.js.py:460
+msgid "Date:"
+msgstr "Fecha:"
+
+#: .\js\overview.js.py:461
+msgid "Time:"
+msgstr "Hora:"
+
+#: .\js\overview.js.py:490
+msgid "Add date"
+msgstr "Agregar fecha"
+
+#: .\js\overview.js.py:499
+msgid "This does not seem to be a valid date."
+msgstr "Esto no parece una fecha válida."
+
+#: .\js\overview.js.py:506
+msgid "This does not seem to be a valid time."
+msgstr "Esto no parece una hora válida."
