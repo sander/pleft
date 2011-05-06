@@ -12,7 +12,7 @@ Installation:
    http://code.google.com/p/plovr/downloads/list
 3. Symlink external/plovr-[code].jar to external/plovr.jar
 4. Create pleft/local_settings.py, based on one of the examples in that dir.
-5. python pleft/manage.py dbsync
+5. python pleft/manage.py syncdb
 6. python pleft/manage.py compile
 7. If you want to test translations, install gettext and run:
    python pleft/manage.py mo
