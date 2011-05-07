@@ -22,11 +22,15 @@ Run debug servers:
 python pleft/manage.py runplovr
 python pleft/manage.py runserver
 
+There may be a lot of JavaScript warnings that still need to be fixed.
+If you don't want to see them, modify the .json files in plapp/js to set
+"level": "QUIET" and restart the 'runplovr' command.
+
 In debug mode, emails are written to the console instead of being sent.
 If you need a link that was provided this way, note that characters like
 the = are escaped. So you might for example need to replace =3D with =.
 
-If you want to test translations, install gettext and run:
+If you want to test or deploy translations, install gettext and run:
 python pleft/manage.py mo
 
 If you want to deploy Pleft, compile the JavaScript files to .cjs using:
