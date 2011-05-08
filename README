@@ -1,45 +1,6 @@
 This is the Pleft software that runs on www.pleft.com.
-Documentation is limited right now, but please email sander.dijkhuis@gmail.com
-for more details and to get involved.
 
-System requirements:
-- Django 1.2 or higher
-- a Java runtime environment (for plovr)
-- SQLite2 for Python (for local testing)
+To get started, see:
+http://code.google.com/p/pleft/wiki/GettingStarted
 
-Installation:
-1. mkdir external
-2. Download the most recent plovr build to the external/ dir, from:
-   http://code.google.com/p/plovr/downloads/list
-3. Symlink external/plovr-[code].jar to external/plovr.jar
-4. Create pleft/local_settings.py, based on one of the examples in that dir.
-   If you just want to test Pleft, use pleft/local_settings.py.debug and
-   modify the paths (especially DATABASE_NAME and MEDIA_ROOT).
-   The SQLite database will be created automatically.
-5. python pleft/manage.py syncdb
-
-Run debug servers:
-python pleft/manage.py runplovr
-python pleft/manage.py runserver
-
-There may be a lot of JavaScript warnings that still need to be fixed.
-If you don't want to see them, modify the .json files in plapp/js to set
-"level": "QUIET" and restart the 'runplovr' command.
-
-In debug mode, emails are written to the console instead of being sent.
-If you need a link that was provided this way, note that characters like
-the = are escaped. So you might for example need to replace =3D with =.
-
-If you want to test or deploy translations, install gettext and run:
-python pleft/manage.py mo
-
-If you want to deploy Pleft, compile the JavaScript files to .cjs using:
-mkdir static/scripts
-python pleft/manage.py compile
-
-Note:
-- If you are using MySQL, make sure that the database is created using:
-    CREATE DATABASE name CHARACTER SET utf8
-  Also, for the user system to work, the email address field must be made
-  case sensitive, using:
-    ALTER TABLE plauth_user MODIFY email VARCHAR(255) COLLATE utf8_bin
+Contact: sander.dijkhuis@gmail.com
