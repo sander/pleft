@@ -3,6 +3,6 @@
   "paths": ".",
   "inputs": "form.js",
   "mode": "ADVANCED",
-  "level": "VERBOSE",
+  "level": "QUIET",
   "externs": "externs.js"
 }
