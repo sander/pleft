@@ -21,7 +21,7 @@ import email.utils
 from django.core.cache import cache
 from django.core import exceptions
 from django import http
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.template.context import RequestContext
 from django.template.loader import render_to_string
 from django.utils import dateformat
@@ -133,11 +133,9 @@ def appointment(request):
 
     user = plauth.models.User.get_signed_in(request)
     if not user:
-        return render_to_response('plauth/not-signed-in.html',
-                                  context_instance=RequestContext(request))
+        return render(request, 'plauth/not-signed-in.html')
 
-    return render_to_response('plapp/appointment.html',
-                              context_instance=RequestContext(request))
+    return render(request, 'plapp/appointment.html')
 
 @never_cache
 def appointment_data(request):
@@ -213,9 +211,8 @@ def appointment_list(request):
     user = plauth.models.User.get_signed_in(request)
     inviteeships = models.Invitee.objects.all(). \
         filter(user=user, appointment__visible=True).order_by('-id')
-    return render_to_response('plapp/list.html',
-                              { 'inviteeships': inviteeships, },
-                              context_instance=RequestContext(request))
+    return render(request, 'plapp/list.html',
+                  { 'inviteeships': inviteeships, })
 
 @never_cache
 def appointment_menu(request):
