@@ -85,7 +85,8 @@ if (pressButt) {
 @register.simple_tag
 def insert_script(filename):
     if settings.DEBUG:
-        return "<script src='http://localhost:9810/compile?id=%s'></script>" \
-	    % filename
+        domain_name = settings.SITE_DOMAIN.split(':')[0]
+        return "<script src='http://%s:9810/compile?id=%s'></script>" \
+	    % (domain_name, filename)
     else:
         return "<script src='/static/scripts/%s.cjs'></script>" % filename
