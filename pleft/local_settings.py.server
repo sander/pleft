@@ -31,3 +31,8 @@ SITE_DOMAIN = 'www.pleft.com'
 GOOGLE_ANALYTICS = 'UA-211435-26'
 
 MEDIA_ROOT = '/home/sander/hg/pleft/static'
+
+# Make this unique, and don't share it with anybody.
+# Can be creating using the following command:
+# python -c 'import random; print "".join([random.choice("abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)") for i in range(50)])'
+SECRET_KEY = ''

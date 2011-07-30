@@ -56,9 +56,6 @@ LANGUAGES = (
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/static/'
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = 'ci^zu4)gr=&!!%=sl+49(3l)a!t1-+15^(=+t5o5byzar5yten'
-
 ROOT_URLCONF = 'pleft.urls'
 
 ROOT_PATH = os.path.dirname(__file__)
