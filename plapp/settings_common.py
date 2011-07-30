@@ -30,10 +30,11 @@ MIDDLEWARE_CLASSES = (
     'plauth.middleware.SignInMiddleware',
 )
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'plapp.urls'
 
 INSTALLED_APPS = (
     'django.contrib.sessions',
+    'django.contrib.staticfiles',
     'plapp',
     'plauth',
     'plosure',
@@ -43,6 +44,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
     'django.core.context_processors.request',
+    'django.core.context_processors.static',
     'plapp.context_processors.settings',
     'plauth.context_processors.user',
 )

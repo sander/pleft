@@ -15,11 +15,11 @@
 
 {% block meta %}{% endblock %}
 
-<link rel='image_src' href='/static/images/logo.png'>
-<link rel='shortcut icon' href='/favicon.ico'>
+<link rel='image_src' href='{{ STATIC_URL }}images/logo.png'>
+<link rel='shortcut icon' href='{{ STATIC_URL }}images/favicon.ico'>
 
-<link rel=stylesheet href='/static/style/site.css'>
-<!--[if ie]><link rel=stylesheet href='/static/style/ie7.css'><![endif]-->
+<link rel=stylesheet href='{{ STATIC_URL }}style/site.css'>
+<!--[if ie]><link rel=stylesheet href='{{ STATIC_URL }}style/ie7.css'><![endif]-->
 {% block styles %}{% endblock %}
 
 <script>
@@ -60,7 +60,7 @@
   </div>
 </div>
 
-<div id=clockpuppets><img src='/static/images/clockpuppets.png'></div>
+<div id=clockpuppets><img src='{{ STATIC_URL }}images/clockpuppets.png'></div>
 
 {% block main_script %}
   <script>pleft.main.init()</script>

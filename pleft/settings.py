@@ -38,6 +38,8 @@ MANAGERS = ADMINS
 
 SITE_BASE = 'http://' +  SITE_DOMAIN
 
+STATIC_URL = '/static/'
+
 LANGUAGE_CODE = 'en'
 USE_I18N = True
 
@@ -50,13 +52,6 @@ LANGUAGES = (
     ('nl', 'Nederlands'),
     ('ru', 'Русский'),
 )
-
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash if there is a path component (optional in other cases).
-# Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/static/'
-
-ROOT_URLCONF = 'pleft.urls'
 
 ROOT_PATH = os.path.dirname(__file__)
 TEMPLATE_DIRS = (

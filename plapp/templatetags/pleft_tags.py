@@ -89,4 +89,5 @@ def insert_script(filename):
         return "<script src='http://%s:9810/compile?id=%s'></script>" \
 	    % (domain_name, filename)
     else:
-        return "<script src='/static/scripts/%s.cjs'></script>" % filename
+        return "<script src='%sscripts/%s.cjs'></script>" \
+        % (settings.STATIC_URL, filename)
