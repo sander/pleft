@@ -30,8 +30,6 @@ EMAIL_HOST = 'localhost'
 EMAIL_PORT = 8025
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-MEDIA_ROOT = '/home/sander/hg/pleft/static'
-
 # Make this unique, and don't share it with anybody.
 # Can be creating using the following command:
 # python -c 'import random; print "".join([random.choice("abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)") for i in range(50)])'
