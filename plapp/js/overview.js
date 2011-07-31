@@ -128,8 +128,6 @@ pleft.overview.Overview.prototype.load = function() {
         me.data = event.target.getResponseJson();
         me.dataText = event.target.getResponseText();
         me.show();
-      } else {
-        me.refreshButton.setEnabled(true);
       }
     } else {
       me.container.innerHTML = '<p>'
@@ -145,10 +143,7 @@ pleft.overview.Overview.prototype.me = -1;
 
 pleft.overview.Overview.prototype.dateKeys = null;
 
-pleft.overview.Overview.prototype.refreshButton = null;
-
 pleft.overview.Overview.prototype.refresh = function() {
-  this.refreshButton.setEnabled(false);
   if (this.saveTimeoutId) {
     this.save(false);
   }
@@ -173,11 +168,6 @@ pleft.overview.Overview.prototype.show = function() {
   this.saveButton.setEnabled(false);
   goog.events.listen(this.saveButton, goog.ui.Component.EventType.ACTION,
       this.save, false, this);
-
-  this.refreshButton = new goog.ui.CustomButton(gettext('Refresh'));
-  this.refreshButton.render(goog.dom.getElement('refresh'));
-  goog.events.listen(this.refreshButton, goog.ui.Component.EventType.ACTION,
-      this.refresh, false, this);
 
   goog.dom.getElement('app-description').innerHTML = this.data['meta']['description'];
 

@@ -199,16 +199,6 @@ body {
   font-size: 13px;
 }
 
-#refresh {
-  float: right;
-  margin-left: 450px;
-  width: 126px;
-  margin-top: 4px;
-  position: absolute;
-  z-index: 9;
-  font-size: 13px;
-  text-align: right;
-}
 .goog-menu {
   z-index: 10;
 }
