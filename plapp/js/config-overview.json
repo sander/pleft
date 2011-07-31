@@ -3,6 +3,6 @@
   "paths": ".",
   "inputs": "overview.js",
   "mode": "ADVANCED",
-  "level": "QUIET",
+  "level": "DEFAULT",
   "externs": "externs.js"
 }
