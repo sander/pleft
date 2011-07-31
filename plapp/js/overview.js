@@ -474,6 +474,7 @@ pleft.overview.Overview.prototype.addProposeTool = function() {
   datePicker.getDatePicker().setShowToday(false);
   datePicker.getDatePicker().setUseNarrowWeekdayNames(false);
   datePicker.getDatePicker().setUseSimpleNavigationMenu(true);
+  datePicker.getDatePicker().setFirstWeekday(0);
 
   var settings = {
     show24Hours: true 
