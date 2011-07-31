@@ -554,11 +554,11 @@ pleft.ui.TimeEntry.prototype.setTime = function(time) {
   this.showTime();
 };
 
-/*
+/**
  * A time may be specified as an exact value or a relative one.
- * @ param  setting  (Date) an actual time or
- *                   (number) offset in seconds from now or
- *                   (string) unites and periods of offsets from now.
+ * @param  setting  (Date) an actual time or
+ *                  (number) offset in seconds from now or
+ *                  (string) unites and periods of offsets from now.
  */
 pleft.ui.TimeEntry.prototype.determineTime = function(setting) {
   var offsetNumeric = function(offset) { // E.g. +300, -2
