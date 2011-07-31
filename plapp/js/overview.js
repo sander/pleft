@@ -434,11 +434,14 @@ pleft.overview.Overview.prototype.addResendTool = function() {
     select.addItem(new goog.ui.Option(invitee.name, invitee.id));
   }
 
+  var sendAgainText = gettext('Send invitation again');
+
   goog.events.listen(select, goog.ui.Component.EventType.ACTION, function() {
+    button.setContent(sendAgainText);
     button.setEnabled(true);
   });
 
-  var button = new goog.ui.CustomButton(gettext('Send invitation again'));
+  var button = new goog.ui.CustomButton(sendAgainText);
   button.setEnabled(false);
   button.render(goog.dom.getElement('resend-form'));
   var me = this;
@@ -449,7 +452,7 @@ pleft.overview.Overview.prototype.addResendTool = function() {
     var params = 'id=' + me.id + '&invitee=' + select.getSelectedItem().getValue();
 
     function complete() {
-      button.setContent(gettext('Send invitation again'));
+      button.setContent(gettext('Invitation was sent again'));
     }
     goog.net.XhrIo.send('/resend-invitation', complete, 'POST', params);
   });
