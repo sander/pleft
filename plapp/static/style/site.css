@@ -86,16 +86,17 @@ a img {
   padding: 0;
   border-bottom: 4px solid #eee;
   background: #fff;
-  height: 27px;
+  height: 28px;
 }
 .menu-bar * {
   font-size: 13px;
 }
 .menu-bar .account > *, .menu-bar .menu h1 {
   display: block;
-  padding: 4px 8px;
   padding: 8px 8px 4px 8px;
   border-bottom: 4px solid transparent;
+  margin: 0;
+  line-height: 16px;
 }
 .menu-bar .account a:hover,
 .menu-bar .menu h1:hover,
@@ -106,7 +107,7 @@ a img {
 
 .menu-bar .menu {
   float: left;
-  margin-top: -8px;
+  height: 32px;
 }
 .menu-bar .menu h1 {
   cursor: pointer;
@@ -130,7 +131,7 @@ a img {
   position: absolute;
   background: #fff;
   border: 1px solid #bcbdd3;
-  margin-top: -9px;
+  margin-top: 0;
   width: 200px;
   list-style: none;
   padding: 0;
