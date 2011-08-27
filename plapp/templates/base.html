@@ -22,20 +22,10 @@
 <!--[if ie]><link rel=stylesheet href='{{ STATIC_URL }}style/ie7.css'><![endif]-->
 {% block styles %}{% endblock %}
 
-<script>
-{% if user %}
-  signedIn = true;
-  email = '{{ user.email|escape }}';
-{% else %}
-  signedIn = false;
-{% endif %}
-  languages = {% templatetag openbrace %}{% for lang in LANGUAGES %}{{ lang.0 }}:'{{ lang.1 }}'{% if not forloop.last %},{% endif %}{% endfor %}{% templatetag closebrace %};
-  language = '{{ request.LANGUAGE_CODE }}';
-</script>
-
 <script src='{% url django.views.i18n.javascript_catalog %}?lang={{ request.LANGUAGE_CODE }}'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+<script src='{{ STATIC_URL }}script/menubar.js'></script>
 {% block scripts %}
-  {% insert_script 'main' %}
 {% endblock %}
 
 <body id='{% block pageid %}{% endblock %}'>
@@ -52,6 +42,32 @@
 </div> 
 <![endif]-->
 
+<div class=menu-bar>
+  {% if user %}<div class=account>
+    <span class=email>{{ user.email }}</span>
+    <a class=sign-out href=/signout>{% trans "Sign out" %}</a>
+  </div>
+  {% endif %}<div class=menu>
+    <h1><b>{{ settings.SITE_NAME }}</b> {% trans "the appointment planner" %}</h1>
+    <ul>
+      <li><a href=/>{% trans "New appointment" %}</a>
+      <li><a href=/about class=external>{% blocktrans with site=settings.SITE_NAME %}About {{ site }}{% endblocktrans %}</a>
+      <li class=chrome-only><a href=https://chrome.google.com/webstore/detail/gaplcjgcfjoianghpkfkbgggdidedcid class='external app-link'>{% blocktrans with site=settings.SITE_NAME %}Install {{ site }} in Chrome{% endblocktrans %}</a>
+      <li class=separator>
+      <li><h2>{% trans "Language" %}{% for language in LANGUAGES %}</h2>
+      <li class='radio{% if language.0 == request.LANGUAGE_CODE %} checked{% endif %}'><a data-language={{ language.0 }}>{{ language.1 }}</a>{% endfor %}
+    </ul>
+  </div>{% if user %}
+  <div class=menu>
+    <h1>{% trans "My appointments" %}</h1>{% get_appointments %}
+    <ul>{% for appointment in appointments %}
+      <li class=radio><a href=/a#id={{ appointment.id }}>{{ appointment.get_title }}</a>{% endfor %}
+      <li class=separator>
+      <li><a href=/appointments>{% trans "All appointments" %}</a>
+    </ul>
+  </div>{% endif %}
+</div>
+
 <div id=title>{% block title %}{% endblock %}</div>
 
 <div id=content>
@@ -63,7 +79,6 @@
 <div id=clockpuppets><img src='{{ STATIC_URL }}images/clockpuppets.png'></div>
 
 {% block main_script %}
-  <script>pleft.main.init()</script>
 {% endblock %}
 
 {% if not disable_analytics %}

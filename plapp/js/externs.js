@@ -5,3 +5,4 @@ function ngettext(singular, plural, count) {}
 function gettext_noop(msgid) {}
 function interpolate(fmt, obj, named) {}
 var _gaq = [];
+var $ = {};

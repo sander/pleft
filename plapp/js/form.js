@@ -35,14 +35,11 @@ goog.require('goog.ui.Dialog');
 goog.require('goog.ui.Textarea');
 goog.require('goog.Uri');
 goog.require('pleft.caleftar.Caleftar');
-goog.require('pleft.main');
 
 /**
  * Initializes the form. Requires a matching DOM representation being present.
  */
 pleft.form.init = function() {
-  pleft.main.init();
-
   // Create the button.
   var button = new goog.ui.CustomButton(gettext('Send invitations'));
   button.addClassName('default-button');

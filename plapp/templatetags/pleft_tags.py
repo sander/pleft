@@ -91,3 +91,10 @@ def insert_script(filename):
     else:
         return "<script src='%sscripts/%s.cjs'></script>" \
         % (settings.STATIC_URL, filename)
+
+@register.simple_tag(takes_context=True)
+def get_appointments(context):
+    user = context.get('user')
+    appointments = plapp.models.Appointment.get_unarchived_for_user(user)
+    context.appointments = appointments
+    return ''

@@ -8,6 +8,9 @@ body {
   cursor: default;
   font-size: 15px;
 }
+body.progress {
+  cursor: wait;
+}
 * {
   font-family: 'Droid Sans', Arial, sans-serif;
   font-family: Helvetica, Arial, sans-serif;
@@ -79,86 +82,101 @@ a img {
   display: none;
 }
 
-#ab-bar {
-  padding: 7px 0 4px 0;
+.menu-bar {
+  padding: 0;
   border-bottom: 4px solid #eee;
-  font-size: 15px;
-  font-size: 13px;
   background: #fff;
+  height: 27px;
 }
-#ab-bar .goog-flat-menu-button {
-  cursor: pointer;
-  margin: -8px 0;
-  padding: 8px 8px 4px 8px;
-  border-bottom: 4px solid transparent;
-  color: #666;
+.menu-bar * {
+  font-size: 13px;
 }
-#ab-bar .goog-flat-menu-button-open {
-  color: #000;
-}
-#ab-bar .goog-flat-menu-button-caption {
-  padding-right: 8px;
-}
-#ab-bar .goog-flat-menu-button-dropdown {
-  height: 15px;
-  width: 7px;
-  background: url(https://ssl.gstatic.com/editor/editortoolbar.png) no-repeat -388px 0;
-  vertical-align: top;
-}
-#ab-bar b {
-  font-weight: bold;
-}
-#ab-header {
-  color: #666;
-}
-#ab-header span {
-  padding: 8px 0 !important;
-}
-#ab-title {
-  font-weight: bold;
-  margin-left: 8px;
-}
-#ab-bar span, #ab-bar a {
+.menu-bar .account > *, .menu-bar .menu h1 {
+  display: block;
   padding: 4px 8px;
-}
-#ab-bar #ab-email {
-  font-weight: bold;
-}
-#ab-bar a {
-  text-decoration: none;
   padding: 8px 8px 4px 8px;
-  color: #4e7bc6;
   border-bottom: 4px solid transparent;
 }
-#ab-bar a:hover, #ab-bar .goog-flat-menu-button:hover,
-#ab-bar .goog-flat-menu-button-open {
+.menu-bar .account a:hover,
+.menu-bar .menu h1:hover,
+.menu-bar .menu.open h1 {
   border-bottom-color: #bcbdd3;
   background: #eeeff7;
 }
-#ab-menu, #ab-settings, #ab-main {
-  padding-right: 20px !important;
-}
-#ab-menu::after, #ab-settings::after, #ab-main::after {
-  content: "▾";
-  position: absolute;
-  font-size: 20px;
-  margin-top: -5px;
-}
-#ab-email, #ab-signout {
-  float: right;
-  margin-top: -4px;
-}
-#ab-signout {
+
+.menu-bar .menu {
+  float: left;
   margin-top: -8px;
 }
-.goog-menu {
+.menu-bar .menu h1 {
+  cursor: pointer;
+  color: #666;
+  padding-right: 20px;
+}
+.menu-bar .menu h1::after {
+  content: "▾";
+  font-size: 12px;
+  position: absolute;
+  margin-left: 6px;
+}
+.menu-bar .menu h1 b {
+  font-weight: bold;
+}
+.menu-bar .menu ul {
+  display: none;
+}
+.menu-bar .menu.open ul {
+  display: block;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #bcbdd3;
+  margin-top: -9px;
   width: 200px;
+  list-style: none;
+  padding: 0;
 }
-.goog-menuitem {
-  padding-right: 4px;
-}
-.goog-menuitem-content {
+.menu-bar .menu.open ul li {
   overflow: hidden;
+}
+.menu-bar .menu.open ul li.separator {
+  height: 8px;
+}
+.menu-bar .menu.open ul li > * {
+  padding: 4px 8px;
+  display: block;
+}
+.menu-bar .menu.open ul li > h2 {
+  margin: 0;
+  color: #666;
+}
+.menu-bar .menu.open ul li > a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.menu-bar .menu.open ul li > a:hover {
+  background: #eeeff7;
+}
+.menu-bar .menu.open ul li.radio > * {
+  padding-left: 26px;
+}
+.menu-bar .menu.open ul li.radio.checked > *::before {
+  content: '•';
+  position: absolute;
+  margin-left: -12px;
+}
+
+.menu-bar .account {
+  float: right;
+}
+.menu-bar .account * {
+  float: left;
+}
+.menu-bar .account a {
+  color: #4e7bc6;
+  text-decoration: none;
+}
+.menu-bar .account .email {
+  font-weight: bold;
 }
 
 .side-help {

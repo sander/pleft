@@ -48,13 +48,10 @@ goog.require('goog.ui.ToggleButton');
 goog.require('goog.net.XmlHttp');
 goog.require('goog.net.XhrIo');
 goog.require('goog.Uri');
-goog.require('pleft.main');
 goog.require('pleft.ui.SelectMenu');
 goog.require('pleft.ui.TimeEntry');
 
 pleft.overview.init = function() {
-  pleft.main.init();
-
   var overview;
 
   function idChange() {
