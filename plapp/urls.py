@@ -27,6 +27,7 @@ js_info_dict = {
 
 urlpatterns = patterns(
     '',
+    (r'^$', 'plapp.views.form'),
     (r'^a$', 'plapp.views.appointment'),
     (r'^data$', 'plapp.views.appointment_data'),
     (r'^appointments$', 'plapp.views.appointment_list'),
@@ -39,7 +40,6 @@ urlpatterns = patterns(
     (r'^add-invitees$', 'plapp.views.add_invitees'),
     (r'^add-dates$', 'plapp.views.add_dates'),
 
-    tpl(r'^$', 'plapp/home.html'),
     tpl(r'^legal-notices$', 'legal-notices.html'),
 
     tpl(r'^404$', '404.html'),

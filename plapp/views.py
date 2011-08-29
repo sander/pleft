@@ -60,6 +60,12 @@ def _get_appointment_or_404(request):
 
     return (appointment, user, invitee)
 
+def form(request):
+    form = forms.AppointmentForm()
+    user = plauth.models.User.get_signed_in(request)
+    if user: form.fields['email'].initial = user.email
+    return render(request, 'plapp/home.html', { 'form': form })
+
 def create(request):
     form = forms.AppointmentForm(request.POST)
     if form.is_valid():

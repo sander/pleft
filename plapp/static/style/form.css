@@ -1,6 +1,3 @@
-@import url(caleftar.css);
-@import url(goog-dialog.css);
-
 body {
   background: #abf39f url(../images/texture/green.png);
 }
@@ -18,12 +15,55 @@ body {
   cursor: pointer;
 }
 
-.preview img {
+.in-popup img {
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid #95be7c;
   padding: 0;
+}
+.side-help .popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding-top: 48px;
+  z-index: 99;
+}
+.side-help .popup.open {
+  display: block;
+}
+.side-help .popup > * {
+  width: 860px;
+  margin: 0 auto !important;
+  background: #222;
+  color: #fff;
+}
+.side-help .popup > p {
+  background: transparent;
+  height: 0;
+}
+.side-help .popup > p a {
+  margin-top: -16px;
+  margin-right: -8px;
+  padding: 8px;
+  float: right;
+  color: #fff;
+  text-decoration: none;
+  font-size: 36px;
+  cursor: pointer;
+}
+.side-help .popup > h1 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+}
+.side-help .popup > div {
+  text-align: center;
+  padding: 32px 8px;
 }
 
 #create .field {
@@ -49,7 +89,12 @@ body {
   resize: none;
 }
 #create dd textarea {
-  width: 451px;
+  height: 47px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  overflow-y: hidden;
+  resize: none;
 }
 #create dd input[type=text] {
   margin-top: -5px;
@@ -59,9 +104,6 @@ body {
 }
 #create .field label {
   cursor: pointer;
-}
-#create #propose-block {
-  padding: 10px 0;
 }
 #create #button-block {
   margin-top: 10px;
@@ -84,23 +126,13 @@ body {
   font-weight: bold;
   display: block;
 }
+#button-block p {
+  margin: 0;
+}
 #button {
   font-weight: bold;
 }
-#inviteespropose {
-  margin-left: 11px;
-}
 
-.dp-picker {
+.date-time-picker {
   margin-top: -10px;
-}
-
-a.preview {
-  cursor: pointer;
-}
-
-.modal-dialog {
-}
-.modal-dialog-buttons {
-  display: none;
 }

@@ -1,8 +1,0 @@
-{
-  "id": "form",
-  "paths": ".",
-  "inputs": "form.js",
-  "mode": "ADVANCED",
-  "level": "DEFAULT",
-  "externs": "externs.js"
-}

@@ -16,13 +16,23 @@
 # along with Pleft. If not, see <http://www.gnu.org/licenses/>.
 
 from django import forms
+from django.utils.translation import ugettext as _
 
 import fields
 
 class AppointmentForm(forms.Form):
-    description = forms.CharField(max_length=1000, required=False)
-    name = forms.CharField(max_length=100, required=False)
-    email = forms.EmailField(required=True)
-    invitees = fields.EmailListField(required=False)
-    dates = fields.DateTimeListField(required=False)
-    propose_more = forms.BooleanField(required=False)
+    description = fields.TextField(max_length=1000, required=False,
+        help_text=_('What, where, how?'))
+    invitees = fields.EmailListField(max_length=2000, required=False,
+        help_text=
+            _('Example: john.doe@example.com, Jane Doe <jane@example.net>'))
+    dates = fields.DateTimeListField(required=False, label=_('Proposed dates'))
+    propose_more = forms.BooleanField(required=False,
+        label=_('Invitees may propose more dates'), initial=True)
+    name = forms.CharField(max_length=100, required=False,
+        label=_('Your name'))
+    email = forms.EmailField(required=True, label=_('Email address'))
+
+    class Media:
+        css = { 'all': ('style/form.css',) }
+        js = ('script/form.js',)

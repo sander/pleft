@@ -20,7 +20,17 @@ from email.utils import getaddresses, formataddr
 import django.forms
 from django.utils.translation import ugettext_lazy as _
 
+import widgets
+
+class TextField(django.forms.CharField):
+    widget = widgets.ImprovedTextarea
+
+    def widget_attrs(self, widget):
+        if self.max_length != None: return {'maxlength': str(self.max_length)}
+
 class DateTimeListField(django.forms.CharField):
+    widget = widgets.DateTimeListWidget
+
     def clean(self, value):
         value = super(DateTimeListField, self).clean(value)
 
@@ -30,7 +40,7 @@ class DateTimeListField(django.forms.CharField):
 
         return datetimes
 
-class EmailListField(django.forms.CharField):
+class EmailListField(TextField):
     """
     A Django form field which validates a list of email addresses.
 

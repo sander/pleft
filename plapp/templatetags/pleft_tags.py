@@ -67,13 +67,6 @@ _gaq.push(
   ['_trackPageview']
 );
 
-var pressButt = document.getElementById('presentation-button');
-if (pressButt) {
-  pressButt.onclick = function() {
-    _gaq.push(['_trackEvent', 'Promotion', 'Presentation']);
-  };
-}
-
 (function() {
   var ga = document.createElement('script');
   ga.src = ('http://www.google-analytics.com/ga.js');
@@ -98,3 +91,9 @@ def get_appointments(context):
     appointments = plapp.models.Appointment.get_unarchived_for_user(user)
     context.appointments = appointments
     return ''
+
+@register.filter
+def is_checkbox(widget):
+    from django.forms.fields import CheckboxInput
+
+    return isinstance(widget, CheckboxInput)
