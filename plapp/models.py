@@ -40,11 +40,12 @@ class Appointment(models.Model):
     def get_metadata(self):
         metadata = {
             'initiator': self.initiator.id,
-            'title': self.get_title(),
-            'description': self.get_html_desc(),
+            'title': self.title,
+            'description': self.html_desc,
             'proposeMore': self.propose_more,
             }
         return metadata
+    metadata = property(get_metadata)
 
     def get_title(self):
         """
@@ -68,6 +69,7 @@ class Appointment(models.Model):
         title = title.replace('\r', '')
 
         return title or _('(no title)')
+    title = property(get_title)
 
     def get_html_desc(self):
         # TODO(sander) Do this in JS.
@@ -90,6 +92,7 @@ class Appointment(models.Model):
         desc = desc.replace('\n', '<br>')
 
         return desc
+    html_desc = property(get_html_desc)
 
     def __str__(self):
         return '%s' % self.description
@@ -108,6 +111,7 @@ class Appointment(models.Model):
             url += '&u=%s&p=%s' % (user.replace('+', '%2B'), password)
 
         return url
+    url = property(get_url)
 
     def send_overview_mail(self, request):
         plapp.clear_menu_cache(self.initiator)
@@ -146,6 +150,7 @@ class Appointment(models.Model):
 
     def get_ordered_dates(self):
         return Date.objects.filter(appointment=self).order_by('date_time')
+    ordered_dates = property(get_ordered_dates)
 
     @classmethod
     def get_unarchived_for_user(cls, user):
@@ -166,6 +171,7 @@ class Invitee(models.Model):
             return self.name
         else:
             return self.user.email.split('@')[0]
+    name = property(get_name)
 
     @classmethod
     def get_or_create(cls, user, appointment):

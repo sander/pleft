@@ -6,12 +6,14 @@
 
 {% block pageid %}appointment{% endblock %}
 
+{# expects Appointment object appt and list tool, containing dictionaries of title, target, form, and submit_text #}
+{# the view hasn't been updated yet. #}
 {% block scripts %}
   {% insert_script 'overview' %}
 {% endblock %}
 
 {% block main_script %}
-  <script>pleft.overview.init()</script>
+  <script>data = {% json appt.metadata %}</script>
 {% endblock %}
 
 {% block styles %}
@@ -23,5 +25,36 @@
 {% endblock %}
 
 {% block content %}
-  <div id=overview-content></div>
+  <div id=overview-content>
+    <div id=overview-content-header>
+        <a class=bttn href=#>Refresh</a>
+        <h2>{{appt.title}}</h2>
+    </div>
+    <div id=overview-content-dates>
+        <!-- content will be overwritten by jQuery -->
+        <h3>Proposed Dates</h3>
+        <table>
+            <thead>
+                <tr>
+                <th>Proposed Dates</th>
+                {% for inv in appt.Invitee_set %}
+                    <th class=invitee>{{invitee.name}}</th>
+                {% endfor %}
+                </tr>
+            </thead>
+            {# still need to generate content #}
+        </table>
+    </div>
+    <div id=overview-content-tools>
+        {% for tool in tools %}
+            <h3>{{tool.title}}</h3>
+            <form action={{tool.target}}>
+            <p>
+                {{ tool.form }} {# TODO: generate inline #}
+                <input type=submit value={{tool.submit_text}}>
+            </p>
+            </form>
+        {% endfor %}
+    </div>
+  </div>
 {% endblock %}
