@@ -25,6 +25,10 @@
 {% endblock %}
 
 {% block content %}
+  <div class=side-help>
+    <p>Use the buttons to indicate when you’re available. You can also enter comments.</p>
+    <p>View the availability of the other participants by clicking on their names or on the dates at the left side.</p>
+  </div>
   <div id=overview-content>
     <div id=overview-content-header>
         <a class=bttn href=#>Refresh</a>
@@ -47,8 +51,8 @@
               {% for date in appt.dates %}
               <tr>
               <th>{{ date.date }}</th>
-              {% for avail in date.availability %}
-                <td class=avail-{{avail.availability}}>{% if avail.user = USER %}
+              {% for avail in date.Availability_set %}
+                <td class=avail-{{avail.possible}}>{% if avail.user = USER %}
                   {# links/form upon REST #}
                 {% else %}
                   {{avail.comment}}
@@ -63,8 +67,10 @@
             <h3>{{tool.title}}</h3>
             <form action={{tool.target}}>
             <p>
-                {{ tool.form }} {# TODO: generate inline #}
-                <input type=submit value={{tool.submit_text}}>
+                {% for field in tool.form %}
+                  {{field.label_tag}}: {{field}}
+                {% endfor %}
+                {% if tool.submit_text %}<input type=submit value={{tool.submit_text}}>{% endfor %}
             </p>
             </form>
         {% endfor %}
