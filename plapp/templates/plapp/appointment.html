@@ -12,9 +12,9 @@
   {% insert_script 'overview' %}
 {% endblock %}
 
-{% block main_script %}
-  <script>data = {% json appt.metadata %}</script>
-{% endblock %}
+{% block main_script %}{% with appointment as appt %}
+  <script>data = {% include plapp/appointment_data.json %}</script>
+{% endwith %}{% endblock %}
 
 {% block styles %}
   <link rel=stylesheet href='{{ STATIC_URL }}style/appointment.css'>
@@ -43,6 +43,19 @@
                 </tr>
             </thead>
             {# still need to generate content #}
+            <tbody>
+              {% for date in appt.dates %}
+              <tr>
+              <th>{{ date.date }}</th>
+              {% for avail in date.availability %}
+                <td class=avail-{{avail.availability}}>{% if avail.user = USER %}
+                  {# links/form upon REST #}
+                {% else %}
+                  {{avail.comment}}
+                {% endif %}</td>
+              {% endfor %}
+              </tr>
+              {% endfor %}
         </table>
     </div>
     <div id=overview-content-tools>
