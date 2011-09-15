@@ -38,10 +38,7 @@ from plapp import forms
 from plapp import models
 
 def _get_appointment_or_404(request):
-    if request.method == 'POST':
-        params = request.POST
-    else:
-        params = request.GET
+    params = request.REQUEST
 
     if not 'id' in params:
         raise http.Http404
@@ -133,15 +130,16 @@ def create(request):
         raise http.Http404
 
 def appointment(request):
-    if 'id' in request.GET:
-        return http.HttpResponsePermanentRedirect('/a#id=%s'
-                                                  % request.GET['id'])
-
-    user = plauth.models.User.get_signed_in(request)
-    if not user:
+    # figure out how to redirect #id= to ?id=
+    try:
+        appointment, user, invitee = _get_appointment_or_404(request)
+    catch (exceptions.PermissionDenied):
         return render(request, 'plauth/not-signed-in.html')
 
-    return render(request, 'plapp/appointment.html')
+    # aggregate tools tools
+    tools = []
+
+    return render(request, 'plapp/appointment.html', { appt : appointment, tools: tools})
 
 @never_cache
 def appointment_data(request):
@@ -368,16 +366,22 @@ def set_availability(request):
     key = plapp.get_cache_key('availability', appointment=appointment.id, invitee=invitee.id)
     cached = cache.get(key)
 
+    # accessible interface
+    if not request.POST['a']:
+        date = models.Date.objects.all().get(id=int(request.POST['date']))
+
+        avail = models.Availability.objects.all().get_or_create(date=date, invitee=invitee)
+        avail.possible = ["yes", "no", "maybe"].indexof(request.POST['date'].lower())
+        avail.comment = request.POST['comment']
+        avail.save()
+
     i = 0
     for line in request.POST['a'].splitlines():
         [datestring, possible, comment] = line.split(':', 2)
         date = models.Date.objects.all().get(id=int(datestring))
         i += 1
 
-        try:
-            avail = models.Availability.objects.all().get(date=date, invitee=invitee)
-        except exceptions.ObjectDoesNotExist:
-            avail = models.Availability(date=date, invitee=invitee)
+        avail = models.Availability.objects.all().get_or_create(date=date, invitee=invitee)
 
         avail.possible = int(possible)
         avail.comment = comment
