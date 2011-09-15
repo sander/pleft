@@ -8,12 +8,12 @@
 
 {# expects Appointment object appt and list tool, containing dictionaries of title, target, form, and submit_text #}
 {# the view hasn't been updated yet. #}
-{% block scripts %}
+{# {% block scripts %}
   {% insert_script 'overview' %}
-{% endblock %}
+{% endblock %} #}
 
 {% block main_script %}{% with appointment as appt %}
-  <script>data = {% include plapp/appointment_data.json %}</script>
+  <script>var data = {% include plapp/appointment_data.json %};</script>
 {% endwith %}{% endblock %}
 
 {% block styles %}
@@ -53,7 +53,14 @@
               <th>{{ date.date }}</th>
               {% for avail in date.Availability_set %}
                 <td class=avail-{{avail.possible}}>{% if avail.user = USER %}
-                  {# links/form upon REST #}
+                  <form action={% reverse set_availability %} method=POST> {# set_availability needs to be altered to accept this. #}
+                    <input type=submit name=avail value=Yes>
+                    <input type=submit name=avail value=Maybe>
+                    <input type=submit name=avail value=No>
+                    <input type=hidden name=date value={{date.id}}>
+
+                    <textarea name=comment>{{avail.comment}}</textarea>
+                  </form>
                 {% else %}
                   {{avail.comment}}
                 {% endif %}</td>
