@@ -20,6 +20,7 @@ import email.utils
 
 from django.core.cache import cache
 from django.core import exceptions
+from django.core.exceptions import ObjectDoesNotExist
 from django import http
 from django.shortcuts import render
 from django.template.context import RequestContext
@@ -46,16 +47,22 @@ def _get_appointment_or_404(request):
     if not 'id' in params:
         raise http.Http404
 
-    appointment = models.Appointment.objects.all().get(id=int(params['id']))
-    if not appointment or not appointment.visible:
+    try:
+        appointment = models.Appointment.objects.all().get(id=int(params['id']))
+    except ObjectDoesNotExist:
+        raise http.Http404
+
+    if not appointment.visible:
         raise http.Http404
 
     user = plauth.models.User.get_signed_in(request)
     if not user:
         raise exceptions.PermissionDenied
 
-    invitee = models.Invitee.objects.all().get(appointment=appointment, user=user)
-    if not invitee:
+    try:
+        invitee = models.Invitee.objects.all() \
+            .get(appointment=appointment, user=user)
+    except ObjectDoesNotExist:
         raise http.Http404
 
     return (appointment, user, invitee)
