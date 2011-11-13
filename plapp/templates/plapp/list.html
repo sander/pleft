@@ -26,7 +26,7 @@
     <tbody>
       {% for i in inviteeships %}
         <tr{% if i.archived %} class=archived{% endif %}>
-          <td class=title><a href='/a#id={{ i.appointment.id }}'>{{ i.appointment.get_title|escape }}</a>
+          <td class=title><a href='/a?id={{ i.appointment.id }}'>{{ i.appointment.get_title|escape }}</a>
           <td class=by>{% get_initiator_name i.appointment user %}
           <td class=on>{{ i.appointment.created|date:"D M d, G:i" }}
           <td class=archive>

@@ -75,16 +75,6 @@ _gaq.push(
 })();
 </script>''' % {'code': settings.GOOGLE_ANALYTICS, 'lang': request.LANGUAGE_CODE, 'signedin': signedin}
 
-@register.simple_tag
-def insert_script(filename):
-    if settings.DEBUG:
-        domain_name = settings.SITE_DOMAIN.split(':')[0]
-        return "<script src='http://%s:9810/compile?id=%s'></script>" \
-	    % (domain_name, filename)
-    else:
-        return "<script src='%sscripts/%s.cjs'></script>" \
-        % (settings.STATIC_URL, filename)
-
 @register.simple_tag(takes_context=True)
 def get_appointments(context):
     user = context.get('user')

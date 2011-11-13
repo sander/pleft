@@ -23,7 +23,7 @@
 {% block styles %}{% endblock %}
 
 <script src='{% url django.views.i18n.javascript_catalog %}?lang={{ request.LANGUAGE_CODE }}'></script>
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js'></script>
 <script src='{{ STATIC_URL }}script/menubar.js'></script>
 {% block scripts %}{% endblock %}
 
@@ -62,7 +62,7 @@
   <div class=menu>
     <h1>{% trans "My appointments" %}</h1>{% get_appointments %}
     <ul>{% for appointment in appointments %}
-      <li class=radio><a href=/a#id={{ appointment.id }}>{{ appointment.get_title }}</a>{% endfor %}
+      <li class=radio><a href=/a?id={{ appointment.id }}>{{ appointment.get_title }}</a>{% endfor %}
       <li class=separator>
       <li><a href=/appointments>{% trans "All appointments" %}</a>
     </ul>

@@ -7,11 +7,10 @@
 {% block pageid %}appointment{% endblock %}
 
 {% block scripts %}
-  {% insert_script 'overview' %}
-{% endblock %}
-
-{% block main_script %}
-  <script>pleft.overview.init()</script>
+  <script src={{ STATIC_URL }}script/overview.js></script>
+  <script>
+    id = {{ id }};
+  </script>
 {% endblock %}
 
 {% block styles %}
@@ -19,9 +18,41 @@
 {% endblock %}
 
 {% block title %}
-  <h1>{% trans "Appointment overview" %}</h1>
+  <h1>{% trans 'Appointment overview' %}</h1>
 {% endblock %}
 
 {% block content %}
-  <div id=overview-content></div>
+  <div id=overview-content class=overview>
+    <p class=not-found>{% trans 'This appointment could not be found or is not meant to be seen by you. We apologize for the inconvenience.' %}
+    <div class=side-help>
+      <p>{% trans 'Use the buttons to indicate when you’re available. You can also enter comments.' %}
+      <p>{% trans 'View the availability of the other participants by clicking on their names or on the dates at the left side.' %}
+    </div>
+    <div class=appointment>
+      <div class=description></div>
+      <table>
+        <thead>
+          <tr>
+            <th>{% trans 'Proposed dates' %}
+            <th>
+            <th>{% trans 'Participants' %}
+        <tbody>
+          <tr>
+            <td class=dates>
+              <ul class=select></ul>
+            <td class=availability>
+            <td class=people>
+              <ul class=select></ul>
+      </table>
+      <p class=save>
+        <button disabled>{% trans 'Done' %}</button>
+        <span class=status></span>
+      <div class=tools>
+        <div class=propose-dates></div>
+        <div class=resend-invitations></div>
+        <div class=invite-participants></div>
+        <div class=email-addresses></div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

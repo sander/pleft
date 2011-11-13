@@ -51,8 +51,7 @@ $(function() {
   $('.menu-bar [data-language]').click(function() {
     var language = $(this).attr('data-language');
     $.post('/i18n/setlang/', 'language=' + language, function() {
-      // Refresh in such a way that the appointment ID doesn't get lost.
-      location = location.href.replace('/a#', '/a?');
+      location.reload();
     });
     $('body').toggleClass('progress', true);
   });

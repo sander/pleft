@@ -133,15 +133,15 @@ def create(request):
         raise http.Http404
 
 def appointment(request):
-    if 'id' in request.GET:
-        return http.HttpResponsePermanentRedirect('/a#id=%s'
-                                                  % request.GET['id'])
+    if not 'id' in request.GET:
+        return http.HttpResponseBadRequest('No ID specified.')
 
     user = plauth.models.User.get_signed_in(request)
     if not user:
         return render(request, 'plauth/not-signed-in.html')
 
-    return render(request, 'plapp/appointment.html')
+    return render(request, 'plapp/appointment.html',
+        { 'id': request.GET['id'] })
 
 @never_cache
 def appointment_data(request):

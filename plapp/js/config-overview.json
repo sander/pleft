@@ -1,8 +1,0 @@
-{
-  "id": "overview",
-  "paths": ".",
-  "inputs": "overview.js",
-  "mode": "ADVANCED",
-  "level": "DEFAULT",
-  "externs": "externs.js"
-}
