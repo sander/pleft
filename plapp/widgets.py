@@ -38,9 +38,9 @@ class DateTimeListWidget(widgets.Widget):
   </div>
   <div class=container>
     <div class=label>
-      <a class='choose up' style='visibility: hidden'>▲</a>
+      <a class='choose up' href=javascript:void(0) style='visibility: hidden'>▲</a>
       <span class=month-label></span>
-      <a class='choose down'>▼</a>
+      <a class='choose down' href=javascript:void(0)>▼</a>
     </div>
     <div class=days></div>
   </div>
