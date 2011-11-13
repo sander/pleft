@@ -133,7 +133,7 @@ def appointment(request):
     # figure out how to redirect #id= to ?id=
     try:
         appointment, user, invitee = _get_appointment_or_404(request)
-    catch (exceptions.PermissionDenied):
+    except exceptions.PermissionDenied:
         return render(request, 'plauth/not-signed-in.html')
 
     # aggregate tools tools
