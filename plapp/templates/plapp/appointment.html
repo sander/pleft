@@ -48,10 +48,27 @@
         <button disabled>{% trans 'Done' %}</button>
         <span class=status></span>
       <div class=tools>
-        <div class=propose-dates></div>
-        <div class=resend-invitations></div>
-        <div class=invite-participants></div>
-        <div class=email-addresses></div>
+        {% for tool in tools %}
+          <form class={{ tool.name }} action={{ tool.target }}>
+            <h3>{{ tool.title }}</h3>
+            <div>
+              {% for field in tool.form %}
+                {% if field.is_hidden %}
+                  {{ field }}
+                {% else %}
+                  {{ field.label_tag }}: {{ field }}
+                {% endif %}
+              {% endfor %}
+              <button>{{ tool.submit_text }}</button>
+              <span class=success></span>
+              <span class=error></span>
+            </div>
+          </form>
+        {% endfor %}
+        <div class=email-addresses>
+          <h3>{% trans 'Email addresses of the invitees (only visible to you)' %}</h3>
+          <p><textarea readonly></textarea>
+        </div>
       </div>
     </div>
   </div>

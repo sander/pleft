@@ -19,6 +19,7 @@ from django import forms
 from django.utils.translation import ugettext as _
 
 import fields
+import models
 
 class AppointmentForm(forms.Form):
     description = fields.TextField(max_length=1000, required=False,
@@ -36,3 +37,9 @@ class AppointmentForm(forms.Form):
     class Media:
         css = { 'all': ('style/form.css',) }
         js = ('script/form.js',)
+
+class ResendInvitationForm(forms.Form):
+    id = forms.ModelChoiceField(
+        queryset=models.Appointment.objects.filter(visible=True),
+        widget=forms.HiddenInput)
+    invitee = forms.IntegerField(widget=forms.Select)

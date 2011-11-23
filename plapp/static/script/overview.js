@@ -62,6 +62,8 @@ $(function() {
     $('.appointment .description').html(data.meta.description);
     document.title = 'Pleft · ' + data.meta.title;
 
+    setupTools(data);
+
     dateKeys = [];
     $(data.dates).each(function() {
       dateKeys.push(this.id);
@@ -305,5 +307,52 @@ $(function() {
       }
     }
     return element;
+  }
+
+  function setupTools(data) {
+    if (data.meta.initiator == data.user || data.meta.proposeMore) {
+      // Propose another date
+      // TODO
+    }
+    if (data.meta.initiator == data.user) {
+      // Resend invitations
+      $('.resend-invitations input[name=id]').val(window.id);
+      $.each(data.people, function() {
+        if (this.id != data.invitee)
+          $('<option>').val(this.id).text(this.name)
+            .appendTo('.resend-invitations select[name=invitee]');
+      });
+      if (data.people.length == 1)
+        $('.resend-invitations select, button').attr('disabled', true);
+
+      // Invite another participant
+      // TODO
+
+      // Email addresses of the invitees
+      var s = [];
+      $.each(data.addresses, function() { s.push(this); });
+      $('.email-addresses textarea').val(s.join(', '));
+      if (data.people.length == 1)
+        $('.email-addresses textarea').attr('disabled', true);
+    }
+
+    $('.tools form').submit(function() {
+      var form = this;
+      $(this).find('button').attr('disabled', true);
+      $.ajax({
+        type: 'POST',
+        url: this.action,
+        data: $(this).serialize(),
+        success: function() {
+          $(form).find('.error').text(gettext('Done!'));
+          $(form).find('button').attr('disabled', false);
+        },
+        error: function() {
+          $(form).find('.error').text(gettext('An error occured.'));
+          $(form).find('button').attr('disabled', false);
+        }
+      });
+      return false;
+    });
   }
 });

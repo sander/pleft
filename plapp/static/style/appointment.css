@@ -141,7 +141,8 @@ body {
   font-size: 12px;
 }
 .static.availability .comment:hover {
-  overflow: hidden visible;
+  overflow-x: hidden;
+  overflow-y: visible;
   background: inherit;
   height: auto;
   padding: 4px;
@@ -202,7 +203,7 @@ body {
   font-size: 13px;
 }
 
-#tools h3 {
+.tools h3 {
   background: #828282;
   color: #fff;
   font-weight: normal;
@@ -210,15 +211,15 @@ body {
   margin: 0 0 5px 0;
   font-size: 13px;
 }
-#propose-dates > div, #invite-participants > div, #resend-invitations > div {
+.propose-dates > div, .invite-participants > div, .resend-invitations > div {
   padding: 0 10px;
   font-size: 13px;
   margin: 5px 0;
 }
-#tools .label-input-label {
+.tools .label-input-label {
   color: gray;
 }
-#tools input {
+.tools input {
   font-size: 13px;
   width: 300px;
   border: 1px solid #aaa;
@@ -226,32 +227,32 @@ body {
   float: left;
   outline: none;
 }
-#tools #propose-form input {
+.tools .propose-form input {
   width: 100px;
   float: none;
 }
-#tools #propose-form label {
+.tools .propose-form label {
   float: left;
   margin-right: 10px;
   white-space: nowrap;
 }
-#tools #invite-participants input {
+.tools .invite-participants input {
   margin-right: 10px;
 }
-#tools #resend-invitations .goog-menu-button {
+.tools .resend-invitations .goog-menu-button {
   margin-right: 10px;
 }
-#tools #resend-invitations .goog-menu-button-caption {
+.tools .resend-invitations .goog-menu-button-caption {
   width: 285px;
 }
-#tools #propose-error, #tools #invite-error {
+.tools .propose-error, .tools .invite-error {
   color: red;
   font-style: italic;
 }
-#tools #email-addresses p {
+.tools .email-addresses p {
   margin: 10px;
 }
-#tools #email-addresses textarea {
+.tools .email-addresses textarea {
   padding: 3px 2px;
   border: 1px solid #aaa;
   width: 500px;

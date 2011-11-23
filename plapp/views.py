@@ -21,6 +21,7 @@ import email.utils
 from django.core.cache import cache
 from django.core import exceptions
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.urlresolvers import reverse
 from django import http
 from django.shortcuts import render
 from django.template.context import RequestContext
@@ -147,8 +148,24 @@ def appointment(request):
     if not user:
         return render(request, 'plauth/not-signed-in.html')
 
+    class Tool(object):
+        def __init__(self, title, name, target, submit_text, form):
+            self.title = title
+            self.name = name
+            self.target = target
+            self.submit_text = submit_text
+            self.form = form
+
+    tools = (
+        Tool(_('Resend invitations'),
+             'resend-invitations',
+             reverse('plapp.views.resend_invitation'),
+             _('Send invitation again'),
+             forms.ResendInvitationForm()),
+    )
+
     return render(request, 'plapp/appointment.html',
-        { 'id': request.GET['id'] })
+        { 'id': request.GET['id'], 'tools': tools })
 
 @never_cache
 def appointment_data(request):
@@ -280,23 +297,22 @@ def verify(request):
     return http.HttpResponseRedirect(appointment.get_url())
 
 def resend_invitation(request):
-    appointment = models.Appointment.objects.all().get(id=int(request.POST['id']))
-    user = plauth.models.User.get_signed_in(request)
-    if (not user or
-        not appointment or
-        not appointment.visible or
-        appointment.initiator != user):
-        raise http.Http404
+    form = forms.ResendInvitationForm(request.POST)
 
-    invitee = models.Invitee.objects.all().get(id=int(request.POST['invitee']))
-    if invitee.appointment != appointment:
-        raise http.Http404
+    if form.is_valid():
+        appointment = form.cleaned_data['id']
+        user = plauth.models.User.get_signed_in(request)
+        if not user or appointment.initiator != user: raise http.Http404
 
-    initiator = models.Invitee.objects.all().get(user=user,
-                                                 appointment=appointment)
-    appointment.send_invitation(invitee, initiator, request)
+        invitee = models.Invitee.objects.all().get(
+            id=form.cleaned_data['invitee'])
+        if invitee.appointment != appointment: raise http.Http404
 
-    return http.HttpResponse()
+        initiator = models.Invitee.objects.all().get(user=user,
+                                                     appointment=appointment)
+        appointment.send_invitation(invitee, initiator, request)
+
+        return http.HttpResponse()
 
 def add_invitees(request):
     appointment = models.Appointment.objects.all().get(id=int(request.POST['id']))
