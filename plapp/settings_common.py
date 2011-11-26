@@ -37,7 +37,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'plapp',
     'plauth',
-    'plosure',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
