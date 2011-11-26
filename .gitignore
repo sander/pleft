@@ -2,9 +2,5 @@
 *.pyc
 *.swp
 *.mo
-*.cjs
 *.db
-external/*
 pleft/local_settings.py
-django
-pleft-bootstrap.py
