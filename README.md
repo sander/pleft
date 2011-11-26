@@ -3,9 +3,6 @@ Pleft
 
 This is the Pleft software that runs on [www.pleft.com](http://www.pleft.com/).
 
-To get started, see:
-http://code.google.com/p/pleft/wiki/GettingStarted
-
 
 Installation
 ------------
