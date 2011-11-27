@@ -48,7 +48,7 @@ def send_mail(subject, template, address, name, title, url, initiator=''):
     content = prepare_mail(template, name, title, url, initiator)
 
     params = {'sender': settings.MAIL_SENDER,
-              'to': '%s <%s>' % (name, address),
+              'to': '"%s" <%s>' % (name.replace('"', '\\"'), address),
               'subject': subject,
               'body': content['body'],
               'html': content['html']}
