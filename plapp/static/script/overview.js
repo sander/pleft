@@ -327,7 +327,7 @@ $(function() {
         $('.resend-invitations select, button').attr('disabled', true);
 
       // Invite another participant
-      // TODO
+      $('.invite-participant input[name=id]').val(window.id);
 
       // Email addresses of the invitees
       var s = [];
@@ -341,13 +341,15 @@ $(function() {
     $('.tools form').submit(function() {
       var form = this;
       $(this).find('button').attr('disabled', true);
+      $(this).find('.success, .error').text('');
       $.ajax({
         type: 'POST',
         url: this.action,
         data: $(this).serialize(),
         success: function() {
-          $(form).find('.error').text(gettext('Done!'));
+          $(form).find('.success').text(gettext('Done!'));
           $(form).find('button').attr('disabled', false);
+          if ($(form).hasClass('invite-participant')) location.reload();
         },
         error: function() {
           $(form).find('.error').text(gettext('An error occured.'));

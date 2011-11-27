@@ -38,6 +38,7 @@ urlpatterns = patterns(
     (r'^set-availability$', 'plapp.views.set_availability'),
     (r'^resend-invitation$', 'plapp.views.resend_invitation'),
     (r'^add-invitees$', 'plapp.views.add_invitees'),
+    (r'^invite-participant$', 'plapp.views.invite_participant'),
     (r'^add-dates$', 'plapp.views.add_dates'),
 
     tpl(r'^legal-notices$', 'legal-notices.html'),

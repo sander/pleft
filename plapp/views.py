@@ -162,6 +162,11 @@ def appointment(request):
              reverse('plapp.views.resend_invitation'),
              _('Send invitation again'),
              forms.ResendInvitationForm()),
+        Tool(_('Invite another participant'),
+             'invite-participant',
+             reverse('plapp.views.invite_participant'),
+             _('Send invitation'),
+             forms.InviteParticipantForm())
     )
 
     return render(request, 'plapp/appointment.html',
@@ -299,21 +304,53 @@ def verify(request):
 def resend_invitation(request):
     form = forms.ResendInvitationForm(request.POST)
 
-    if form.is_valid():
-        appointment = form.cleaned_data['id']
-        user = plauth.models.User.get_signed_in(request)
-        if not user or appointment.initiator != user: raise http.Http404
+    if not form.is_valid(): raise http.Http404
 
-        invitee = models.Invitee.objects.all().get(
-            id=form.cleaned_data['invitee'])
-        if invitee.appointment != appointment: raise http.Http404
+    appointment = form.cleaned_data['id']
+    user = plauth.models.User.get_signed_in(request)
+    if not user or appointment.initiator != user: raise http.Http404
 
-        initiator = models.Invitee.objects.all().get(user=user,
-                                                     appointment=appointment)
-        appointment.send_invitation(invitee, initiator, request)
+    invitee = models.Invitee.objects.all().get(
+        id=form.cleaned_data['invitee'])
+    if invitee.appointment != appointment: raise http.Http404
 
-        return http.HttpResponse()
+    initiator = models.Invitee.objects.all().get(user=user,
+                                                 appointment=appointment)
+    appointment.send_invitation(invitee, initiator, request)
 
+    return http.HttpResponse()
+
+def invite_participant(request):
+    form = forms.InviteParticipantForm(request.POST)
+
+    if not form.is_valid(): raise http.Http404
+
+    appointment = form.cleaned_data['id']
+    user = plauth.models.User.get_signed_in(request)
+    if not user or appointment.initiator != user: raise http.Http404
+
+    iuser = plauth.models.User.get_or_create(form.cleaned_data['email'])
+    invitee = models.Invitee.get_or_create(iuser, appointment)
+    invitee.name = form.cleaned_data['name']
+    invitee.save()
+
+    initiator = models.Invitee.objects.all().get(user=appointment.initiator,
+                                                 appointment=appointment)
+    appointment.send_invitation(invitee, initiator, request)
+
+    invitees_key = plapp.get_cache_key('invitees',
+                                       appointment=appointment.id)
+    invitees = cache.get(invitees_key)
+    if invitees: cache.delete(invitees_key)
+
+    addresses_key = plapp.get_cache_key('addresses',
+                                        appointment=appointment.id)
+    addresses = cache.get(addresses_key)
+    if addresses: cache.delete(addresses_key)
+
+    return http.HttpResponse()
+
+# Not used by the web app, but still available as API
 def add_invitees(request):
     appointment = models.Appointment.objects.all().get(id=int(request.POST['id']))
     user = plauth.models.User.get_signed_in(request)

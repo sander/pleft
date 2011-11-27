@@ -43,3 +43,10 @@ class ResendInvitationForm(forms.Form):
         queryset=models.Appointment.objects.filter(visible=True),
         widget=forms.HiddenInput)
     invitee = forms.IntegerField(widget=forms.Select)
+
+class InviteParticipantForm(forms.Form):
+    id = forms.ModelChoiceField(
+        queryset=models.Appointment.objects.filter(visible=True),
+        widget=forms.HiddenInput)
+    name = forms.CharField(max_length=100)
+    email = forms.EmailField()

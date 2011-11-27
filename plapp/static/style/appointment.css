@@ -211,7 +211,7 @@ body {
   margin: 0 0 5px 0;
   font-size: 13px;
 }
-.propose-dates > div, .invite-participants > div, .resend-invitations > div {
+.propose-dates > div, .invite-participant > div, .resend-invitations > div {
   padding: 0 10px;
   font-size: 13px;
   margin: 5px 0;
@@ -224,7 +224,6 @@ body {
   width: 300px;
   border: 1px solid #aaa;
   padding: 3px 2px;
-  float: left;
   outline: none;
 }
 .tools .propose-form input {
@@ -236,8 +235,20 @@ body {
   margin-right: 10px;
   white-space: nowrap;
 }
-.tools .invite-participants input {
+.tools .invite-participant input {
   margin-right: 10px;
+  width: 150px;
+}
+.tools .success {
+  color: green;
+}
+.tools .error {
+  color: red;
+  font-weight: bold;
+}
+.tools .invite-participant .success, .tools .invite-participant .error {
+  clear: both;
+  display: block;
 }
 .tools .resend-invitations .goog-menu-button {
   margin-right: 10px;
