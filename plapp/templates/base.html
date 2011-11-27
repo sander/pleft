@@ -37,6 +37,10 @@
 {% endif %}
 {% block scripts %}{% endblock %}
 
+{% if not disable_analytics %}
+  {% google_analytics_snippet request %}
+{% endif %}
+
 {% block media %}{% endblock %}
 
 <body id='{% block pageid %}{% endblock %}'>
@@ -91,7 +95,3 @@
 
 {% block main_script %}
 {% endblock %}
-
-{% if not disable_analytics %}
-  {% google_analytics_snippet request %}
-{% endif %}
