@@ -20,6 +20,7 @@ from django.utils.translation import ugettext as _
 
 import fields
 import models
+import widgets
 
 class AppointmentForm(forms.Form):
     description = fields.TextField(max_length=1000, required=False,
@@ -50,3 +51,12 @@ class InviteParticipantForm(forms.Form):
         widget=forms.HiddenInput)
     name = forms.CharField(max_length=100)
     email = forms.EmailField()
+
+class ProposeDateForm(forms.Form):
+    id = forms.ModelChoiceField(
+        queryset=models.Appointment.objects.filter(visible=True),
+        widget=forms.HiddenInput)
+    d = forms.DateTimeField(input_formats=('%Y-%m-%dT%H:%M:%S',),
+                            widget=forms.HiddenInput, required=False)
+    date = forms.DateField(widget=widgets.DatePicker, required=False)
+    time = forms.TimeField(widget=widgets.TimePicker, required=False)

@@ -22,6 +22,53 @@ from django.forms.util import flatatt
 from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext as _
 
+class DatePicker(widgets.Widget):
+    def __init__(self, attrs=None):
+        default_attrs = {}
+        super(DatePicker, self).__init__(default_attrs)
+
+    def render(self, name, value, attrs=None):
+        final_attrs = self.build_attrs(attrs, name=name)
+        return mark_safe(u"""
+<input%s>
+<script>
+  (function() {
+    var input = $('#%s');
+    input.DatePicker({
+      date: new Date(),
+      onChange: function(date) {
+        input.val(date);
+      }
+    });
+  })();
+</script>
+""" % (flatatt(final_attrs), final_attrs['id']))
+
+    class Media:
+        css = {
+            'all': ('style/datepicker.css',)
+        }
+        js = ('third-party/datepicker.js',)
+
+class TimePicker(widgets.Widget):
+    def __init__(self, attrs=None):
+        default_attrs = {}
+        super(TimePicker, self).__init__(default_attrs)
+
+    def render(self, name, value, attrs=None):
+        final_attrs = self.build_attrs(attrs, name=name)
+        print final_attrs
+        return mark_safe(u"""
+<input%s>
+<script>$('#%s').timePicker({ show24Hours: true })</script>
+""" % (flatatt(final_attrs), final_attrs['id']))
+
+    class Media:
+        css = {
+            'all': ('style/timepicker.css',)
+        }
+        js = ('third-party/jquery.timePicker.js',)
+
 class DateTimeListWidget(widgets.Widget):
     def __init__(self, attrs=None):
         default_attrs = {}
@@ -53,7 +100,7 @@ class DateTimeListWidget(widgets.Widget):
 
     class Media:
         css = {
-            'all': ('style/caleftar.css',)
+            'all': ('style/caleftar.css', 'style/timepicker.css')
         }
         js = ('script/caleftar.js', 'third-party/jquery.timePicker.js')
 

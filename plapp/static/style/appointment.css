@@ -211,7 +211,7 @@ body {
   margin: 0 0 5px 0;
   font-size: 13px;
 }
-.propose-dates > div, .invite-participant > div, .resend-invitations > div {
+.tools form > div {
   padding: 0 10px;
   font-size: 13px;
   margin: 5px 0;
@@ -256,10 +256,6 @@ body {
 .tools .resend-invitations .goog-menu-button-caption {
   width: 285px;
 }
-.tools .propose-error, .tools .invite-error {
-  color: red;
-  font-style: italic;
-}
 .tools .email-addresses p {
   margin: 10px;
 }
@@ -269,6 +265,12 @@ body {
   width: 500px;
   height: 60px;
   outline: none;
+}
+.tools .propose-date input {
+  width: 100px;
+}
+.appointment {
+  margin-bottom: 100px; /* hack to make date picker appear at the right place */
 }
 
 .te-up, .te-down {
@@ -295,3 +297,4 @@ body {
 .label-no {
   background-position: -42px 0;
 }
+

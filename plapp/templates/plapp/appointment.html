@@ -4,6 +4,10 @@
 {% load pleft_tags %}
 {% load i18n %}
 
+{% block media %}
+  {% for tool in tools %}{{ tool.form.media }}{% endfor %}
+{% endblock %}
+
 {% block pageid %}appointment{% endblock %}
 
 {% block scripts %}

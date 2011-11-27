@@ -312,7 +312,7 @@ $(function() {
   function setupTools(data) {
     if (data.meta.initiator == data.user || data.meta.proposeMore) {
       // Propose another date
-      // TODO
+      $('.propose-date input[name=id]').val(window.id);
     }
 
     if (data.meta.initiator == data.user) {
@@ -349,7 +349,8 @@ $(function() {
         success: function() {
           $(form).find('.success').text(gettext('Done!'));
           $(form).find('button').attr('disabled', false);
-          if ($(form).hasClass('invite-participant')) location.reload();
+          if ($(form).hasClass('invite-participant') ||
+              $(form).hasClass('propose-date')) location.reload();
         },
         error: function() {
           $(form).find('.error').text(gettext('An error occured.'));

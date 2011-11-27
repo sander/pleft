@@ -166,7 +166,12 @@ def appointment(request):
              'invite-participant',
              reverse('plapp.views.invite_participant'),
              _('Send invitation'),
-             forms.InviteParticipantForm())
+             forms.InviteParticipantForm()),
+        Tool(_('Propose another date'),
+             'propose-date',
+             reverse('plapp.views.add_dates'),
+             _('Add date'),
+             forms.ProposeDateForm()),
     )
 
     return render(request, 'plapp/appointment.html',
@@ -392,15 +397,25 @@ def add_invitees(request):
     return http.HttpResponse()
 
 def add_dates(request):
-    appointment, user, invitee = _get_appointment_or_404(request)
+    form = forms.ProposeDateForm(request.POST)
 
-    if (appointment.initiator != user and
-        not appointment.propose_more):
-        raise http.Http404
+    if not form.is_valid(): raise http.Http404
+
+    appointment = form.cleaned_data['id']
+    user = plauth.models.User.get_signed_in(request)
+    if not user or appointment.initiator != user \
+        or not appointment.propose_more: raise http.Http404
+
+    invitee = models.Invitee.objects.all().get(user=user,
+                                               appointment=appointment)
 
     date = models.Date(appointment=appointment)
-    date.date_time = datetime.datetime.strptime(request.POST['d'],
-                                                '%Y-%m-%dT%H:%M:%S')
+    if form.cleaned_data['d']:
+        date.date_time = form.cleaned_data['d']
+    elif form.cleaned_data['date'] and form.cleaned_data['time']:
+        date.date_time = datetime.datetime.combine(form.cleaned_data['date'],
+                                                   form.cleaned_data['time'])
+    else: raise http.Http404
     date.invitee = invitee
     date.save()
 
@@ -410,11 +425,14 @@ def add_dates(request):
     avail.possible = 1 
     avail.save()
 
-    # Remove dates from cache. Would be nicer to add the current date, but that would need re-ordering.
+    # Remove dates from cache. Would be nicer to add the current date, but
+    # that would need re-ordering.
     dates_key = plapp.get_cache_key('dates', appointment=appointment.id)
     cache.set(dates_key, None)
 
-    availability_key = plapp.get_cache_key('availability', appointment=appointment.id, invitee=invitee.id)
+    availability_key = plapp.get_cache_key('availability',
+                                           appointment=appointment.id,
+                                           invitee=invitee.id)
     availability = cache.get(availability_key)
     if availability:
         availability[date.id] = [1, '']
