@@ -62,6 +62,7 @@ def google_analytics_snippet(request):
 var _gaq = _gaq || [];
 _gaq.push(
   ['_setAccount', '%(code)s'],
+  ['_setDomainName', '.pleft.com'],
   ['_setCustomVar', 1, 'Language set', '%(lang)s', 1],
   ['_setCustomVar', 2, 'Signed in', '%(signedin)s', 2],
   ['_trackPageview']
