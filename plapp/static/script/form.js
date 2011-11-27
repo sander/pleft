@@ -114,7 +114,7 @@ $(function() {
     }).success(function(data) {
       if (data == '0') return unknownError();
       if (window._gaq) _gaq.push(['_trackEvent', 'Appointments', 'Create']);
-      if ($('.menu-bar .account .email')) location.href = data;
+      if ($('.menu-bar .account .email').length) location.href = data;
       else $('#status p').text([
         gettext('Created!'),
         gettext('Please check your email.')
