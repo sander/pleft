@@ -22,6 +22,59 @@ from django.forms.util import flatatt
 from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext as _
 
+class MultipleEmailInput(widgets.Widget):
+    def __init__(self, attrs=None):
+        default_attrs = {}
+        super(MultipleEmailInput, self).__init__(default_attrs)
+
+    def render(self, name, value, attrs=None):
+        final_attrs = self.build_attrs(attrs, name=name)
+        return mark_safe(u"""
+<input%s>
+<script>
+  $('#%s').tokenInput([], {
+    tokenFormatter: function(item) {
+      return '<li><p>' + item.email + '</p></li>';
+    },
+    tokenLimit: null,
+    tokenDelimiter: ',',
+    preventDuplicates: true,
+    propertyToSearch: 'email',
+    onResult: function(item) {
+      var id = this.get(0).id;
+      var input = $('#token-input-' + id).val();
+      if (input.indexOf(',') == -1) return;
+      $(input.split(',')).each(function() {
+        var address = this.trim();
+        if (!address) return;
+        $('#' + id).tokenInput('add', {
+          id: address,
+          email: address
+        });
+      });
+    },
+    onAdd: function(item) {
+      var s = JSON.stringify(this.tokenInput('get'));
+      console.log(s);
+    },
+    onDelete: function(item) {
+      var s = JSON.stringify(this.tokenInput('get'));
+      console.log(s);
+    }
+  });
+</script>
+""" % (
+            flatatt(final_attrs),
+            final_attrs['id']
+        ))
+
+    class Media:
+        css = {
+            'all': ('style/multiple-email-input.css',)
+        }
+        js = ('third-party/jquery.tokeninput.js',)
+
+
 class DatePicker(widgets.Widget):
     def __init__(self, attrs=None):
         default_attrs = {}

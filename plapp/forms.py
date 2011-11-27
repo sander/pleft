@@ -26,6 +26,7 @@ class AppointmentForm(forms.Form):
     description = fields.TextField(max_length=1000, required=False,
         help_text=_('What, where, how?'))
     invitees = fields.EmailListField(max_length=2000, required=False,
+        widget=widgets.MultipleEmailInput(),
         help_text=
             _('Example: john.doe@example.com, Jane Doe <jane@example.net>'))
     dates = fields.DateTimeListField(required=False, label=_('Proposed dates'))

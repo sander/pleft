@@ -79,7 +79,7 @@ body {
 #create .field dd {
   margin-left: 110px;
 }
-#create dd textarea, #create dd input[type=text] {
+#create dd textarea, #create dd > input[type=text] {
   width: 439px;
   border: 0;
   border: 1px solid #ccc;
@@ -96,7 +96,7 @@ body {
   overflow-y: hidden;
   resize: none;
 }
-#create dd input[type=text] {
+#create dd > input[type=text] {
   margin-top: -5px;
 }
 #create .field .help {
