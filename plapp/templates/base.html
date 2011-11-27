@@ -66,7 +66,7 @@
     <h1><b>{{ settings.SITE_NAME }}</b> {% trans "the appointment planner" %}</h1>
     <ul>
       <li><a href=/>{% trans "New appointment" %}</a>
-      <li><a href=/about class=external>{% blocktrans with site=settings.SITE_NAME %}About {{ site }}{% endblocktrans %}</a>
+      {% if settings.ABOUT_URL %}<li><a href='{{ settings.ABOUT_URL }}' class=external>{% blocktrans with site=settings.SITE_NAME %}About {{ site }}{% endblocktrans %}</a>{% endif %}
       <li class=chrome-only><a href=https://chrome.google.com/webstore/detail/gaplcjgcfjoianghpkfkbgggdidedcid class='external app-link'>{% blocktrans with site=settings.SITE_NAME %}Install {{ site }} in Chrome{% endblocktrans %}</a>
       <li class=separator>
       <li><h2>{% trans "Language" %}{% for language in LANGUAGES %}</h2>
