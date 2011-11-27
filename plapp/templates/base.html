@@ -25,6 +25,16 @@
 <script src='{% url django.views.i18n.javascript_catalog %}?lang={{ request.LANGUAGE_CODE }}'></script>
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js'></script>
 <script src='{{ STATIC_URL }}script/menubar.js'></script>
+{% if settings.USERVOICE_ID %}
+<script>
+  var uvOptions = {};
+  (function() {
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/{{ settings.USERVOICE_ID }}.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+  })();
+</script>
+{% endif %}
 {% block scripts %}{% endblock %}
 
 {% block media %}{% endblock %}
