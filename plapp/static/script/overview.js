@@ -314,6 +314,7 @@ $(function() {
       // Propose another date
       // TODO
     }
+
     if (data.meta.initiator == data.user) {
       // Resend invitations
       $('.resend-invitations input[name=id]').val(window.id);
@@ -334,7 +335,8 @@ $(function() {
       $('.email-addresses textarea').val(s.join(', '));
       if (data.people.length == 1)
         $('.email-addresses textarea').attr('disabled', true);
-    }
+    } else 
+      $('.resend-invitations, .email-addresses').css('display', 'none');
 
     $('.tools form').submit(function() {
       var form = this;
