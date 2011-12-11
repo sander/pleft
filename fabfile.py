@@ -3,7 +3,6 @@ from fabric.colors import *
 from fabric.operations import *
 
 env.hosts = ['tryout.pleft.com']
-env.hosts = ['192.168.1.11']
 
 def install(package):
     with settings(hide('warnings', 'stderr'), warn_only=True):
