@@ -3,6 +3,7 @@ from fabric.colors import *
 from fabric.operations import *
 
 env.hosts = ['tryout.pleft.com']
+env.hosts = ['192.168.1.11']
 
 def install(package):
     with settings(hide('warnings', 'stderr'), warn_only=True):
@@ -19,10 +20,10 @@ def setup_dir():
     with cd('/opt/pleft-tryout'):
         sudo('mkdir -p var/log var/run var/lib/pleft/static')
         sudo('chmod 775 var/log var/run')
-        sudo('chown root:www-data var/log var/run var/lib/pleft/media')
+        sudo('chown root:www-data var/log var/run')
 
 def clone_repository():
-    sudo('git clone git@github.com:sander/pleft.git /opt/pleft-tryout/deploy')
+    sudo('git clone git://github.com/sander/pleft.git /opt/pleft-tryout/deploy')
     with cd('/opt/pleft-tryout/deploy'):
         sudo('git checkout tryout')
 
@@ -38,15 +39,15 @@ def setup_virtualenv():
     virtualenv('pip install --requirement=/opt/pleft-tryout/deploy/tools/requirements.txt')
 
 def upload_local_settings():
-    put('local_settings.py', '/opt/pleft-tryout/deploy/pleft/local_settings.py', use_sudo=True)
+    put('pleft/local_settings.py', '/opt/pleft-tryout/deploy/pleft/local_settings.py', use_sudo=True)
     sudo('chown root:root /opt/pleft-tryout/deploy/pleft/local_settings.py')
 
 def manage(command):
     with cd('/opt/pleft-tryout/deploy'):
-        return virtualenv('python manage.py ' + command)
+        return virtualenv('python pleft/manage.py ' + command)
 
 def setup_upstart():
-    sudo('cp /opt/pleft-tryout/deploy/tools/upstart /etc/init/pleft-tryout')
+    sudo('cp /opt/pleft-tryout/deploy/tools/upstart /etc/init/pleft-tryout.conf')
 
 def setup_nginx():
     name = '/etc/nginx/sites-available/pleft-tryout'

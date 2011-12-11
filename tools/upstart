@@ -13,11 +13,11 @@ respawn
 
 script
   su -s /bin/sh -c 'exec "$0" "$@"' www-data -- \
-    exec $DIR/virtualenv/bin/gunicorn_django \
+    $DIR/virtualenv/bin/gunicorn_django \
     --bind=127.0.0.1:8002 \
     --workers=2 \
     --log-file=$DIR/var/log/gunicorn.log \
     --pid=$DIR/var/run/pleft.pid \
     --name=pleft-tryout \
-    $SOURCE/pleft/settings.py
+    $DIR/deploy/pleft/settings.py
 end script
