@@ -175,7 +175,7 @@ $(function() {
     $($('.appointment .select .me').data('person').availability)
       .each(function(i) {
       avail = avail.concat([
-        dateKeys[i], ':', this[0], ':', this[1] || '', '\n']);
+        dateKeys[i], ':', (this[0] || 0), ':', this[1] || '', '\n']);
     });
 
     $.ajax({
@@ -232,7 +232,7 @@ $(function() {
       element.find('.toggle').toggleClass('checked', false);
       $(this).addClass('checked');
 
-      var prev = availability[0];
+      var prev = availability[0] || 0;
       availability[0] = $(this).data('value');
       if (availability[0] == prev) return;
 
@@ -265,7 +265,7 @@ $(function() {
         this.data('value', 1 - i).appendTo(choose).click(onChange);
       });
 
-      element.addClass(classes['' + availability[0]]);
+      element.addClass(classes['' + (availability[0] || 0)]);
 
       var selectedAny = false;
       for (var j = 0; j < 3; j++) {
@@ -274,10 +274,7 @@ $(function() {
           selectedAny = true;
         }
       }
-      if (!selectedAny) {
-        buttons[1].addClass('checked');
-        onChange();
-      }
+      if (!selectedAny) buttons[1].addClass('checked');
 
       var entry = $('<textarea>').keydown(function(event) {
         if (event.keyCode == 13) // enter
