@@ -132,6 +132,7 @@ a img {
   list-style: none;
   padding: 0;
   z-index: 2;
+  margin-left: 0;
 }
 .menu-bar .menu.open ul li {
   overflow: hidden;

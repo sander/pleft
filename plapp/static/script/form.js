@@ -144,5 +144,6 @@ $(function() {
   });
   $('.popup > p a').click(function() {
     $('.popup').toggleClass('open', false);
+    $('.popup > div').html('');
   });
 });

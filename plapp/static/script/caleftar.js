@@ -37,7 +37,8 @@ $(function() {
 
     // Add Mon/Tue/Wed/etc.
     $(DAYS).each(function() {
-      $('<span>').text(this).appendTo($(me).find('.week-days'));
+      // The '' + this is apparently needed for IE.
+      $('<span>').text('' + this).appendTo($(me).find('.week-days'));
     });
 
     // Month selector.
@@ -135,7 +136,6 @@ $(function() {
       var normal = new Date(year, month);
       year = normal.getFullYear();
       month = normal.getMonth();
-
       var nDays = new Date(year, month + 1, 0).getDate();
 
       // Contains the day boxes.
@@ -143,8 +143,8 @@ $(function() {
         .hasClass('even');
       var div = $('<div class=month>').appendTo($(me).find('.days'))
         .addClass('year-' + year).addClass('month-' + month);
-      $('<span class=which-year>').text(year).appendTo(div);
-      $('<span class=which-month>').text(month).appendTo(div);
+      $('<span>').addClass('which-year').text(year).appendTo(div);
+      $('<span>').addClass('which-month').text(month).appendTo(div);
       for (var i = 0; i < nDays; i++)
         addDay(year, month, i + 1).addClass(even ? 'even' : 'odd')
           .appendTo(div);
@@ -167,8 +167,10 @@ $(function() {
       var div = $('<div class=month>').appendTo($(me).find('.days'))
         .addClass('year-' + previous.getFullYear())
         .addClass('month-' + previous.getMonth());
-      $('<span class=which-year>').text(previous.getFullYear()).appendTo(div);
-      $('<span class=which-month>').text(previous.getMonth()).appendTo(div);
+      $('<span>').addClass('which-year').text(previous.getFullYear())
+        .appendTo(div);
+      $('<span>').addClass('which-month').text(previous.getMonth())
+        .appendTo(div);
       for (var i = firstCurrent - 1; i >= 0; i--)
         addDay(previous.getFullYear(), previous.getMonth(),
           lastPrevious - i).addClass('odd').appendTo(div);
@@ -355,8 +357,9 @@ $(function() {
 
       $('.time-picker').click(preventScroll);
 
-      $('<a class=enter>').appendTo(content).click(add);
-      $('<span class=close>').appendTo($(me).find('.popup')).click(function() {
+      $('<a>').addClass('enter').appendTo(content).click(add);
+      $('<span>').addClass('close').appendTo($(me).find('.popup'))
+        .click(function() {
         closePopup();
         return false;
       });
@@ -383,9 +386,9 @@ $(function() {
 
         var elt = $('<div class=date>').addClass('time-' + full)
           .appendTo($(me).find('.selected-times'));
-        $('<span class=which-time>').text(full).appendTo(elt);
-        $('<span class=readable>').text(formatDate(date)).appendTo(elt);
-        $('<a class=date-delete>').text('×').appendTo(elt);
+        $('<span>').addClass('which-time').text(full).appendTo(elt);
+        $('<span>').addClass('readable').text(formatDate(date)).appendTo(elt);
+        $('<a>').addClass('date-delete').text('×').appendTo(elt);
 
         updateTimes();
         updateDay(year, month, day);
@@ -402,12 +405,14 @@ $(function() {
           var time = parseInt($(this).text());
           if (time < begin || time > end) return;
 
-          var box = $('<span class=time-box>').text(formatTime(new Date(time)))
+          var box = $('<span>').addClass('time-box')
+            .text(formatTime(new Date(time)))
             .appendTo($(me).find('.popup-times'));
-          $('<span class=which-time>').text(new Date(time).getTime())
+          $('<span>').addClass('which-time').text(new Date(time).getTime())
             .appendTo(box);
 
-          $('<a class=time-delete>').text('×').appendTo(box).click(function() {
+          $('<a>').addClass('time-delete').text('×').appendTo(box)
+            .click(function() {
             deleteTime(time);
             updateTimes();
             updateDay(year, month, day);

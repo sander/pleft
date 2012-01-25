@@ -24,7 +24,7 @@ $(function() {
     // Add support for HTML5's maxlength if needed.
     if (document.createElement('textarea').maxLength == undefined) {
       $(this).keyup(function() {
-        $(this).val(text.substr(0, $(this)).attr('maxlength'));
+        $(this).val($(this).val().substr(0, $(this).attr('maxlength')));
       });
     }
 
@@ -43,7 +43,8 @@ $(function() {
       } else $(this).height(minimum);
     };
 
-    $(this).css('lineHeight', lineHeight + 'px').height(minimum).keyup(this.setHeight);
+    $(this).css('lineHeight', lineHeight + 'px').height(minimum)
+      .keyup(this.setHeight);
 
     this.setHeight();
   });

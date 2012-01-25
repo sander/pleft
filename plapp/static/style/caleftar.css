@@ -226,6 +226,7 @@
   line-height: 16px;
   padding-left: .3em;
   color: #fff;
+  margin-top: -15px;
 }
 .date-time-picker .which-month, .which-year, .which-time {
   display: none;
@@ -239,6 +240,7 @@
   left: 91px;
   cursor: pointer;
   top: 18px;
+  z-index: 3;
 }
 .date-time-picker .enter:active {
   background: url(../images/dp-enter-pressed.png);
