@@ -22,18 +22,16 @@ msgid "Please enter a valid list of email addresses."
 msgstr "Entrez une liste d’adresses d’email valide, Merci."
 
 #: forms.py:27
-#, fuzzy
 msgid "Description"
-msgstr "Description:"
+msgstr "Description"
 
 #: forms.py:27
 msgid "What, where, how?"
 msgstr "Quoi, Où, Comment?"
 
 #: forms.py:29
-#, fuzzy
 msgid "Invitees"
-msgstr "Invités:"
+msgstr "Invités"
 
 #: forms.py:31
 msgid "Example: john.doe@example.com, Jane Doe <jane@example.net>"
@@ -56,9 +54,8 @@ msgid "Email address"
 msgstr "Adresse Email:"
 
 #: forms.py:47
-#, fuzzy
 msgid "Invitee"
-msgstr "Invités:"
+msgstr "Invités"
 
 #: forms.py:53
 msgid "Name"
@@ -121,7 +118,7 @@ msgstr ""
 
 #: views.py:224 templatetags/pleft_tags.py:49
 msgid "D M d, G:i"
-msgstr "D M s, G:i"
+msgstr "D M d, G:i"
 
 #: widgets.py:99
 msgid "Selected times:"
