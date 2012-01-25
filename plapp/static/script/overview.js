@@ -138,7 +138,7 @@ $(function() {
       $('.appointment .people .select li').each(function() {
         var av = $(this).data('person').availability[i];
         if (av.length == 0) return;
-        if (av[0] == 1) dateTime.yes++; else dateTime.no++;
+        if (av[0] == 1) dateTime.yes++; else if (av[0] == -1) dateTime.no++;
       });
 
       updateBar(item);
@@ -212,6 +212,7 @@ $(function() {
     var left = dt.yes / n * total;
     var right = dt.no / n * total;
     var middle = total - left - right;
+    console.log(n, total, dt.yes, dt.no, left, right, middle);
     if (middle < 0 || middle > total) return;
     $(item).find('.bar').css({
       borderLeftWidth: left, borderRightWidth: right, width: middle });
