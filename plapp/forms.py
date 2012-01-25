@@ -24,8 +24,9 @@ import widgets
 
 class AppointmentForm(forms.Form):
     description = fields.TextField(max_length=1000, required=False,
-        help_text=_('What, where, how?'))
+        label=_('Description'), help_text=_('What, where, how?'))
     invitees = fields.EmailListField(max_length=2000, required=False,
+        label=_('Invitees'),
         help_text=
             _('Example: john.doe@example.com, Jane Doe <jane@example.net>'))
     dates = fields.DateTimeListField(required=False, label=_('Proposed dates'))
@@ -43,14 +44,14 @@ class ResendInvitationForm(forms.Form):
     id = forms.ModelChoiceField(
         queryset=models.Appointment.objects.filter(visible=True),
         widget=forms.HiddenInput)
-    invitee = forms.IntegerField(widget=forms.Select)
+    invitee = forms.IntegerField(widget=forms.Select, label=_('Invitee'))
 
 class InviteParticipantForm(forms.Form):
     id = forms.ModelChoiceField(
         queryset=models.Appointment.objects.filter(visible=True),
         widget=forms.HiddenInput)
-    name = forms.CharField(max_length=100)
-    email = forms.EmailField()
+    name = forms.CharField(max_length=100, label=_('Name'))
+    email = forms.EmailField(label=_('Email'))
 
 class ProposeDateForm(forms.Form):
     id = forms.ModelChoiceField(
@@ -58,5 +59,7 @@ class ProposeDateForm(forms.Form):
         widget=forms.HiddenInput)
     d = forms.DateTimeField(input_formats=('%Y-%m-%dT%H:%M:%S',),
                             widget=forms.HiddenInput, required=False)
-    date = forms.DateField(widget=widgets.DatePicker, required=False)
-    time = forms.TimeField(widget=widgets.TimePicker, required=False)
+    date = forms.DateField(widget=widgets.DatePicker, required=False,
+        label=_('Date'))
+    time = forms.TimeField(widget=widgets.TimePicker, required=False,
+        label=_('Time'))

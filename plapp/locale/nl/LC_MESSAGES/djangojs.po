@@ -2,253 +2,234 @@
 # Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
 # This file is distributed under the same license as the Pleft package.
 # Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Pleft\n"
-"Report-Msgid-Bugs-To: http://code.google.com/p/pleft/issues/list\n"
-"POT-Creation-Date: 2011-01-25 21:51+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-24 19:57-0600\n"
 "PO-Revision-Date: 2011-01-25 21:06+0000\n"
 "Last-Translator: sander <sander.dijkhuis@gmail.com>\n"
 "Language-Team: Dutch <>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: .\js\accountbar.js.py:52
-msgid "Sign out"
-msgstr "Uitloggen"
-
-#: .\js\accountbar.js.py:66
-msgid "New appointment"
-msgstr "Nieuwe afspraak"
-
-#: .\js\accountbar.js.py:68
-msgid "About Pleft"
-msgstr "Over Pleft"
-
-#: .\js\accountbar.js.py:72
-msgid "Write a review"
-msgstr "Recensie schrijven"
-
-#: .\js\accountbar.js.py:74
-msgid "Install Pleft in Chrome"
-msgstr "Pleft installeren in Chrome"
-
-#: .\js\accountbar.js.py:82
-msgid "Language"
-msgstr "Taal"
-
-#: .\js\accountbar.js.py:113
-msgid "the appointment planner"
-msgstr "de afsprakenplanner"
-
-#: .\js\accountbar.js.py:123
-msgid "Loading…"
-msgstr "Laden…"
-
-#: .\js\accountbar.js.py:127
-msgid "All appointments"
-msgstr "Alle afspraken"
-
-#: .\js\accountbar.js.py:144
-msgid "Menu temporarily unavailaible."
-msgstr "Het menu is tijdelijk niet beschikbaar."
-
-#: .\js\accountbar.js.py:154
-msgid "My appointments"
-msgstr "Mijn afspraken"
-
-#: .\js\caleftar.js.py:49
+#: static/script/caleftar.js:23
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec"
 
-#: .\js\caleftar.js.py:50
+#: static/script/caleftar.js:25
 msgid "Mon|Tue|Wed|Thu|Fri|Sat|Sun"
 msgstr "ma|di|wo|do|vr|za|zo"
 
-#: .\js\caleftar.js.py:113
-msgid "Selected times:"
-msgstr "Tijdstippen:"
-
-#: .\js\caleftar.js.py:327
+#: static/script/caleftar.js:181
 msgid "today"
 msgstr "nu"
 
-#: .\js\caleftar.js.py:407
-msgid "No times are selected yet."
-msgstr "Er zijn nog geen tijdstippen geselecteerd."
-
-#: .\js\caleftar.js.py:524
+#: static/script/caleftar.js:316
 msgid "Add a time:"
 msgstr "Een tijdstip toevoegen:"
 
-#: .\js\form.js.py:47
-msgid "Send invitations"
-msgstr "Uitnodigingen verzenden"
-
-#: .\js\form.js.py:82
+#: static/script/form.js:32
 msgid "Please enter your email address."
 msgstr "Voer alstublieft uw e-mailadres in."
 
-#: .\js\form.js.py:86
+#: static/script/form.js:34
 msgid "This email address doesn‘t seem to be valid."
 msgstr "Dit e-mailadres lijkt ongeldig te zijn."
 
-#: .\js\form.js.py:120
+#: static/script/form.js:61
 msgid "There seems to be an invalid email address in this list:"
 msgstr "Er lijkt een ongeldig e-mailadres in deze lijst te staan:"
 
-#: .\js\form.js.py:142
+#: static/script/form.js:83
 msgid "Sorry, I do not fully understand your input yet."
 msgstr "Helaas begrijp ik uw invoer nog niet volledig."
 
-#: .\js\form.js.py:143
+#: static/script/form.js:84
 msgid "Please check the form for any warnings."
 msgstr "Kijk alstublieft of er ergens een waarschuwing staat."
 
-#: .\js\form.js.py:176
+#: static/script/form.js:92
 msgid "Creating an appointment…"
 msgstr "Afspraak maken…"
 
-#: .\js\form.js.py:194 .\js\form.js.py:222
+#: static/script/form.js:96
 msgid "Sorry, something went wrong."
 msgstr "Het spijt ons, er lijkt iets mis te zijn gegaan."
 
-#: .\js\form.js.py:195 .\js\form.js.py:223
+#: static/script/form.js:97
 msgid "This should not happen."
 msgstr "Dit hoort niet te gebeuren."
 
-#: .\js\form.js.py:197 .\js\form.js.py:224
+#: static/script/form.js:100
 msgid "Click here to go back to the form."
 msgstr "Klik hier om terug te gaan naar het formulier."
 
-#: .\js\form.js.py:218
+#: static/script/form.js:119
 msgid "Created!"
 msgstr "Aangemaakt!"
 
-#: .\js\form.js.py:219
+#: static/script/form.js:120
 msgid "Please check your email."
 msgstr "Kijk in uw e-mail om door te gaan."
 
-#: .\js\form.js.py:238
-msgid "Pleft: the presentation!"
-msgstr "Pleft: de presentatie!"
+#: static/script/menubar.js:58
+msgid "Write a review"
+msgstr "Recensie schrijven"
 
-#: .\js\form.js.py:255
-msgid "Example invitation email"
-msgstr "Voorbeelduitnodigingsmail"
-
-#: .\js\form.js.py:266
-msgid "Example appointment overview"
-msgstr "Voorbeeldafsprakenoverzicht"
-
-#: .\js\overview.js.py:136
-msgid "This appointment could not be found or is not meant to be seen by you. We apologize for the inconvenience."
-msgstr "Deze afspraak kon niet worden gevonden of is niet voor u bedoeld. Excuses voor het ongemak."
-
-#: .\js\overview.js.py:160
-msgid "Use the buttons to indicate when you’re available. You can also enter comments."
-msgstr "Gebruik de knoppen om aan te geven wanneer u beschikbaar bent. U kunt ook commentaar invoegen."
-
-#: .\js\overview.js.py:162
-msgid "View the availability of the other participants by clicking on their names or on the dates at the left side."
-msgstr "Bekijk de aanwezigheid van de andere deelnemers door op hun namen te klikken of op de datums aan de linkerkant."
-
-#: .\js\overview.js.py:164
-msgid "Appointment"
-msgstr "Afspraak"
-
-#: .\js\overview.js.py:166
-msgid "Proposed dates"
-msgstr "Voorgestelde data"
-
-#: .\js\overview.js.py:168
-msgid "Participants"
-msgstr "Deelnemers"
-
-#: .\js\overview.js.py:171
-msgid "Done"
-msgstr "Klaar"
-
-#: .\js\overview.js.py:177
-msgid "Refresh"
-msgstr "Herladen"
-
-#: .\js\overview.js.py:333
+#: static/script/overview.js:183
 msgid "Automatically saved on "
 msgstr "Automatisch opgeslagen op "
 
-#: .\js\overview.js.py:340
+#: static/script/overview.js:192
 msgid "Sorry, your availability could not be saved."
 msgstr "Excuses, je beschikbaarheid kan niet worden opgeslagen."
 
-#: .\js\overview.js.py:340
+#: static/script/overview.js:193
 msgid "Please try again."
 msgstr "Probeer het nogmaals."
 
-#: .\js\overview.js.py:368
-msgid "Email addresses of the invitees (only visible to you)"
-msgstr "E-mailadressen van de genodigden (alleen voor u zichtbaar)"
+#: static/script/overview.js:292
+msgid "Not filled in yet."
+msgstr "Nog niet ingevuld."
 
-#: .\js\overview.js.py:376
-msgid "Invite another participant"
-msgstr "Een nieuwe deelnemer uitnodigen"
+#: static/script/overview.js:334
+msgid "Done!"
+msgstr "Klaar!"
 
-#: .\js\overview.js.py:379
-msgid "Name <email@address.example>"
-msgstr "Naam <e_mail.adres@example.com>"
+#: static/script/overview.js:340
+msgid "An error occured."
+msgstr ""
 
-#: .\js\overview.js.py:382 .\js\overview.js.py:412
-msgid "Send invitation"
-msgstr "Uitnodiging verzenden"
+#~ msgid "Sign out"
+#~ msgstr "Uitloggen"
 
-#: .\js\overview.js.py:396
-msgid "Please enter an address."
-msgstr "Voer alstublieft een e-mailadres in."
+#~ msgid "New appointment"
+#~ msgstr "Nieuwe afspraak"
 
-#: .\js\overview.js.py:399
-msgid "This email address does not seem to be correct."
-msgstr "Dit e-mailadres lijkt ongeldig te zijn."
+#~ msgid "About Pleft"
+#~ msgstr "Over Pleft"
 
-#: .\js\overview.js.py:404 .\js\overview.js.py:446
-msgid "Sending…"
-msgstr "Verzenden…"
+#~ msgid "Install Pleft in Chrome"
+#~ msgstr "Pleft installeren in Chrome"
 
-#: .\js\overview.js.py:422
-msgid "Resend invitations"
-msgstr "De uitnodigingen nogmaals verzenden"
+#~ msgid "Language"
+#~ msgstr "Taal"
 
-#: .\js\overview.js.py:426
-msgid "Select an invitee"
-msgstr "Selecteer een genodigde"
+#~ msgid "the appointment planner"
+#~ msgstr "de afsprakenplanner"
 
-#: .\js\overview.js.py:440 .\js\overview.js.py:451
-msgid "Send invitation again"
-msgstr "Uitnodiging nogmaals versturen"
+#~ msgid "Loading…"
+#~ msgstr "Laden…"
 
-#: .\js\overview.js.py:459
-msgid "Propose another date"
-msgstr "Een andere datum voorstellen"
+#~ msgid "All appointments"
+#~ msgstr "Alle afspraken"
 
-#: .\js\overview.js.py:460
-msgid "Date:"
-msgstr "Datum:"
+#~ msgid "Menu temporarily unavailaible."
+#~ msgstr "Het menu is tijdelijk niet beschikbaar."
 
-#: .\js\overview.js.py:461
-msgid "Time:"
-msgstr "Tijd:"
+#~ msgid "My appointments"
+#~ msgstr "Mijn afspraken"
 
-#: .\js\overview.js.py:490
-msgid "Add date"
-msgstr "Datum toevoegen"
+#~ msgid "Selected times:"
+#~ msgstr "Tijdstippen:"
 
-#: .\js\overview.js.py:499
-msgid "This does not seem to be a valid date."
-msgstr "Dit lijkt een ongeldige datum te zijn."
+#~ msgid "No times are selected yet."
+#~ msgstr "Er zijn nog geen tijdstippen geselecteerd."
 
-#: .\js\overview.js.py:506
-msgid "This does not seem to be a valid time."
-msgstr "Dit lijkt een ongeldig tijdstip te zijn."
+#~ msgid "Send invitations"
+#~ msgstr "Uitnodigingen verzenden"
+
+#~ msgid "Pleft: the presentation!"
+#~ msgstr "Pleft: de presentatie!"
+
+#~ msgid "Example invitation email"
+#~ msgstr "Voorbeelduitnodigingsmail"
+
+#~ msgid "Example appointment overview"
+#~ msgstr "Voorbeeldafsprakenoverzicht"
+
+#~ msgid ""
+#~ "This appointment could not be found or is not meant to be seen by you. We "
+#~ "apologize for the inconvenience."
+#~ msgstr ""
+#~ "Deze afspraak kon niet worden gevonden of is niet voor u bedoeld. Excuses "
+#~ "voor het ongemak."
+
+#~ msgid ""
+#~ "Use the buttons to indicate when you’re available. You can also enter "
+#~ "comments."
+#~ msgstr ""
+#~ "Gebruik de knoppen om aan te geven wanneer u beschikbaar bent. U kunt ook "
+#~ "commentaar invoegen."
+
+#~ msgid ""
+#~ "View the availability of the other participants by clicking on their "
+#~ "names or on the dates at the left side."
+#~ msgstr ""
+#~ "Bekijk de aanwezigheid van de andere deelnemers door op hun namen te "
+#~ "klikken of op de datums aan de linkerkant."
+
+#~ msgid "Appointment"
+#~ msgstr "Afspraak"
+
+#~ msgid "Proposed dates"
+#~ msgstr "Voorgestelde data"
+
+#~ msgid "Participants"
+#~ msgstr "Deelnemers"
+
+#~ msgid "Refresh"
+#~ msgstr "Herladen"
+
+#~ msgid "Email addresses of the invitees (only visible to you)"
+#~ msgstr "E-mailadressen van de genodigden (alleen voor u zichtbaar)"
+
+#~ msgid "Invite another participant"
+#~ msgstr "Een nieuwe deelnemer uitnodigen"
+
+#~ msgid "Name <email@address.example>"
+#~ msgstr "Naam <e_mail.adres@example.com>"
+
+#~ msgid "Send invitation"
+#~ msgstr "Uitnodiging verzenden"
+
+#~ msgid "Please enter an address."
+#~ msgstr "Voer alstublieft een e-mailadres in."
+
+#~ msgid "This email address does not seem to be correct."
+#~ msgstr "Dit e-mailadres lijkt ongeldig te zijn."
+
+#~ msgid "Sending…"
+#~ msgstr "Verzenden…"
+
+#~ msgid "Resend invitations"
+#~ msgstr "De uitnodigingen nogmaals verzenden"
+
+#~ msgid "Select an invitee"
+#~ msgstr "Selecteer een genodigde"
+
+#~ msgid "Send invitation again"
+#~ msgstr "Uitnodiging nogmaals versturen"
+
+#~ msgid "Propose another date"
+#~ msgstr "Een andere datum voorstellen"
+
+#~ msgid "Date:"
+#~ msgstr "Datum:"
+
+#~ msgid "Time:"
+#~ msgstr "Tijd:"
+
+#~ msgid "Add date"
+#~ msgstr "Datum toevoegen"
+
+#~ msgid "This does not seem to be a valid date."
+#~ msgstr "Dit lijkt een ongeldige datum te zijn."
+
+#~ msgid "This does not seem to be a valid time."
+#~ msgstr "Dit lijkt een ongeldig tijdstip te zijn."

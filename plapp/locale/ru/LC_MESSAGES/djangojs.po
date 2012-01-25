@@ -2,253 +2,191 @@
 # Copyright (C) 2010 Sander Dijkhuis <sander.dijkhuis@gmail.com>
 # This file is distributed under the same license as the Pleft package.
 # Sander Dijkhuis <sander.dijkhuis@gmail.com>, 2010.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Pleft\n"
-"Report-Msgid-Bugs-To: http://code.google.com/p/pleft/issues/list\n"
-"POT-Creation-Date: 2011-01-25 21:51+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-24 19:57-0600\n"
 "PO-Revision-Date: 2011-01-25 21:06+0000\n"
 "Last-Translator: sander <sander.dijkhuis@gmail.com>\n"
 "Language-Team: Russian <>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
-#: .\js\accountbar.js.py:52
-msgid "Sign out"
-msgstr "Выход"
-
-#: .\js\accountbar.js.py:66
-msgid "New appointment"
-msgstr "Новая встреча"
-
-#: .\js\accountbar.js.py:68
-msgid "About Pleft"
-msgstr ""
-
-#: .\js\accountbar.js.py:72
-msgid "Write a review"
-msgstr ""
-
-#: .\js\accountbar.js.py:74
-msgid "Install Pleft in Chrome"
-msgstr ""
-
-#: .\js\accountbar.js.py:82
-msgid "Language"
-msgstr ""
-
-#: .\js\accountbar.js.py:113
-msgid "the appointment planner"
-msgstr ""
-
-#: .\js\accountbar.js.py:123
-msgid "Loading…"
-msgstr ""
-
-#: .\js\accountbar.js.py:127
-msgid "All appointments"
-msgstr "Все встречи"
-
-#: .\js\accountbar.js.py:144
-msgid "Menu temporarily unavailaible."
-msgstr ""
-
-#: .\js\accountbar.js.py:154
-msgid "My appointments"
-msgstr "Мои встречи"
-
-#: .\js\caleftar.js.py:49
+#: static/script/caleftar.js:23
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Янв|Фев|Мар|Апр|Май|Июн|Июл|Авг|Сен|Окт|Ноя|Дек"
 
-#: .\js\caleftar.js.py:50
+#: static/script/caleftar.js:25
 msgid "Mon|Tue|Wed|Thu|Fri|Sat|Sun"
 msgstr "Пон|Вт|Ср|Чет|Пят|Суб|Вос"
 
-#: .\js\caleftar.js.py:113
-msgid "Selected times:"
-msgstr "Выбранные даты:"
-
-#: .\js\caleftar.js.py:327
+#: static/script/caleftar.js:181
 msgid "today"
 msgstr ""
 
-#: .\js\caleftar.js.py:407
-msgid "No times are selected yet."
-msgstr ""
-
-#: .\js\caleftar.js.py:524
+#: static/script/caleftar.js:316
 msgid "Add a time:"
 msgstr ""
 
-#: .\js\form.js.py:47
-msgid "Send invitations"
-msgstr "Отошлите приглашения"
-
-#: .\js\form.js.py:82
+#: static/script/form.js:32
 msgid "Please enter your email address."
 msgstr "Пожалуйста введите ваш емэйл адрес."
 
-#: .\js\form.js.py:86
+#: static/script/form.js:34
 msgid "This email address doesn‘t seem to be valid."
 msgstr "Этот емэйл адрес не правильный."
 
-#: .\js\form.js.py:120
+#: static/script/form.js:61
 msgid "There seems to be an invalid email address in this list:"
 msgstr "В этом списке есть неправильный емэйл адрес:"
 
-#: .\js\form.js.py:142
+#: static/script/form.js:83
 msgid "Sorry, I do not fully understand your input yet."
 msgstr "Извините, я не совсем понимаю ваш ввод."
 
-#: .\js\form.js.py:143
+#: static/script/form.js:84
 msgid "Please check the form for any warnings."
 msgstr "Пожалуйста проконтролируйте есть ли ошибки в форме."
 
-#: .\js\form.js.py:176
+#: static/script/form.js:92
 msgid "Creating an appointment…"
 msgstr "Создаю встречу…"
 
-#: .\js\form.js.py:194 .\js\form.js.py:222
+#: static/script/form.js:96
 msgid "Sorry, something went wrong."
 msgstr "Извините, что-то произошло неправильно."
 
-#: .\js\form.js.py:195 .\js\form.js.py:223
+#: static/script/form.js:97
 msgid "This should not happen."
 msgstr "Это не должно было случиться."
 
-#: .\js\form.js.py:197 .\js\form.js.py:224
+#: static/script/form.js:100
 msgid "Click here to go back to the form."
 msgstr "Нажмите здесь чтобы вернуться к форме."
 
-#: .\js\form.js.py:218
+#: static/script/form.js:119
 msgid "Created!"
 msgstr "Создано!"
 
-#: .\js\form.js.py:219
+#: static/script/form.js:120
 msgid "Please check your email."
 msgstr "Посмотрите в своём почтовом ящике."
 
-#: .\js\form.js.py:238
-msgid "Pleft: the presentation!"
-msgstr "Контакт с Pleft"
-
-#: .\js\form.js.py:255
-msgid "Example invitation email"
-msgstr "Пример пригласительного емэйла"
-
-#: .\js\form.js.py:266
-msgid "Example appointment overview"
-msgstr "Пример обзора встречь"
-
-#: .\js\overview.js.py:136
-msgid "This appointment could not be found or is not meant to be seen by you. We apologize for the inconvenience."
-msgstr "Эта встреча не была найдена или вы не имеете права на просмотр. Мы приносим вам наши извинения."
-
-#: .\js\overview.js.py:160
-msgid "Use the buttons to indicate when you’re available. You can also enter comments."
+#: static/script/menubar.js:58
+msgid "Write a review"
 msgstr ""
 
-#: .\js\overview.js.py:162
-msgid "View the availability of the other participants by clicking on their names or on the dates at the left side."
-msgstr ""
-
-#: .\js\overview.js.py:164
-msgid "Appointment"
-msgstr "Встреча"
-
-#: .\js\overview.js.py:166
-msgid "Proposed dates"
-msgstr "Предполагаемые даты"
-
-#: .\js\overview.js.py:168
-msgid "Participants"
-msgstr "Приглашённые"
-
-#: .\js\overview.js.py:171
-msgid "Done"
-msgstr "Готово"
-
-#: .\js\overview.js.py:177
-msgid "Refresh"
-msgstr "Обновить"
-
-#: .\js\overview.js.py:333
+#: static/script/overview.js:183
 msgid "Automatically saved on "
 msgstr "Автоматически сохранено в "
 
-#: .\js\overview.js.py:340
+#: static/script/overview.js:192
 msgid "Sorry, your availability could not be saved."
 msgstr ""
 
-#: .\js\overview.js.py:340
+#: static/script/overview.js:193
 msgid "Please try again."
 msgstr ""
 
-#: .\js\overview.js.py:368
-msgid "Email addresses of the invitees (only visible to you)"
-msgstr "Имэйл адреса приглашённых (только видны вам)"
-
-#: .\js\overview.js.py:376
-msgid "Invite another participant"
-msgstr "Пригласите других"
-
-#: .\js\overview.js.py:379
-msgid "Name <email@address.example>"
-msgstr "Имя <email@address.example>"
-
-#: .\js\overview.js.py:382 .\js\overview.js.py:412
-msgid "Send invitation"
-msgstr "Отправить приглашения"
-
-#: .\js\overview.js.py:396
-msgid "Please enter an address."
-msgstr "Пожалуйста введите адрес."
-
-#: .\js\overview.js.py:399
-msgid "This email address does not seem to be correct."
-msgstr "Кажется этот адрес не правильный."
-
-#: .\js\overview.js.py:404 .\js\overview.js.py:446
-msgid "Sending…"
-msgstr "Отсылаю…"
-
-#: .\js\overview.js.py:422
-msgid "Resend invitations"
+#: static/script/overview.js:292
+msgid "Not filled in yet."
 msgstr ""
 
-#: .\js\overview.js.py:426
-msgid "Select an invitee"
+#: static/script/overview.js:334
+msgid "Done!"
+msgstr "Готово!"
+
+#: static/script/overview.js:340
+msgid "An error occured."
 msgstr ""
 
-#: .\js\overview.js.py:440 .\js\overview.js.py:451
-msgid "Send invitation again"
-msgstr ""
+#~ msgid "Sign out"
+#~ msgstr "Выход"
 
-#: .\js\overview.js.py:459
-msgid "Propose another date"
-msgstr "Предложить другую дату"
+#~ msgid "New appointment"
+#~ msgstr "Новая встреча"
 
-#: .\js\overview.js.py:460
-msgid "Date:"
-msgstr "Дата:"
+#~ msgid "All appointments"
+#~ msgstr "Все встречи"
 
-#: .\js\overview.js.py:461
-msgid "Time:"
-msgstr "Время:"
+#~ msgid "My appointments"
+#~ msgstr "Мои встречи"
 
-#: .\js\overview.js.py:490
-msgid "Add date"
-msgstr "Добавить дату"
+#~ msgid "Selected times:"
+#~ msgstr "Выбранные даты:"
 
-#: .\js\overview.js.py:499
-msgid "This does not seem to be a valid date."
-msgstr "Кажется это не правильная дата."
+#~ msgid "Send invitations"
+#~ msgstr "Отошлите приглашения"
 
-#: .\js\overview.js.py:506
-msgid "This does not seem to be a valid time."
-msgstr "Кажется это не правильная время."
+#~ msgid "Pleft: the presentation!"
+#~ msgstr "Контакт с Pleft"
+
+#~ msgid "Example invitation email"
+#~ msgstr "Пример пригласительного емэйла"
+
+#~ msgid "Example appointment overview"
+#~ msgstr "Пример обзора встречь"
+
+#~ msgid ""
+#~ "This appointment could not be found or is not meant to be seen by you. We "
+#~ "apologize for the inconvenience."
+#~ msgstr ""
+#~ "Эта встреча не была найдена или вы не имеете права на просмотр. Мы "
+#~ "приносим вам наши извинения."
+
+#~ msgid "Appointment"
+#~ msgstr "Встреча"
+
+#~ msgid "Proposed dates"
+#~ msgstr "Предполагаемые даты"
+
+#~ msgid "Participants"
+#~ msgstr "Приглашённые"
+
+#~ msgid "Refresh"
+#~ msgstr "Обновить"
+
+#~ msgid "Email addresses of the invitees (only visible to you)"
+#~ msgstr "Имэйл адреса приглашённых (только видны вам)"
+
+#~ msgid "Invite another participant"
+#~ msgstr "Пригласите других"
+
+#~ msgid "Name <email@address.example>"
+#~ msgstr "Имя <email@address.example>"
+
+#~ msgid "Send invitation"
+#~ msgstr "Отправить приглашения"
+
+#~ msgid "Please enter an address."
+#~ msgstr "Пожалуйста введите адрес."
+
+#~ msgid "This email address does not seem to be correct."
+#~ msgstr "Кажется этот адрес не правильный."
+
+#~ msgid "Sending…"
+#~ msgstr "Отсылаю…"
+
+#~ msgid "Propose another date"
+#~ msgstr "Предложить другую дату"
+
+#~ msgid "Date:"
+#~ msgstr "Дата:"
+
+#~ msgid "Time:"
+#~ msgstr "Время:"
+
+#~ msgid "Add date"
+#~ msgstr "Добавить дату"
+
+#~ msgid "This does not seem to be a valid date."
+#~ msgstr "Кажется это не правильная дата."
+
+#~ msgid "This does not seem to be a valid time."
+#~ msgstr "Кажется это не правильная время."

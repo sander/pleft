@@ -8,30 +8,30 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-25 21:51+0100\n"
+"POT-Creation-Date: 2012-01-24 19:57-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 
-#: .\templates\plauth\not-signed-in.html.py:5
-#: .\templates\plauth\not-signed-in.html.py:10
+#: templates/plauth/not-signed-in.html:5
+#: templates/plauth/not-signed-in.html:10
 msgid "Not signed in"
 msgstr ""
 
-#: .\templates\plauth\not-signed-in.html.py:14
+#: templates/plauth/not-signed-in.html:14
 msgid ""
 "You are not signed in. Please use the URL that was sent to you by email."
 msgstr ""
 
-#: .\templates\plauth\wrong-email-pass.html.py:5
-#: .\templates\plauth\wrong-email-pass.html.py:10
+#: templates/plauth/wrong-email-pass.html:5
+#: templates/plauth/wrong-email-pass.html:10
 msgid "Failed to sign in"
 msgstr ""
 
-#: .\templates\plauth\wrong-email-pass.html.py:14
+#: templates/plauth/wrong-email-pass.html:14
 msgid "It seems that the URL you used is wrong or stopped working."
 msgstr ""

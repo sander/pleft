@@ -27,7 +27,7 @@ class Command(NoArgsCommand):
 
         packages = [s for s in os.listdir('.') if os.path.isdir(s)
                     and os.path.exists(s + '/locale')]
-        locales = ('en', 'de', 'fr', 'it', 'nl', 'ru', 'es_ES')
+        locales = ('en', 'de', 'fr', 'it', 'nl', 'ru', 'es')
 
         for pkg in packages:
             for locale in locales:
