@@ -10,9 +10,10 @@ Installation
 1. Check out the source code (`git clone git://github.com/sander/pleft.git`).
 2. Enter into the newly created pleft/ directory (`cd pleft/`).
 3. Decide which directory to put Pleft's environment in (`export PLENV=~/env/pleft`).
-4. Create a Pleft environment (`python pleft-bootstrap.py $PLENV`).
+4. Create a Pleft environment (`python tools/pleft-bootstrap.py $PLENV`).
 5. Create a file `pleft/local_settings.py`, based on one of the examples in that directory. If you just want to test Pleft, copy `pleft/local_settings.py.debug` to `pleft/local_settings.py` to do that. You need to edit the file to modify some paths. Especially database information (i.e. `DATABASE_NAME`) and `SECRET_KEY` need to be changed. The SQLite database will be created automatically.
-6. Create the proper tables in the database (`python pleft/manage.py syncdb`).
+6. Activate the Pleft environment (`source $PLENV/bin/activate`).
+7. Create the proper tables in the database (`python pleft/manage.py syncdb`).
 
 
 Running
