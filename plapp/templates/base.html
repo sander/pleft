@@ -96,6 +96,7 @@
 {% block main_script %}
 {% endblock %}
 
+{% if settings.TRYOUT %}
 <div style='height:30px'></div>
 <div style='position: fixed; bottom: 0; left: 0; background: #484848; color: #fff; padding: 5px 10px; font-size: 12px'>
   Thank you for using Pleft Tryout. <a href='javascript:UserVoice.showPopupWidget()' title='Feedback &amp; support' style='color: #feff61'>Let us know what you think.</a> Doesn’t it work for you? <a id=switch-link href=//www.pleft.com/ style='color: #feff61'>Switch to regular Pleft</a>
@@ -110,3 +111,4 @@
     document.getElementById('switch-link').href = url;
   })();
 </script>
+{% endif %}
