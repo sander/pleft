@@ -403,8 +403,8 @@ def add_dates(request):
 
     appointment = form.cleaned_data['id']
     user = plauth.models.User.get_signed_in(request)
-    if not user or appointment.initiator != user \
-        or not appointment.propose_more: raise http.Http404
+    if (not user) or (appointment.initiator != user \
+        and not appointment.propose_more): raise http.Http404
 
     invitee = models.Invitee.objects.all().get(user=user,
                                                appointment=appointment)
