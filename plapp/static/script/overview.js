@@ -212,7 +212,6 @@ $(function() {
     var left = dt.yes / n * total;
     var right = dt.no / n * total;
     var middle = total - left - right;
-    console.log(n, total, dt.yes, dt.no, left, right, middle);
     if (middle < 0 || middle > total) return;
     $(item).find('.bar').css({
       borderLeftWidth: left, borderRightWidth: right, width: middle });
