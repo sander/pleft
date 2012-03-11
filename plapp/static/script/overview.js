@@ -351,7 +351,7 @@ $(function() {
               $(form).hasClass('propose-date')) location.reload();
         },
         error: function() {
-          $(form).find('.error').text(gettext('An error occured.'));
+          $(form).find('.error').text(gettext('An error occurred.'));
           $(form).find('button').attr('disabled', false);
         }
       });
