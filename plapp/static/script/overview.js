@@ -333,7 +333,8 @@ $(function() {
       if (data.people.length == 1)
         $('.email-addresses textarea').attr('disabled', true);
     } else 
-      $('.resend-invitations, .email-addresses').css('display', 'none');
+      $('.resend-invitations, .email-addresses, .invite-participant')
+        .css('display', 'none');
 
     $('.tools form').submit(function() {
       var form = this;
