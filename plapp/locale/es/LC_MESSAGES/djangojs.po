@@ -8,10 +8,9 @@ msgstr ""
 "Project-Id-Version: Pleft\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-24 19:57-0600\n"
-"PO-Revision-Date: 2011-05-01 21:33+0000\n"
-"Last-Translator: larjona <larjona99@gmail.com>\n"
-"Language-Team: Spanish (Spain) (http://www.transifex.net/projects/p/pleft/"
-"team/es_ES/)\n"
+"PO-Revision-Date: 2012-05-22 14:31+0100\n"
+"Last-Translator: Laura Arjona Reina <larjona99@gmail.com>\n"
+"Language-Team: Spanish (Spain) (http://www.transifex.net/projects/p/pleft/team/es_ES/)\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,8 +43,7 @@ msgstr "Esta dirección de correo electrónico parece que no es válida."
 
 #: static/script/form.js:61
 msgid "There seems to be an invalid email address in this list:"
-msgstr ""
-"Parece que hay una dirección de correo electrónico no válida en esta lista:"
+msgstr "Parece que hay una dirección de correo electrónico no válida en esta lista:"
 
 #: static/script/form.js:83
 msgid "Sorry, I do not fully understand your input yet."
@@ -73,7 +71,7 @@ msgstr "Haga clic aquí para volver al formulario."
 
 #: static/script/form.js:119
 msgid "Created!"
-msgstr "Creada!"
+msgstr "¡Creada!"
 
 #: static/script/form.js:120
 msgid "Please check your email."
@@ -97,16 +95,15 @@ msgstr "Por favor inténtelo otra vez."
 
 #: static/script/overview.js:292
 msgid "Not filled in yet."
-msgstr ""
+msgstr "Aún no rellenado"
 
 #: static/script/overview.js:334
-#, fuzzy
 msgid "Done!"
-msgstr "Hecho"
+msgstr "¡Hecho!"
 
 #: static/script/overview.js:340
 msgid "An error occured."
-msgstr ""
+msgstr "Ocurrió un error."
 
 #~ msgid "Sign out"
 #~ msgstr "Salir"
