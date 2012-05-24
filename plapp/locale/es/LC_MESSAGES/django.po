@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Pleft\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-24 19:57-0600\n"
-"PO-Revision-Date: 2011-04-27 13:17+0000\n"
+"PO-Revision-Date: 2012-05-22 14:40+0000\n"
 "Last-Translator: larjona <larjona99@gmail.com>\n"
 "Language-Team: Spanish (Spain) <>\n"
 "Language: es_ES\n"
@@ -22,7 +22,6 @@ msgid "Please enter a valid list of email addresses."
 msgstr "Por favor introduzca una lista de correos electrónicos válida."
 
 #: forms.py:27
-#, fuzzy
 msgid "Description"
 msgstr "Descripción:"
 
@@ -31,17 +30,15 @@ msgid "What, where, how?"
 msgstr "¿Qué, dónde, cómo?"
 
 #: forms.py:29
-#, fuzzy
 msgid "Invitees"
 msgstr "Invitados:"
 
 #: forms.py:31
-#, fuzzy
 msgid "Example: john.doe@example.com, Jane Doe <jane@example.net>"
 msgstr "Ejemplo: john.doe@example.com, Jane Doe <jane@example.net>"
 
-#: forms.py:32 templates/plapp/appointment.html:40
-#, fuzzy
+#: forms.py:32
+#: templates/plapp/appointment.html:40
 msgid "Proposed dates"
 msgstr "Fechas propuestas:"
 
@@ -50,37 +47,35 @@ msgid "Invitees may propose more dates"
 msgstr "Los invitados pueden proponer más fechas"
 
 #: forms.py:36
-#, fuzzy
 msgid "Your name"
 msgstr "Su nombre:"
 
 #: forms.py:37
-#, fuzzy
 msgid "Email address"
-msgstr "Dirección de correo electrónico:"
+msgstr "Dirección de correo electrónico"
 
 #: forms.py:47
-#, fuzzy
 msgid "Invitee"
-msgstr "Invitados:"
+msgstr "Invitado"
 
 #: forms.py:53
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: forms.py:54
 msgid "Email"
-msgstr ""
+msgstr "Correo-e"
 
 #: forms.py:63
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: forms.py:65
 msgid "Time"
-msgstr ""
+msgstr "Hora"
 
-#: models.py:70 models.py:75
+#: models.py:70
+#: models.py:75
 msgid "(no title)"
 msgstr "(sin título)"
 
@@ -97,41 +92,40 @@ msgid "Verification"
 msgstr "Verificación"
 
 #: views.py:160
-#, fuzzy
 msgid "Resend invitations"
-msgstr "Invitación"
+msgstr "Reenviar invitaciones"
 
 #: views.py:163
 msgid "Send invitation again"
-msgstr ""
+msgstr "Enviar de nuevo invitación"
 
 #: views.py:165
 msgid "Invite another participant"
-msgstr ""
+msgstr "Invitar a otro participante"
 
 #: views.py:168
-#, fuzzy
 msgid "Send invitation"
-msgstr "Invitación"
+msgstr "Enviar invitación"
 
 #: views.py:170
-#, fuzzy
 msgid "Propose another date"
-msgstr "Fechas propuestas:"
+msgstr "Proponer otra fecha"
 
 #: views.py:173
 msgid "Add date"
-msgstr ""
+msgstr "Agregar fecha"
 
-#: views.py:224 templatetags/pleft_tags.py:49
+#: views.py:224
+#: templatetags/pleft_tags.py:49
 msgid "D M d, G:i"
 msgstr "D M d, G:i"
 
 #: widgets.py:99
 msgid "Selected times:"
-msgstr ""
+msgstr "Horas seleccionadas:"
 
-#: templates/404.html:5 templates/404.html.py:10
+#: templates/404.html:5
+#: templates/404.html.py:10
 msgid "Not found"
 msgstr "No encontrado"
 
@@ -149,7 +143,7 @@ msgstr "Volver al formulario de la cita"
 
 #: templates/500.html:4
 msgid "Server error"
-msgstr "Error de servidor"
+msgstr "Error del servidor"
 
 #: templates/500.html:6
 msgid "Oops!"
@@ -163,9 +157,7 @@ msgstr "Parece que hay algo incorrecto en %(name)s."
 #: templates/500.html:9
 #, python-format
 msgid "Don’t panic though: try again or send an email to %(email)s."
-msgstr ""
-"Que no cunda el pánico: pruebe otra vez o envíe un correo electrónico a "
-"%(email)s."
+msgstr "Que no cunda el pánico: pruebe otra vez o envíe un correo electrónico a %(email)s."
 
 #: templates/500.html:10
 msgid "We are sorry for the inconvenience."
@@ -173,12 +165,8 @@ msgstr "Sentimos las molestias."
 
 #: templates/base.html:11
 #, python-format
-msgid ""
-"Planning an appointment? %(name)s helps you and the invitees to pick the "
-"right date and time."
-msgstr ""
-"¿Planificando una cita? %(name)s le ayuda a usted y sus invitados a escoger "
-"la fecha y hora correctas."
+msgid "Planning an appointment? %(name)s helps you and the invitees to pick the right date and time."
+msgstr "¿Planificando una cita? %(name)s le ayuda a usted y sus invitados a escoger la fecha y hora correctas."
 
 #: templates/base.html:12
 #, python-format
@@ -187,84 +175,73 @@ msgstr "%(name)s el planificador de citas"
 
 #: templates/base.html:63
 msgid "Sign out"
-msgstr ""
+msgstr "Cerrar sesión"
 
 #: templates/base.html:66
-#, fuzzy
 msgid "the appointment planner"
-msgstr "%(name)s el planificador de citas"
+msgstr "el planificador de citas"
 
 #: templates/base.html:68
-#, fuzzy
 msgid "New appointment"
-msgstr "Cita"
+msgstr "Nueva cita"
 
 #: templates/base.html:69
 #, python-format
 msgid "About %(site)s"
-msgstr ""
+msgstr "Acerca de %(site)s"
 
 #: templates/base.html:70
 #, python-format
 msgid "Install %(site)s in Chrome"
-msgstr ""
+msgstr "Instalar %(site)s en Chrome"
 
 #: templates/base.html:72
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 #: templates/base.html:77
-#, fuzzy
 msgid "My appointments"
-msgstr "Sus citas"
+msgstr "Mis citas"
 
 #: templates/base.html:81
-#, fuzzy
 msgid "All appointments"
-msgstr "Cita"
+msgstr "Todas las citas"
 
 #: templates/plapp/appointment.html:25
 msgid "Appointment overview"
 msgstr "Vista general de cita"
 
 #: templates/plapp/appointment.html:30
-msgid ""
-"This appointment could not be found or is not meant to be seen by you. We "
-"apologize for the inconvenience."
-msgstr ""
+msgid "This appointment could not be found or is not meant to be seen by you. We apologize for the inconvenience."
+msgstr "No se ha podido encontrar la cita o no está permitido que usted la vea. Disculpe las molestias."
 
 #: templates/plapp/appointment.html:32
-msgid ""
-"Use the buttons to indicate when you’re available. You can also enter "
-"comments."
-msgstr ""
+msgid "Use the buttons to indicate when you’re available. You can also enter comments."
+msgstr "Use los botones para indicar cuándo está usted disponible. También puede introducir comentarios."
 
 #: templates/plapp/appointment.html:33
-msgid ""
-"View the availability of the other participants by clicking on their names "
-"or on the dates at the left side."
-msgstr ""
+msgid "View the availability of the other participants by clicking on their names or on the dates at the left side."
+msgstr "Vea la disponibilidad de otros participantes haciendo clic en sus nombres o en las fechas en el lado izquierdo."
 
 #: templates/plapp/appointment.html:42
 msgid "Participants"
-msgstr ""
+msgstr "Participantes"
 
 #: templates/plapp/appointment.html:52
 msgid "Done"
-msgstr ""
+msgstr "Hecho"
 
 #: templates/plapp/appointment.html:73
 msgid "Email addresses of the invitees (only visible to you)"
-msgstr ""
+msgstr "Direcciones de correo electrónico de los invitados (sólo visibles para usted)"
 
 #: templates/plapp/home.html:13
 msgid "Plan an appointment"
 msgstr "Planificar una cita"
 
 #: templates/plapp/home.html:19
-#, fuzzy
 msgid "Pleft: the presentation!"
-msgstr "¡Vea nuestra presentación!"
+msgstr "¡Pleft: la presentación!"
 
 #: templates/plapp/home.html:19
 msgid "Watch our presentation!"
@@ -272,48 +249,37 @@ msgstr "¡Vea nuestra presentación!"
 
 #: templates/plapp/home.html:20
 #, python-format
-msgid ""
-"%(name)s helps you to find the right date and time for your appointments."
-msgstr ""
-"%(name)s le ayuda a encontrar la fecha y hora correctas para sus citas."
+msgid "%(name)s helps you to find the right date and time for your appointments."
+msgstr "%(name)s le ayuda a encontrar la fecha y hora correctas para sus citas."
 
 #: templates/plapp/home.html:20
 #, python-format
-msgid ""
-"Propose a few dates and let the invitees tell %(name)s when they’re "
-"available."
-msgstr ""
-"Proporcione algunas fechas y deje que los invitados le digan a  %(name)s "
-"cuándo están disponibles."
+msgid "Propose a few dates and let the invitees tell %(name)s when they’re available."
+msgstr "Proporcione algunas fechas y deje que los invitados le digan a  %(name)s cuándo están disponibles."
 
 #: templates/plapp/home.html:22
 msgid "The invitees will receive an email that looks like this:"
-msgstr ""
-"Los invitados recibirán un correo electrónico que tendrá el siguiente "
-"aspecto:"
+msgstr "Los invitados recibirán un correo electrónico que tendrá el siguiente aspecto:"
 
 #: templates/plapp/home.html:23
 msgid "Example invitation mail"
-msgstr ""
+msgstr "Ejemplo de correo de invitación"
 
 #: templates/plapp/home.html:24
 msgid "Both you and the invitees will then get a nice overview:"
-msgstr ""
-"Tanto usted como los invitados obtendrán entonces una buena vista general:"
+msgstr "Tanto usted como los invitados obtendrán entonces una buena vista general:"
 
 #: templates/plapp/home.html:25
-#, fuzzy
 msgid "Example appointment overview"
-msgstr "Vista general de cita"
+msgstr "Ejemplo de vista general de cita"
 
 #: templates/plapp/home.html:34
 msgid "Appointment"
 msgstr "Cita"
 
 #: templates/plapp/home.html:59
-#, fuzzy
 msgid "Send invitations "
-msgstr "Invitación"
+msgstr "Enviar invitaciones "
 
 #: templates/plapp/list.html:6
 #, python-format
@@ -360,54 +326,37 @@ msgstr "Un saludo,"
 #: templates/plapp/mail/base.txt:10
 #, python-format
 msgid "The %(name)s Team"
-msgstr "El Equipo %(name)s "
+msgstr "El Equipo de %(name)s "
 
 #: templates/plapp/mail/invited.txt:6
 #, python-format
-msgid ""
-"You have been invited by %(initiator)s to tell when you’re available for the "
-"following appointment:"
-msgstr ""
-"Ha sido invitado por %(initiator)s para decir cuándo está usted disponible "
-"para la siguiente cita:"
+msgid "You have been invited by %(initiator)s to tell when you’re available for the following appointment:"
+msgstr "Ha sido invitado por %(initiator)s para decir cuándo está usted disponible para la siguiente cita:"
 
 #: templates/plapp/mail/invited.txt:10
 msgid "Click the above link for an overview and to indicate your availability."
-msgstr ""
-"Haga clic en el enlace de arriba para una vista general e indicar su "
-"disponibilidad."
+msgstr "Haga clic en el enlace de arriba para una vista general e indicar su disponibilidad."
 
 #: templates/plapp/mail/overview.txt:6
 msgid "Your email address has been verified."
 msgstr "Su dirección de correo electrónico ha sido verificada."
 
 #: templates/plapp/mail/overview.txt:6
-msgid ""
-"Go to the overview to see which invitees have entered their availability or "
-"modify the appointment:"
-msgstr ""
-"Vaya a la vista general para ver qué invitados han introducido su "
-"disponibilidad o cambiar la cita:"
+msgid "Go to the overview to see which invitees have entered their availability or modify the appointment:"
+msgstr "Vaya a la vista general para ver qué invitados han introducido su disponibilidad o cambiar la cita:"
 
 #: templates/plapp/mail/overview.txt:10
 msgid "We have assumed that you are available on all proposed dates."
 msgstr "Hemos asumido que usted está disponible en todas las citas propuestas."
 
 #: templates/plapp/mail/overview.txt:10
-msgid ""
-"You can use the above link to change your own availability or add comments."
-msgstr ""
-"Puede usar el enlace de arriba para cambiar su propia disponibilidad o "
-"añadir comentarios."
+msgid "You can use the above link to change your own availability or add comments."
+msgstr "Puede usar el enlace de arriba para cambiar su propia disponibilidad o añadir comentarios."
 
 #: templates/plapp/mail/verification.txt:6
 #, python-format
-msgid ""
-"Thank you for using %(site)s to help you pick the right moment for your "
-"appointment."
-msgstr ""
-"Gracias por usar %(site)s para ayudarle a encontrar el momento adecuado para "
-"su cita."
+msgid "Thank you for using %(site)s to help you pick the right moment for your appointment."
+msgstr "Gracias por usar %(site)s para ayudarle a encontrar el momento adecuado para su cita."
 
 #: templates/plapp/mail/verification.txt:6
 msgid "We need to verify your email address."
@@ -419,19 +368,12 @@ msgstr "Por favor haga clic en el siguiente enlace para continuar:"
 
 #: templates/plapp/mail/verification.txt:10
 #, python-format
-msgid ""
-"After you have done this, a %(site)s email will be sent to the invitees."
-msgstr ""
-"Después de hacer esto, se enviará a los invitados un correo electrónico de  "
-"%(site)s ."
+msgid "After you have done this, a %(site)s email will be sent to the invitees."
+msgstr "Después de hacer esto, se enviará a los invitados un correo electrónico de  %(site)s ."
 
 #: templates/plapp/mail/verification.txt:12
-msgid ""
-"If you did not create this appointment, someone else has entered your email "
-"address."
-msgstr ""
-"Si usted no ha creado esta cita, alguien ha introducido su dirección de "
-"correo electrónico."
+msgid "If you did not create this appointment, someone else has entered your email address."
+msgstr "Si usted no ha creado esta cita, alguien ha introducido su dirección de correo electrónico."
 
 #: templates/plapp/mail/verification.txt:12
 msgid "Please ignore this message."
@@ -439,13 +381,10 @@ msgstr "Por favor ignore este mensaje."
 
 #: templates/plapp/mail/verification.txt:12
 #, python-format
-msgid ""
-"Should this happen more often, please contact %(abuse_address)s and we will "
-"get back to you."
-msgstr ""
-"Si volviera a ocurrir esto, por favor contacte %(abuse_address)s y le "
-"responderemos."
+msgid "Should this happen more often, please contact %(abuse_address)s and we will get back to you."
+msgstr "Si volviera a ocurrir esto, por favor contacte %(abuse_address)s y le responderemos."
 
 #: templatetags/appointment_tags.py:63
 msgid "me"
 msgstr "yo"
+
