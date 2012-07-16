@@ -333,7 +333,8 @@ $(function() {
       if (data.people.length == 1)
         $('.email-addresses textarea').attr('disabled', true);
     } else 
-      $('.resend-invitations, .email-addresses').css('display', 'none');
+      $('.resend-invitations, .email-addresses, .invite-participant')
+        .css('display', 'none');
 
     $('.tools form').submit(function() {
       var form = this;
@@ -350,7 +351,7 @@ $(function() {
               $(form).hasClass('propose-date')) location.reload();
         },
         error: function() {
-          $(form).find('.error').text(gettext('An error occured.'));
+          $(form).find('.error').text(gettext('An error occurred.'));
           $(form).find('button').attr('disabled', false);
         }
       });
