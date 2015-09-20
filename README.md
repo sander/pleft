@@ -1,7 +1,13 @@
 Pleft
 =====
 
-This is the Pleft software that runs on [www.pleft.com](http://www.pleft.com/).
+This is the Pleft software that ran on pleft.com (not owned anymore). See [Pleft’s future](https://groups.google.com/forum/#!topic/pleft/W8MsYejGk_M) for a discussion on further public hosting of Pleft.
+
+
+Screenshots
+-----------
+
+<img alt="Home" src="https://raw.githubusercontent.com/sander/pleft/gh-pages/screenshots/home.png" width="240" height="150"> <img alt="Appointment" src="https://raw.githubusercontent.com/sander/pleft/gh-pages/screenshots/appointment.png" width="240" height="150">
 
 
 Installation
@@ -66,4 +72,4 @@ There are two ways to publish changes to the code:
 Contact
 -------
 
-Feel free to contact our [public mailing list](https://groups.google.com/forum/#!forum/pleft) at pleft@googlegroups.com if you are stuck. You can also contact [Sander Dijkhuis](mailto:sander.dijkhuis@gmail.com).
+Feel free to contact our [public mailing list](https://groups.google.com/forum/#!forum/pleft) at pleft@googlegroups.com if you are stuck.
